@@ -109,6 +109,20 @@
             font-size: 16px;
             color: rgb(220, 219, 219);
         }
+         /* Style video controls to match theme */
+        .gallery-item video::-webkit-media-controls-panel {
+            background: rgba(54, 54, 54, 0.9);
+        }
+        .gallery-item video::-webkit-media-controls-play-button,
+        .gallery-item video::-webkit-media-controls-volume-slider,
+        .gallery-item video::-webkit-media-controls-timeline {
+            filter: invert(0.8);
+        }
+         /* Video wrapper for consistent appearance */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -128,9 +142,10 @@
         <h2>Components Used</h2>
         <ul>
             <li>PIC16f18875 microcontroller</li>
-            <li>3 PCB that my teammate and I designed using Traxmaker pro</li>
+            <li>3 PCB designed using Traxmaker pro</li>
             <li>2 ultrasonic sensors</li>
             <li>IR flame sensors</li>
+            <li>LCD</li>
             <li>Motors</li>
             <li>12v Fan</li>
             <li>Wood, Threaded lamp rods, wires</li>
@@ -162,17 +177,70 @@
                 <img src="../Images/Firefighter Bot/IMG_1437.jpg" alt="Breadboard Assignments 3">
                 <div class="image-caption">One of my completed circuits, always trying to be more efficent in my circuitry and use of wires</div>
                 </div>
+            <div class="gallery-item">
+                <img src="../Images/Firefighter Bot/Project Proposal.png" alt="Schematic diagrams">
+                <div class="image-caption">Once I get the schematic diagrams, I will post them here!</div> 
+            </div>
     </div>
     </section>
     <section>
-        <p> Part 2: Now that evrything was approved, we were given a schematic diagram that we had to translate onto a printed circuit board design using Traxmaker Pro. Taught me greatly about how to make circuits more efficent now that I couldnt have wires jumping over each other to get it running.</p>
-       #add a section with images of the PCB design and the actual PCB
+        <p> Part 2: Now that the basics were done, we were given another schematic diagram that we had to translate onto a printed circuit board, designed using Traxmaker Pro. Taught me greatly about how to make circuits more efficent now that I couldnt have wires jumping over each other to get it running.</p>
+       <div class = "image-gallery">
+            <div class="gallery-item">
+                <img src="../Images/Firefighter Bot/PCB Design 1.png" alt="PCB Design 1">
+                <div class="image-caption">PCB design for motors (bot is with my teammate, soon photos will be uploaded!)
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="../Images/Firefighter Bot/PCB Design 2.png" alt="PCB Design 2">
+                <div class="image-caption">PCB design for motherboard </div>
+                </div>
+            <div class="gallery-item">
+                <img src="../Images/Firefighter Bot/PCB Design 3.png" alt="PCB Design 3">
+                <div class="image-caption">PCB design for IR detection and fan</div>
+            </div>
     </section>
     <section>
-        <p>Part 3: Once the PCB designs were approved, it was printed onto </p>
+        <p>Part 3: Once the PCB designs were approved, it was printed onto a photosensitive copper-clad laminate using UV light exposure, then put into an ethching tank to remove excess copper and reveal the final circuit pathways. We then drilled small openings to solder our components in. During this time, we also built the frame of the bot, and lucked out by finding threaded lamp rods that had a shell in which we could run wire through. This decluttered the bot making the PCB boards clearer to see/easier to troubleshoot and the bot more visually appealing.</p>
         </section>
     <section>
-        <p>Day 3: worked on getting the dc motors working. Ran into a problem with the left dc motor not running, so I did troubleshooting. </p>
+        <p>Part 4: Now that we had everything set up, we connected the PCB's to power and started troubleshooting, because as is the way with engineering, nothing ever goes right the first time. Started form basics such as getting the motors running, getting the wall sensors to detect objects and output the vlaues in the LCD, to finally getting the IR sensors to detect the flame and turn the fan on. Through this, we had to constantly troubleshoot the circuitry using a multimeter, resolder some parts and lines, and replace componenets that weren't working. </p>
         </section>
+    <section>
+        <p>Part 5: Once everything was working individually, we were finally ready to start testing the bot in the maze. The aim was to successfully navigate the maze, detect the flame and blow it out with the fan. The algorithim was coded use GCBasic. Lots of trial and error, as well as troubleshooting circuitry and resoldering. We got it to detect the flame in the end!! Overall, this project taught me a lot about PCB design, microcontroller programming, sensor integration and autonomous navigation algorithms. It was a challenging but rewarding experience that helped me develop my skills in mechatronics engineering.</p>
+        <div class = "image-gallery">
+            <div class="gallery-item">
+                <img src="../Images/Firefighter Bot/Final Bot 1.jpg" alt="Maze">
+                <div class="image-caption">Maze
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="../Images/Firefighter Bot/Testing the bot.jpg" alt="Final Bot 1">
+                <div class="image-caption">Front view</div>
+                </div>
+            <div class="gallery-item">
+                <img src="../Images/Firefighter Bot/Final Bot 2.jpg" alt="Final Bot 2">
+                <div class="image-caption">Side view 1</div>
+                </div>
+            <div class="gallery-item">
+                <img src="../Images/Firefighter Bot/Final Bot 3.jpg" alt="Final Bot 3">
+                <div class="image-caption">Side view 2</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../Images/Firefighter Bot/Final Bot 3.jpg" alt="Final Bot 4">
+                <div class="image-caption">Back view</div>
+            </div>
+            <div>
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="../Images/Firefighter Bot/Firefighter Bot in action.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="image-caption">FireFighter bot in action!</div>
+            </div>
+    </div>
+    </section>
+
 </body>
 </html>
