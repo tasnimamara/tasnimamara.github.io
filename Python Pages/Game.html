@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasnim's Portfolio!</title>
+    <style>
+        h1{
+            color: rgb(255, 102, 178);
+            font-size: 75px;
+            margin: auto;
+        }
+        body{
+            background: rgb(15, 14, 15); 
+            color: white; 
+            font-family: monospace, Helvetica, sans-serif;
+            margin: 5;
+            padding: 0;
+        }
+        .container{
+            max-width:1000px;
+            margin:0 auto;
+            padding:16px;
+        }
+        button {
+            background: rgb(54, 54, 54); 
+            border: none; 
+            color: rgb(240, 15, 240); 
+            font-family: monospace, Helvetica, sans-serif;
+            font-size: 18px;
+            border-radius: 8px; 
+        }
+        button:hover { /*this makes it zoom in when hovered over*/
+                transform: translateY(-2px);
+                transition: transform 0.3s;
+            }
+        h2 {
+            color: rgb(255, 102, 178);
+
+        }
+        header{
+            border: 2px solid rgb(255, 102, 178);
+            margin: 5px 10px;
+            padding: 10px;
+            background: rgb(15, 14, 15);
+            color: rgb(242, 242, 242);   
+            font-size: 18px;
+        }
+         section {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            padding: 15px;
+            background: rgba(30, 30, 30, 0.7);
+            flex: 1;
+            min-width: 250px; 
+            margin: 5px 10px 5px 10px;
+        } 
+        footer {
+           /* border: 2px solid rgb(14, 14, 14);*/
+            margin: 10px;
+            padding: 0px;
+        } 
+        div {
+            display: inline-block; 
+            
+        } 
+        /* small-screen tweaks */
+        @media (max-width:480px){
+            .container{ padding:12px; }
+            .sections{ flex-direction:column; }
+        }
+        p {
+            font-size: 18px;
+            color: rgb(220, 219, 219);
+
+        }
+        a.header-buttons {
+            color: rgb(255, 102, 178);
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+            padding: 5px;
+        }
+         /* Image gallery styles */
+        .image-gallery {
+            display: grid; /*grid style for images*/
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));/*responsive columns, the repeat makes multiple columns, auto fill makes as many columns that will fill the ontainer, and minmax is about sizing*/
+            gap: 20px; /*space between images*/
+            margin: 20px 0; /*space above and below the gallery*/
+        }
+        
+        .gallery-item {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(30, 30, 30, 0.7);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover { /*this makes it zoom in when hovered over*/
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-caption {
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            color: rgb(220, 219, 219);
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        Projects and Experiences:
+        <div><button><a class = "header-buttons" href="../Mechatronics Pages/Mechatronics.html">Mechatronics</a></button></div>
+    <div><button><a class = "header-buttons" href="../Python.html">Python</a></button></div>
+    <div><button><a class = "header-buttons" href="../TENG Project.html">TENG Project</a></button></div>  
+</header>
+    <button><a class = "header-buttons"  href="Python.html">Python</a></button>
+    <h1>FPS Game</h1>
+    <section>
+        <h2>Project Overview</h2>
+        <p>
+            I am building a first-person shooter game using the Ursina game engine in Python. The game will feature basic shooting mechanic and a simple level design. Disclaimer: This is all self taught and I am following various tutorials, aiming to learn the skills as I go. 
+        </p>
+        <h2>Components Used</h2>
+        <ul>
+            <li>Ursina Game Engine</li>
+            <li>Python Programming Language</li>
+            <li>3D Models and Textures (Sketchfab)</li>
+        </ul>
+        <h2>Skills</h2>
+        <ul>
+            <li>Game development with Ursina</li>
+            <li>3D Modeling and asset integration</li>
+            <li>Basic game mechanics programming</li>
+            <li>Level design</li>
+    </section>
+    <h2>Documentation</h2>
+    <section>
+        <p><strong>Day 1:</strong> Successfully set up the basic foundation for a first-person shooter game using the Ursina game engine. Created the initial level structure with player controls and environment. </p>
+        <div class ="image-gallery">
+            <div class="gallery-item">
+                <img src="../Images/FPS Game/Screenshot 2025-11-09 143004.png" alt="Game Screenshot 1">
+                <div class="image-caption">Game Code(can be found in my Github)</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../Images/FPS Game/Screenshot 2025-11-09 143438.png" alt="Game Screenshot 2">
+                <div class="image-caption">Game World in Ursina</div>
+            </div>
+    </div>
+    </section>
+    <section>
+        <p><strong>Day 2:</strong> Imported 3d castle model from Sketchfab. Debugged and fixed texture loading errors by correcting the projects file structure. Started adjusting the models position and scale within the world to align it properly. Finished a lot of the world intitial building phase, but still have more to do. Ended the day still trying to adjust the model.</p>  
+        <div class ="image-gallery">
+            <div class="gallery-item">
+                <img src="../Images/FPS Game/Error Code.png" alt="Game Screenshot 1">
+                <div class="image-caption">Loaded in my 3d model and go this error code</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../Images/FPS Game/debugging.png" alt="Game Screenshot 2">
+                <div class="image-caption">Ran this code section to debug. It returns whether or not the path exists.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../Images/FPS Game/not-found.png" alt="Game Screenshot 2">
+                <div class="image-caption">Path was not found. Time to find out why.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../Images/FPS Game/debugging2.png" alt="Game Screenshot 2">
+                <div class="image-caption">Ran this code section to debug. It returns whether or the files (game and 3d model) are in the same folder.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../Images/FPS Game/upside-down.png" alt="Game Screenshot 2">
+                <div class="image-caption">Turned out the files were not in the same folder. Once that got sorted out, my model came out upside down. Started working on fixing rotation.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../Images/FPS Game/new-model.png" alt="Game Screenshot 2">
+                <div class="image-caption">Thought that the 3d model I used was bad, so ran a newer one, still the same issues. Ended the day still trying to fix my rotation.</div>
+            </div>
+    </div>
+    </section>
+</body>
+</html>

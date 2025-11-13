@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasnim's Portfolio!</title>
+    <style>
+        h1{
+            color: rgb(255, 102, 178);
+            font-size: 75px;
+            margin: auto;
+        }
+        body{
+            background: rgb(15, 14, 15); 
+            color: white; 
+            font-family: monospace, Helvetica, sans-serif;
+            margin: 5;
+            padding: 0;
+        }
+        .container{
+            max-width:1000px;
+            margin:0 auto;
+            padding:16px;
+        }
+        button {
+            background: rgb(54, 54, 54); 
+            border: none; 
+            color: rgb(240, 15, 240); 
+            font-family: monospace, Helvetica, sans-serif;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+        button:hover { /*this makes it zoom in when hovered over*/
+            transform: translateY(-2px);
+            transition: transform 0.3s;
+        }
+        h2 {
+            color: rgb(255, 102, 178);
+
+        }
+        header{
+            border: 2px solid rgb(255, 102, 178);
+            margin: 5px 10px;
+            padding: 10px;
+            background: rgb(15, 14, 15);
+            color: rgb(242, 242, 242);   
+            font-size: 18px;
+        }
+         section {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            padding: 15px;
+            background: rgba(30, 30, 30, 0.7);
+            flex: 1;
+            min-width: 250px; 
+        } 
+        div {
+            display: inline-block; 
+            
+        } 
+        /* small-screen tweaks */
+        @media (max-width:480px){
+            .container{ padding:12px; }
+            .sections{ flex-direction:column; }
+        }
+        p {
+            font-size: 18px;
+            color: rgb(220, 219, 219);
+
+        }
+        a.header-buttons {
+            color: rgb(255, 102, 178);
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+            padding: 5px;
+        }
+        /* Image gallery styles */
+        .image-gallery {
+            display: grid; /*grid style for images*/
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));/*responsive columns, the repeat makes multiple columns, auto fill makes as many columns that will fill the ontainer, and minmax is about sizing*/
+            gap: 20px; /*space between images*/
+            margin: 20px 0; /*space above and below the gallery*/
+        }
+        
+        .gallery-item {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(30, 30, 30, 0.7);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover { /*this makes it zoom in when hovered over*/
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-caption {
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            color: rgb(220, 219, 219);
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        Projects and Experiences: 
+        <div><button><a class = "header-buttons" href="Mechatronics Pages/Mechatronics.html">Mechatronics</a></button></div>
+    <div><button><a class = "header-buttons" href="Python Pages/Python.html">Python</a></button></div>
+    <div><button><a class = "header-buttons" href="TENG Project.html">TENG Project</a></button></div> 
+</header>
+    <button><a class = "header-buttons"href="index.html">Home</a></button>
+    <h1>Triboelectric Nanogenerator</h1>
+    <section><h2>Day 1</h2><p>During the first day of our lab project, my group focused on designing a Triboelectric Nanogenerator (TENG) device for our chosen customers, campers. We identified their need for a reliable light source on windy nights when a campfire is impractical. After brainstorming concepts like a wind-powered fan with triboelectric blades that generates a current to light the bulb, we finalized a more innovative design: an aluminum ball housed within a 3D-printed vortex whistle, utilising the wind to move around. Inside this chamber, the ball will roll between two walls (one coated in wool and the other in styrofoam) to generate a triboelectric charge through contact and separation. With our concept solidified, we concluded the day by beginning the CAD model in SolidWorks, preparing for 3D printing. </p>
+</section>
+<h2>Pictures from day 1!</h2>
+<div class="image-gallery">
+            <div class="gallery-item">
+                <img src="/images/TENG/IMG_1335.jpg" alt="TENG Brainstorming Session">
+                <div class="image-caption">Materials Available</div>
+            </div>
+             <div class="gallery-item">
+                <img src="/images/TENG/IMG_1342.jpg" alt="TENG Technical Details">
+                <div class="image-caption">Discussing Technical Details</div>
+            </div>
+             <div class="gallery-item">
+                <img src="/images/TENG/IMG_1341.jpg" alt="TENG CAD Model">
+                <div class="image-caption">Ideas</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/TENG/IMG_1345.jpg" alt="TENG Concept Development">
+                <div class="image-caption">Concept Development</div>
+            </div>
+             <div class="gallery-item">
+                <img src="/images/TENG/IMG_1343.jpg" alt="TENG Design Process">
+                <div class="image-caption">Design Process</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/TENG/IMG_1350.jpg" alt="TENG Design Sketches">
+                <div class="image-caption"> Final Design Sketches</div>
+            </div>
+             <div class="gallery-item">
+                <img src="/images/TENG/IMG_1336.jpg" alt="TENG Prototype Planning">
+                <div class="image-caption">Material Selection</div>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/TENG/IMG_1344.jpg" alt="TENG Material Selection">
+                <div class="image-caption">CAD Model (Solidworks)</div>
+            </div>
+        </div>
+<section><h2>Day 2</h2><p>
+    Met up with my lab partners to finish the solidworks design and import onto Cura to 3d print. The solidworks design was a vortex whistle with a cap on top to make putting the triboelectric materials inside easier. Uploaded the solidworks to Cura to prepare for 3d printing the next day! 
+    </p>
+</section>
+<h2>Pictures from day 2!</h2>
+<div class="image-gallery">
+            <div class="gallery-item">
+                <img src="/images/TENG/IMG_1463.jpg" alt="TENG Brainstorming Session">
+                <div class="image-caption">Main part of the vortex whistle.</div>
+            </div>
+             <div class="gallery-item">
+                <img src="/images/TENG/IMG_1462.jpg" alt="TENG Brainstorming Session">
+                <div class="image-caption">Lid of the vortex whistle. </div>
+            </div>
+             <div class="gallery-item">
+                <img src="/images/TENG/Screenshot 2025-11-12 211440.png" alt="TENG Brainstorming Session">
+                <div class="image-caption">Main part in Cura. </div>
+            </div>
+             <div class="gallery-item">
+                <img src="/images/TENG/Screenshot 2025-11-12 212005.png" alt="TENG Brainstorming Session">
+                <div class="image-caption">Lid in Cura. </div>
+            </div>
+    </div>
+    </body>
+</html>

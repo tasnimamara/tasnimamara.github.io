@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasnim's Portfolio!</title>
+    <style>
+        h1{
+            color: rgb(255, 102, 178);
+            font-size: 75px;
+            margin: auto;
+        }
+        body{
+            background: rgb(15, 14, 15); 
+            color: white; 
+            font-family: monospace, Helvetica, sans-serif;
+            margin: 5;
+            padding: 0;
+        }
+        .container{
+            max-width:1000px;
+            margin:0 auto;
+            padding:16px;
+        }
+        button {
+            background: rgb(54, 54, 54); 
+            border: none; 
+            border-radius: 8px;
+            color: rgb(240, 15, 240); 
+            font-family: monospace, Helvetica, sans-serif;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+         button:hover { /*this makes it zoom in when hovered over*/
+            transform: translateY(-2px);
+            transition: transform 0.3s;
+        }
+        h2 {
+            color: rgb(255, 102, 178);
+
+        }
+        header{
+            border: 2px solid rgb(255, 102, 178);
+            margin: 5px 10px;
+            padding: 10px;
+            background: rgb(15, 14, 15);
+            color: rgb(242, 242, 242);   
+            font-size: 18px;
+        }
+         section {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            margin: 5px;
+            padding: 10px;
+            flex: 1;  /* This makes sections flexible within the container */
+            min-width: 250px; /* Minimum width before wrapping */
+        } 
+        .sections-container {
+            display: flex;           /* Turns this div into a flex container */
+            flex-wrap: wrap;         /* Allows sections to wrap to next line if needed */
+            gap: 20px;               /* Adds space between sections */
+            justify-content: space-between; /* Distributes sections evenly */
+            max-width: 1500px;       /* Limits maximum width */
+            margin: 20px auto;       /* Centers the container */
+        } 
+        div {
+            display: inline-block; 
+            
+        } 
+        /* small-screen tweaks */
+        @media (max-width:480px){
+            .container{ padding:12px; }
+            .sections{ flex-direction:column; }
+        }
+        p {
+            font-size: 18px;
+            color: rgb(220, 219, 219);
+
+        }
+        a.header-buttons {
+            color: rgb(255, 102, 178);
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        Projects and Experiences:
+        <div><button><a class = "header-buttons"  href="../Mechatronics Pages/Mechatronics.html">Mechatronics</a></button></div>
+    <div><button><a class = "header-buttons" href="Python.html">Python</a></button></div>
+    <div><button><a class = "header-buttons"  href="../TENG Project.html">TENG Project</a></button></div>  
+</header>
+   <button><a class = "header-buttons"href="../index.html">Home</a></button> 
+    <h1>Python</h1>
+   <p>When it comes to coding, my intrests lie solely in building games that allow my artistic self to shine. The only part of coding that intrests me is front-end and game development, so here are some things I've built!</strong></p>
+   <div class="sections-container">
+        <section>
+            <h2><button><a class = "header-buttons" href="Game.html">First Person Shooter Game using Ursina</a></button></h2>
+        </section>
+    </div>
+    <div class="sections-container">
+        <section>
+            <h2><button><a class = "header-buttons" href="Class.html">Building a webapp using Streamlit</a></button></h2>
+        </section>
+  
+</body>
+</html>

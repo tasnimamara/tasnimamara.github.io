@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasnim's Portfolio!</title>
+    <style>
+        h1{
+            color: rgb(255, 102, 178);
+            font-size: 75px;
+            margin: auto;
+        }
+        body{
+            background: rgb(15, 14, 15); 
+            color: white; 
+            font-family: monospace, Helvetica, sans-serif;
+            margin: 5;
+            padding: 0;
+        }
+        .container{
+            max-width:1000px;
+            margin:0 auto;
+            padding:16px;
+        }
+        button {
+            background: rgb(54, 54, 54); 
+            border: none; 
+            color: rgb(240, 15, 240); 
+            font-family: monospace, Helvetica, sans-serif;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+         button:hover { /*this makes it zoom in when hovered over*/
+            transform: translateY(-2px);
+            transition: transform 0.3s;
+        }
+        h2 {
+            color: rgb(255, 102, 178);
+
+        }
+        header{
+            border: 2px solid rgb(255, 102, 178);
+            margin: 5px 10px;
+            padding: 10px;
+            background: rgb(15, 14, 15);
+            color: rgb(242, 242, 242);   
+            font-size: 18px;
+        }
+          section {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            padding: 15px;
+            background: rgba(30, 30, 30, 0.7);
+            flex: 1;
+            min-width: 250px; 
+        }
+        section:hover {
+            transform: translateY(-10px);
+            transition: transform 0.5s;
+        }
+        .sections-container {
+            display: flex;           /* Turns this div into a flex container */
+            flex-wrap: wrap;         /* Allows sections to wrap to next line if needed */
+            gap: 20px;               /* Adds space between sections */
+            justify-content: space-between; /* Distributes sections evenly */
+            max-width: 1200px;       /* Limits maximum width */
+            margin: 20px auto;       /* Centers the container */
+        } 
+        div {
+            display: inline-block; 
+            
+        } 
+        /* small-screen tweaks */
+        @media (max-width:480px){
+            .container{ padding:12px; }
+            .sections{ flex-direction:column; }
+        }
+        p {
+            font-size: 18px;
+            color: rgb(220, 219, 219);
+
+        }
+          a.header-buttons {
+            color: rgb(255, 102, 178);
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        Projects and Experiences:
+        <div><button><a class = "header-buttons" href="Mechatronics.html">Mechatronics</a></button></div>
+    <div><button><a class = "header-buttons" href="../Python Pages/Python.html">Python</a></button></div>
+    <div><button><a class = "header-buttons" href="../TENG Project.html">TENG Project</a></button></div>  
+</header>
+
+    <button><a class = "header-buttons"href="../index.html">Home</a></button>
+    <h1>Mechatronics</h1>
+   <p>Welcome to my workshop! This page is dedicated to the projects where I bridge the gap between digital and physical. </p>
+   
+    <div class="sections-container">
+        <section>
+            <h2><button><a class = "header-buttons" href="Project1.html">FireFighter Bot</a></button></h2>
+        </section>
+        <section>
+            <h2><button><a class = "header-buttons" href="Project2.html">Drawing Robot</a></button></h2>
+            <img src="/images/DrawingRobot/IMG_1243.jpg" alt="Drawing Robot Image" style="width:100%; height:auto;">
+        </section>
+        <section>
+            <h2><button><a class = "header-buttons" href="Project3.html">Webcam Controlled Robot</a></button></h2>
+            
+        </section>
+        <section>
+            <h2><button><a class = "header-buttons" href="Project4.html">Self Balancing Motorcyle</a></button></h2>
+            
+        </section>
+    </div>
+</body>
+</html>

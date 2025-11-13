@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasnim's Portfolio!</title>
+    <style>
+          h1{
+            color: rgb(255, 102, 178);
+            font-size: 75px;
+            margin: auto;
+        }
+        body{
+            background: rgb(15, 14, 15); 
+            color: white; 
+            font-family: monospace, Helvetica, sans-serif;
+            margin: 5;
+            padding: 0;
+        }
+        .container{
+            max-width:1000px;
+            margin:0 auto;
+            padding:16px;
+        }
+        button {
+            background: rgb(54, 54, 54); 
+            border: none; 
+            color: rgb(240, 15, 240); 
+            font-family: monospace, Helvetica, sans-serif;
+            font-size: 18px;
+            border-radius: 8px; 
+        }
+        button:hover { /*this makes it zoom in when hovered over*/
+                transform: translateY(-2px);
+                transition: transform 0.3s;
+            }
+        h2 {
+            color: rgb(255, 102, 178);
+
+        }
+        header{
+            border: 2px solid rgb(255, 102, 178);
+            margin: 5px 10px;
+            padding: 10px;
+            background: rgb(15, 14, 15);
+            color: rgb(242, 242, 242);   
+            font-size: 18px;
+        }
+         section {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            padding: 15px;
+            background: rgba(30, 30, 30, 0.7);
+            flex: 1;
+            min-width: 250px; 
+            margin: 5px 10px 5px 10px;
+        } 
+        section.list-item {
+            border: 2px solid rgb(30, 30, 30, 0.7);
+            border-radius: 8px;
+            padding: 15px;
+            background: rgba(30, 30, 30, 0.7);
+            flex: 1;
+            min-width: 250px; 
+            margin: 5px 10px 5px 10px;
+        } 
+        footer {
+           /* border: 2px solid rgb(14, 14, 14);*/
+            margin: 10px;
+            padding: 0px;
+        } 
+        div {
+            display: inline-block; 
+            
+        } 
+        /* small-screen tweaks */
+        @media (max-width:480px){
+            .container{ padding:12px; }
+            .sections{ flex-direction:column; }
+        }
+        p {
+            font-size: 18px;
+            color: rgb(220, 219, 219);
+
+        }
+        a.header-buttons {
+            color: rgb(255, 102, 178);
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+            padding: 5px;
+        }
+         /* Image gallery styles */
+        .image-gallery {
+            display: grid; /*grid style for images*/
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));/*responsive columns, the repeat makes multiple columns, auto fill makes as many columns that will fill the ontainer, and minmax is about sizing*/
+            gap: 20px; /*space between images*/
+            margin: 20px 0; /*space above and below the gallery*/
+        }
+        
+        .gallery-item {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(30, 30, 30, 0.7);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover { /*this makes it zoom in when hovered over*/
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-caption {
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            color: rgb(220, 219, 219);
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        Projects and Experiences:
+        <div><button><a class = "header-buttons" href="../Mechatronics Pages/Mechatronics.html">Mechatronics</a></button></div>
+    <div><button><a class = "header-buttons" href="../Python.html">Python</a></button></div>
+    <div><button><a class = "header-buttons" href="../TENG Project.html">TENG Project</a></button></div>  
+</header>
+<button><a class = "header-buttons"  href="Python.html">Python</a></button>
+<h1>Building a Webapp</h1>
+    <section>
+        <h2>Project Overview</h2>
+        <p>For my class project, we are tasked with building a webapp that will be a tool for fitting histograms to statistical data. It will include:
+        <ul>
+            <li> A way for users to enter data, either by hand or in the form of a CSV file.</li>
+        
+            <li> The ability to fit multiple different types of distributions, such as normal, gamma, weibull, and other miscillaneous types. Each distribution object in scipy has a fitting function, which returns the relevant parameters.</li>
+        
+            <li> Providea at least 10 different options</li>
+        
+            <li> A visualization of the data and the fitted distribution</li>
+        
+            <li> An output area that shows the fitting parameters with some information about the quality of the fit (e.g. average error or maximum error between data and curve).</li>
+        
+            <li> The app should also provide a 'manual fitting' option, where users can adjust sliders to control the various parameters of the current distribution.</li>
+        
+            <li> The layout, such as use of tabs, columns, expanders, etc are up to you, but marks will be given for 'esthetic appeal' and clean layout.</li>
+        </ul>
+        </p>
+        <h2>Components Used</h2>
+        <ul>
+            <li>Python Programming Language</li>
+            <li>Streamlit Library</li>
+            <li>SciPy Library</li>
+            <li>NumPy Library</li>
+            <li>Matplotlib Library</li>
+        </ul>
+        <h2>Skills</h2>
+        <ul> 
+            <li>Web app development with Streamlit</li>
+            <li>Data visualization with Matplotlib</li>
+            <li>Statistical data fitting using SciPy</li>
+            <li>File handling and user input processing</li>
+        </ul>
+    </section>
+    <h2>Documentation</h2>
+    <section>
+        <p> Day 1:
+           </p>
+</body>
+</html>

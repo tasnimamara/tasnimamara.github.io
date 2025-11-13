@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasnim's Portfolio!</title>
+    <style>
+        h1{
+            color: rgb(255, 102, 178);
+            font-size: 75px;
+            margin: auto;
+        }
+        body{
+            background: rgb(15, 14, 15); 
+            color: white; 
+            font-family: monospace, Helvetica, sans-serif;
+            margin: 5;
+            padding: 0;
+        }
+        .container{
+            max-width:1000px;
+            margin:0 auto;
+            padding:16px;
+        }
+        button {
+            background: rgb(54, 54, 54); 
+            border: none; 
+            color: rgb(240, 15, 240); 
+            font-family: monospace, Helvetica, sans-serif;
+            font-size: 18px;
+            border-radius: 8px; 
+        }
+        button:hover { /*this makes it zoom in when hovered over*/
+                transform: translateY(-2px);
+                transition: transform 0.3s;
+            }
+        h2 {
+            color: rgb(255, 102, 178);
+
+        }
+        header{
+            border: 2px solid rgb(255, 102, 178);
+            margin: 5px 10px;
+            padding: 10px;
+            background: rgb(15, 14, 15);
+            color: rgb(242, 242, 242);   
+            font-size: 18px;
+        }
+         section {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            padding: 15px;
+            background: rgba(30, 30, 30, 0.7);
+            flex: 1;
+            min-width: 250px; 
+            margin: 5px 10px 5px 10px;
+        } 
+        div {
+            display: inline-block; 
+            
+        } 
+        /* small-screen tweaks */
+        @media (max-width:480px){
+            .container{ padding:12px; }
+            .sections{ flex-direction:column; }
+        }
+        p {
+            font-size: 18px;
+            color: rgb(220, 219, 219);
+
+        }
+        a.header-buttons {
+            color: rgb(255, 102, 178);
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+            padding: 5px;
+        }
+          /* Image gallery styles */
+        .image-gallery {
+            display: grid; /*grid style for images*/
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));/*responsive columns, the repeat makes multiple columns, auto fill makes as many columns that will fill the ontainer, and minmax is about sizing*/
+            gap: 20px; /*space between images*/
+            margin: 20px 0; /*space above and below the gallery*/
+        }
+        
+        .gallery-item {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(30, 30, 30, 0.7);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover { /*this makes it zoom in when hovered over*/
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-caption {
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            color: rgb(220, 219, 219);
+        }
+        .gallery-item video {
+            background: rgba(15, 14, 15, 0.9);
+        }
+        
+        /* Style video controls to match theme */
+        .gallery-item video::-webkit-media-controls-panel {
+            background: rgba(54, 54, 54, 0.9);
+        }
+        .gallery-item video::-webkit-media-controls-play-button,
+        .gallery-item video::-webkit-media-controls-volume-slider,
+        .gallery-item video::-webkit-media-controls-timeline {
+            filter: invert(0.8);
+        }
+         /* Video wrapper for consistent appearance */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        Projects and Experiences:
+        <div><button><a class = "header-buttons" href="Mechatronics.html">Mechatronics</a></button></div>
+    <div><button><a class = "header-buttons" href="../Python Pages/Python.html">Python</a></button></div>
+    <div><button><a class = "header-buttons" href="../TENG Project.html">TENG Project</a></button></div>  
+</header>
+    <button><a class = "header-buttons"  href="Mechatronics.html">Mechatronics</a></button>
+    <h1>Drawing Robot</h1>
+    <section>
+        <h2>Project Overview</h2>
+        <p>
+            I built a robot that extracts line traces from an image and programed it to reproduce the images as a drawing on a whiteboard.
+        </p>
+        <h2>Components Used</h2>
+        <ul>
+            <li>Matlab/Simulink</li>
+            <li>Arduino Nano 33 IoT (microcontroller)</li>
+            <li>Arduino Nano Motor Carrier</li>
+            <li>Servo Motors</li>
+            <li>DC Motor Drivers</li>
+            <li>Frame and Structure</li>
+            <li>Markers</li>
+            <li>Power Supply</li>
+        </ul>
+        <h2>Skills</h2>
+        <ul>
+            <li>MATLAB programming and image processing</li>
+            <li>Microcontroller programming (Arduino)</li>
+            <li>Sensor integration</li>
+            <li>Mechanical design and assembly</li>
+            <li>Hardware troubleshooting and circuit analysis</li>
+    </section>
+    <h2>Documentation</h2>
+    <section>
+        <p>Day 0: Setting up connection between the microcontroller and MATLAB, as well as learning how to use MATLAB and SIMULINK through the arduino courseware.</p>
+    </section>
+    <section>
+        <p>Day 1: Assembling the frame and structure of the robot. Installed motors and motor drivers, wired the electronics.</p>
+         <div class = "image-gallery">
+            <div class="gallery-item">
+                <img src="../images/DrawingRobot/IMG_1389.jpg" alt="Drawing Robot Diagram">
+                <div class="image-caption">Robot from the side</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../images/DrawingRobot/IMG_1386.jpg" alt="Drawing Robot Assembled">
+                <div class="image-caption">Robot from the side</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../images/DrawingRobot/IMG_1385.jpg" alt="Drawing Robot Top View">
+                <div class="image-caption">Robot from the back</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../images/DrawingRobot/IMG_1383.jpg" alt="Drawing Robot Front View">
+                <div class="image-caption">Robot from the top</div>
+            </div>
+            <div class="gallery-item">
+                <img src="../images/DrawingRobot/IMG_1387.jpg" alt="Drawing Robot Front View">
+                <div class="image-caption">Robot from the front</div>   
+            </div>
+             <div class="gallery-item">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="../images/DrawingRobot/building.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="image-caption">Timelapse of building the bot!</div>
+            </div>
+        </div>
+        </section>
+    <section>
+        <p>Day 2: Tested which values lowered the left marker, the right maker, and then raised them both.</p>
+        </section>
+    <section>
+        <p>Day 3: worked on getting the dc motors working. Ran into a problem with the left dc motor not running, so I did troubleshooting. </p>
+        </section>
+</body>
+</html>

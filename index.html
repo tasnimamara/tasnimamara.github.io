@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasnim's Portfolio!</title>
+    <style>
+        h1{
+            color: rgb(255, 102, 178);
+            font-size: 75px;
+        }
+        body{
+            background: rgb(15, 14, 15); 
+            color: white; 
+            font-family: monospace, Helvetica, sans-serif;
+            margin: 5;
+            padding: 0;
+        }
+        .container{
+            max-width:1000px;
+            margin:0 auto;
+            padding:16px;
+        }
+        button {
+            background: rgb(54, 54, 54); 
+            border: none; 
+            color: rgb(240, 15, 240); 
+            font-family: monospace, Helvetica, sans-serif;
+            font-size: 18px;
+            border-radius: 8px;
+        }
+         button:hover { /*this makes it zoom in when hovered over*/
+            transform: translateY(-2px);
+            transition: transform 0.3s;
+        }
+        h2 {
+            color: rgb(255, 102, 178);
+
+        }
+        header{
+            border: 2px solid rgb(255, 102, 178);
+            margin: 5px 10px;
+            padding: 10px;
+            background: rgb(15, 14, 15);
+            color: rgb(242, 242, 242);   
+            font-size: 18px;
+        }
+         section {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            margin: 20px 10px;
+            padding: 30px;
+            background: rgba(30, 30, 30, 0.7);
+            line-height: 1.6;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            display: flex;
+             gap: 30px;
+            align-items: flex-start;
+        }
+        div {
+            display: inline-block; 
+            
+        } 
+        /* small-screen tweaks */
+        @media (max-width:480px){
+            .container{ padding:12px; }
+            .sections{ flex-direction:column; }
+        }
+        p {
+            font-size: 18px;
+            color: rgb(220, 219, 219);
+
+        }
+          a.header-buttons {
+            color: rgb(255, 102, 178);
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+            padding: 5px;
+        }
+         
+        .image-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 250px;
+        }
+        
+        .profile-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .image-gallery {
+            display: grid; /*grid style for images*/
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));/*responsive columns, the repeat makes multiple columns, auto fill makes as many columns that will fill the ontainer, and minmax is about sizing*/
+            gap: 20px; /*space between images*/
+            margin: 20px 0; /*space above and below the gallery*/
+        }
+        
+        .gallery-item {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(30, 30, 30, 0.7);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover { /*this makes it zoom in when hovered over*/
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        Projects and Experiences:
+    <div><button><a class = "header-buttons"href="Mechatronics Pages/Mechatronics.html">Mechatronics</a></button></div>
+    <div><button><a class = "header-buttons"href="Python Pages/Python.html">Python</a></button></div>
+    <div><button><a class = "header-buttons"href="TENG Project.html">TENG Project</a></button></div> 
+</header>
+    <section>
+    <div class="text-content">
+        <h1>My name is Tasnim Amara.</h1>
+        <p>I am a currently a nanotechnology engineering student at the <strong>University of Waterloo.</strong> A hands-on engineer, scientist, and explorer at heart, my passion lies in the lab, where I can take scientific ideas and create functional hardware. My ultimate goal is contributing to technologies for sustainable life beyond Earth.</p>
+        <p><strong>email</strong>: (tamara@uwaterloo.ca)       <strong>github</strong>:(//github.com/tasnimamara) </p>
+    </div>
+    <div class="image-section">
+        <img src="/images/IMG_1100.jpg" alt="Photo of Tasnim Amara" class="profile-image">
+    </div>
+</section>
+   <h2>What is Nanotechnology Engineering?</h2>
+   <section><p>Nanotechnology engineering is basically just a mix of electrical engineering, chemical engineering, mechanical/material engineering and chemistry (a truly interdisiplenary field XD), but at its core, nanotechnology engineering is about solving big problems by working at the smallest scale.
+
+Nano engineers act as a bridge between the nanoscale and real world innovations. Whether you need stronger, lighter materials for mechanical systems, faster and more efficient electronic components, smarter chemical processes, or entirely new materials designed from the ground up, my skills will deliver that next-generation advantage.
+</p> </section>
+    <h2>Get to know me!</h2>
+   <ul>
+        <li> I am a massive book worm (currently reading "The Brothers Karamazov" by Dostoevsky.)</li>
+        <li> I am passionate about anything space related. I beleive aliens do exist and naysayers are too small minded.</li> 
+        <li> I love traveling and taking pictures! Check out some of my favorite shots below:</li>
+   </ul>
+
+    <div class="image-gallery">
+          <div class="gallery-item">
+                <img src="/images/personal/IMG_3058.jpg" alt="Travel Photo 1">
+          </div>
+          <div class="gallery-item">
+                <img src="/images/personal/IMG_3189.jpg" alt="Travel Photo 3">
+          </div>
+          <div class="gallery-item">
+                <img src="/images/personal/IMG_2861.jpg" alt="Travel Photo 4">
+          </div>
+          <div class="gallery-item">
+                <img src="/images/personal/IMG_0564.jpg" alt="Travel Photo 4">
+          </div>
+           <div class="gallery-item">
+                <img src="/images/personal/IMG_0763.jpg" alt="Travel Photo 4">
+          </div>
+          <div class="gallery-item">
+                <img src="/images/personal/IMG_1430.jpg" alt="Travel Photo 4">
+          </div>
+          <div class="gallery-item">
+                <img src="/images/personal/IMG_1425.jpg" alt="Travel Photo 4">
+          </div>
+          <div class="gallery-item">
+                <img src="/images/personal/IMG_1428.jpg" alt="Travel Photo 4">
+          </div>
+          <div class="gallery-item">
+                <img src="/images/personal/IMG_1431.jpg" alt="Travel Photo 4">
+          </div>
+          <div class="gallery-item">
+                <img src="/images/personal/IMG_1426.jpg" alt="Travel Photo 4">
+          </div>
+          <div class="gallery-item">
+                <img src="/images/personal/IMG_1432.jpg" alt="Travel Photo 4">
+          </div>
+          <div class="gallery-item">
+                <img src="/images/personal/IMG_1429.jpg" alt="Travel Photo 4">
+          </div>
+     </div>
+</body>
+</html>

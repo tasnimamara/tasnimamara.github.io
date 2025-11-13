@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasnim's Portfolio!</title>
+    <style>
+        h1{
+            color: rgb(255, 102, 178);
+            font-size: 75px;
+            margin: auto;
+        }
+        body{
+            background: rgb(15, 14, 15); 
+            color: white; 
+            font-family: monospace, Helvetica, sans-serif;
+            margin: 5;
+            padding: 0;
+        }
+        .container{
+            max-width:1000px;
+            margin:0 auto;
+            padding:16px;
+        }
+        button {
+            background: rgb(54, 54, 54); 
+            border: none; 
+            color: rgb(240, 15, 240); 
+            font-family: monospace, Helvetica, sans-serif;
+            font-size: 18px;
+            border-radius: 8px; 
+        }
+        button:hover { /*this makes it zoom in when hovered over*/
+                transform: translateY(-2px);
+                transition: transform 0.3s;
+            }
+        h2 {
+            color: rgb(255, 102, 178);
+
+        }
+        header{
+            border: 2px solid rgb(255, 102, 178);
+            margin: 5px 10px;
+            padding: 10px;
+            background: rgb(15, 14, 15);
+            color: rgb(242, 242, 242);   
+            font-size: 18px;
+        }
+         section {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            padding: 15px;
+            background: rgba(30, 30, 30, 0.7);
+            flex: 1;
+            min-width: 250px; 
+            margin: 5px 10px 5px 10px;
+        } 
+        div {
+            display: inline-block; 
+            
+        } 
+        /* small-screen tweaks */
+        @media (max-width:480px){
+            .container{ padding:12px; }
+            .sections{ flex-direction:column; }
+        }
+        p {
+            font-size: 18px;
+            color: rgb(220, 219, 219);
+
+        }
+        a.header-buttons {
+            color: rgb(255, 102, 178);
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px;
+            padding: 5px;
+        }
+          /* Image gallery styles */
+        .image-gallery {
+            display: grid; /*grid style for images*/
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));/*responsive columns, the repeat makes multiple columns, auto fill makes as many columns that will fill the ontainer, and minmax is about sizing*/
+            gap: 20px; /*space between images*/
+            margin: 20px 0; /*space above and below the gallery*/
+        }
+        
+        .gallery-item {
+            border: 2px solid rgb(255, 102, 178);
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(30, 30, 30, 0.7);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover { /*this makes it zoom in when hovered over*/
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-caption {
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            color: rgb(220, 219, 219);
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        Projects and Experiences:
+        <div><button><a class = "header-buttons" href="Mechatronics.html">Mechatronics</a></button></div>
+    <div><button><a class = "header-buttons" href="../Python Pages/Python.html">Python</a></button></div>
+    <div><button><a class = "header-buttons" href="../TENG Project.html">TENG Project</a></button></div>  
+</header>
+    <button><a class = "header-buttons"  href="Mechatronics.html">Mechatronics</a></button>
+    <h1>FireFighter Bot</h1>
+    <section>
+        <h2>Project Overview</h2>
+        <p>
+            I built this in highschool for my grade 12 engineering class. The FireFighter bot is an autonomous robot designed to navigate a maze and locate the fire source, which in our case was a candle. Once the fire source is detected by the IR sensors, the robot activates the fan to blow out the flame. The project involves integrating various sensors, such as flame sensors and ultrasonic sensors, to enable the robot to detect walls and the fire source effectively.
+        </p>
+        <h2>Components Used</h2>
+        <ul>
+            <li>PIC16f18875 microcontroller</li>
+            <li>3 PCB that my teammate and I designed using Traxmaker pro</li>
+            <li>2 ultrasonic sensors</li>
+            <li>IR flame sensors</li>
+            <li>Motors</li>
+            <li>12v Fan</li>
+            <li>Wood, Threaded lamp rods, wires</li>
+            <li>Power Supply</li>
+        </ul>
+        <h2>Skills</h2>
+        <ul>
+            <li>PCB Design and fabrication</li>
+            <li>Soldering</li>
+            <li>Microcontroller programming (PIC16f18875)</li>
+            <li>Sensor integration (ultrasonic and flame (IR) sensors)</li>
+            <li>Autonomous navigation algorithms</li>
+            <li>Mechanical design and assembly</li>
+            <li>Hardware troubleshooting and circuit analysis</li>
+            <li>Team collaboration and project management</li>
+        </ul>
+    </section>
+    <h2>Documentation</h2>
+    <section>
+        <p>Part 1: Before starting on our project, we had to complete 10 different breadboarding assignments, all designed to help us understand logic gates, binary clocks, etc. In this, I was exposed to building circuits from looking at schematic diagrams, which built my foundation for the more complex work ahead. I became skilled with a multimeter, troubleshooting issues like bad connections and short circuits to ensure each circuit functioned as intended. Then, my partner and I wrote up a document explaining our project, including a deatiled sketch, materials list and project calender to be evaluated by our teacher and prepare us for future workplaces.</p>
+        </section>
+        <div class = "image-gallery">
+            <div class="gallery-item">
+                <img src="../Images/Firefighter Bot/IMG_1435.jpg" alt="Breadboard Assignments">
+                <div class="image-caption">Me, working on one of my assignments at home.
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="../Images/Firefighter Bot/IMG_1437.jpg" alt="Breadboard Assignments 3">
+                <div class="image-caption">One of my completed circuits, always trying to be more efficent in my circuitry and use of wires</div>
+                </div>
+    </div>
+    </section>
+    <section>
+        <p> Part 2: Now that evrything was approved, we were given a schematic diagram that we had to translate onto a printed circuit board design using Traxmaker Pro. Taught me greatly about how to make circuits more efficent now that I couldnt have wires jumping over each other to get it running.</p>
+       #add a section with images of the PCB design and the actual PCB
+    </section>
+    <section>
+        <p>Part 3: Once the PCB designs were approved, it was printed onto </p>
+        </section>
+    <section>
+        <p>Day 3: worked on getting the dc motors working. Ran into a problem with the left dc motor not running, so I did troubleshooting. </p>
+        </section>
+</body>
+</html>
