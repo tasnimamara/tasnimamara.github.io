@@ -133,6 +133,13 @@
             transition: transform 0.1s ease;
             transform: translate(-50%, -50%);
         }
+        .cursor{
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 102, 178, 0.5);
+            position: absolute;
+            border-radius: 50%;
+        }
     </style>
 </head>
 <body>
@@ -202,5 +209,15 @@ Nano engineers bring a new way of problem solving and act as a bridge between th
                 <img src="/images/personal/IMG_1429.jpg" alt="Travel Photo 4">
           </div>
      </div>
+    <img class="cursor" src="https://t3.ftcdn.net/jpg/08/61/34/30/360_F_861343004_jQh0OD0O4y7Y7GSwjzItXlDqtziONr40.jpg" alt="Custom Cursor">
+    <script>
+        // Custom cursor script
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
 </body>
 </html>
