@@ -15,6 +15,7 @@
             font-family: monospace, Helvetica, sans-serif;
             margin: 5;
             padding: 0;
+            cursor:none;
         }
         .container{
             max-width:1000px;
@@ -122,23 +123,23 @@
         .small{
             font-size: 16px;
         }
-          .custom-cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            background: #000;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.1s ease;
-            transform: translate(-50%, -50%);
+        .custom-cursor {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background: transparent;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.1s ease;
+        transform: translate(-50%, -50%);
         }
-        .cursor{
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 102, 178, 0.5);
-            position: absolute;
-            border-radius: 50%;
+
+        .cursor {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        pointer-events: none;
         }
     </style>
 </head>
@@ -209,14 +210,26 @@ Nano engineers bring a new way of problem solving and act as a bridge between th
                 <img src="/images/personal/IMG_1429.jpg" alt="Travel Photo 4">
           </div>
      </div>
-    <img class="cursor" src="https://t3.ftcdn.net/jpg/08/61/34/30/360_F_861343004_jQh0OD0O4y7Y7GSwjzItXlDqtziONr40.jpg" alt="Custom Cursor">
+    <div class="custom-cursor">
+    <img class="cursor" src="/images/cursor.png" alt="Custom Cursor">
+    </div>
     <script>
-        // Custom cursor script
-        const cursor = document.querySelector('.cursor');
+        const cursor = document.querySelector('.custom-cursor');
 
         document.addEventListener('mousemove', e => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
+        });
+        const interactiveElements = document.querySelectorAll('a, button, .nav-button, .gallery-item');
+
+        interactiveElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+            });
         });
     </script>
 </body>
