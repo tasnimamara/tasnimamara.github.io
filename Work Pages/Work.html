@@ -51,8 +51,9 @@
             color: #834e4e;
             letter-spacing: -0.02em; 
             margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 32px;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 28px;
         }
         
         header {
@@ -75,7 +76,7 @@
             margin-top: 15px;
         }
         
-        .back-button {
+        .home-button {
             margin: 0 auto 25px;
             display: block;
             text-align: center;
@@ -83,7 +84,14 @@
         
         .page-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .sections-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
         
         section {
@@ -93,69 +101,61 @@
             background: rgba(107, 142, 35, 0.08); 
             line-height: 1.6; 
             box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15); 
-            margin-bottom: 30px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            min-height: 180px;
         }
         
         section:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(107, 142, 35, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(107, 142, 35, 0.25);
         }
         
-        .content-section {
-            max-width: 1500px;
-            margin: 0 auto;
+        .work-section {
+            min-height: 150px;
+            padding: 25px;
         }
         
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
-        }
-        
-        .gallery-item {
-            border: 2px solid #6B8E23;
-            border-radius: 8px;
-            overflow: hidden;
-            background: rgba(107, 142, 35, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 400px;
+        .section-content {
             display: flex;
             flex-direction: column;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(107, 142, 35, 0.25);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.03);
-        }
-        
-        .image-caption {
-            padding: 15px;
-            font-size: 16px;
-            color: #555;
-            text-align: center;
-            line-height: 1.5;
-            flex-grow: 1;
-            display: flex;
             align-items: center;
-            justify-content: center;
+            width: 100%;
+        }
+        
+        .section-button {
+            margin-top: 15px;
+        }
+        
+        .section-button button {
+            width: 100%;
+            max-width: 280px;
+            padding: 12px 24px;
+            font-size: 22px;
+        }
+        
+        .intro-paragraph {
+            margin-bottom: 25px;
+            padding: 0 5px;
+            font-size: 22px;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
         }
         
         /* small-screen tweaks */
         @media (max-width: 768px) {
+            .sections-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
             .container {
                 padding: 15px;
                 max-width: 95%;
@@ -164,10 +164,6 @@
             h1 {
                 font-size: 48px;
                 margin-bottom: 8px;
-            }
-            
-            h2 {
-                font-size: 28px;
             }
             
             header {
@@ -182,24 +178,22 @@
             
             .header-nav button {
                 padding: 8px 16px;
-                font-size: 18px;
+                font-size: 22px;
+            }
+            
+            .section-button button {
+                max-width: 240px;
+                padding: 10px 20px;
             }
             
             section {
+                min-height: 140px;
                 padding: 25px 20px;
             }
             
-            .image-gallery {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 20px;
-            }
-            
-            .gallery-item {
-                height: 380px;
-            }
-            
-            .gallery-item img {
-                height: 280px;
+            .work-section {
+                min-height: 130px;
+                padding: 20px;
             }
         }
         
@@ -208,45 +202,36 @@
                 padding: 12px;
             }
             
+            body {
+                line-height: 1.6;
+            }
+            
             section {
                 padding: 20px 15px;
+                min-height: 120px;
+            }
+            
+            .work-section {
+                min-height: 110px;
+                padding: 18px 15px;
             }
             
             h1 {
                 font-size: 40px;
             }
             
-            h2 {
-                font-size: 26px;
-            }
-            
-            .image-gallery {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .gallery-item {
-                height: 350px;
-            }
-            
-            .gallery-item img {
-                height: 250px;
+            .section-button button {
+                font-size: 22px;
+                padding: 10px 20px;
             }
         }
         
         p {
             font-size: 20px;
             color: #3b3a3a;
-            margin-bottom: 1.5em;
+            margin-bottom: 1.2em;
             font-weight: 500;
             line-height: 1.7;
-        }
-        
-        .intro-paragraph {
-            margin-bottom: 25px;
-            padding: 0 5px;
-            font-size: 22px;
-            text-align: center;
         }
         
         a.header-buttons {
@@ -282,6 +267,8 @@
         
         h1, h2, h3, h4, h5, h6 {
             font-weight: 600; 
+            margin-top: 1em;
+            margin-bottom: 0.6em;
         }
         
         code, pre {
@@ -304,15 +291,6 @@
         html {
             scroll-behavior: smooth;
         }
-        
-        strong {
-            color: #834e4e;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-        }
     </style>
 </head>
 <body>
@@ -322,41 +300,29 @@
             <div class="header-nav">
                 <button><a class="header-buttons" href="../index.html">⬅️ Home</a></button>
                 <button><a class='header-buttons' href='../Resume.html'>Resume 📄</a></button>
-                <button><a class='header-buttons' href='../Work Pages/Work.html'>Work 💼</a></button>
-                <button><a class="header-buttons" href="Hardware.html">Hardware 🔧</a></button>
+                <button><a class='header-buttons' href='Work.html'>Work 💼</a></button>
+                <button><a class="header-buttons" href="../Hardware Pages/Hardware.html">Hardware 🔧</a></button>
                 <button><a class="header-buttons" href="../Software Pages/Software.html">Software 💻</a></button>
                 <button><a class="header-buttons" href="../WEC.html">WEC 💡</a></button>  
             </div>
         </header>
         
-        <div class="page-header">
-            <h1>Soldering Lab</h1>
-        </div>
         
-        <div class="content-section">
-            <section>
-                <h2>Soldering Lab Experience</h2>
-                <p>Soldering is the process of joining two or more electronic components together by melting solder around the connection. It is a fundamental skill in electronics and is essential for building and repairing circuits. Thankfully, I built that skill during my FireFighter Bot project and this lab helped reinforce it. Here's some pictures from my lab in which I built a fully functioning circuit with a switch and 2 LEDs.</p>
-            </section>
+        <div class="page-header">
+            <h1>Work Experience</h1>
+            <p class="intro-paragraph">
+                Proof over promises. This section documents my professional work experience, detailing the projects I've contributed to, skills I've developed, and impacts I've made in engineering environments.
+            </p>
+        </div>
             
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="/images/Soldering Lab/breadboard.jpg" alt="Breadboard Setup">
-                    <div class="image-caption">My breadboard setup</div>
+            <section class="work-section">
+                <div class="section-content">
+                    <h2>MSAM [December 2025-Present]</h2>
+                    <div class="section-button">
+                        <button><a class="header-buttons" href="MSAM.html">View Details</a></button>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="/images/Soldering Lab/soldering.jpg" alt="Soldering Process">
-                    <div class="image-caption">Me soldering!</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/Soldering Lab/final look.jpg" alt="Completed Solder">
-                    <div class="image-caption">Completed solder joints</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/Soldering Lab/circuit working.jpg" alt="Working Circuit">
-                    <div class="image-caption">The final product with LEDs on!</div>
-                </div>
-            </div>
+            </section>
         </div>
     </div>
     
@@ -370,7 +336,7 @@
             cursor.style.top = e.clientY + 'px';
         });
         
-        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
+        const interactiveElements = document.querySelectorAll('a, button, section');
 
         interactiveElements.forEach(element => {
             element.addEventListener('mouseenter', () => {

@@ -5,219 +5,308 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasnim's Portfolio!</title>
     <style>
-    h1 {
-        color: #6d3f3f; 
-        font-size: 75px;
-    }
-    body {
-        background: #FAF0E6; 
-        color: #3D3D3D; 
-        font-family: 'Courier New', monospace, Consolas, 'Liberation Mono', monospace;
-        margin: 0;
-        padding: 0;
-        cursor: none;
-        line-height: 1.6; 
-        letter-spacing: 0.01em; 
-    }
-    .container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 16px;
-    }
-    button {
-        background: #A57C65; 
-        border: none;
-        color: #FAF0E6; 
-        font-family: inherit; 
-        font-size: 18px;
-        border-radius: 8px;
-        padding: 10px 20px;
-        transition: all 0.3s ease;
-    }
-    button:hover {
-        transform: translateY(-2px);
-        background: #6B8E23; 
-        color: #FFFFFF;
-    }
-    h2 {
-        color: #834e4e;
-        letter-spacing: -0.02em; 
-    }
-    header {
-        border: 2px solid #6B8E23; 
-        margin: 5px 10px;
-        padding: 10px;
-        background: rgba(107, 142, 35, 0.08); 
-        color: #654848;
-        font-size: 18px;
-        border-radius: 4px;
-        font-weight: 700;
-    }
-    section {
-        border: 2px solid #6B8E23;
-        border-radius: 8px;
-        margin: 20px 10px;
-        padding: 30px;
-        background: rgba(107, 142, 35, 0.08); 
-        line-height: 1.6; 
-        box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15); 
-        display: flex;
-        gap: 30px;
-        align-items: flex-start;
-    }
-    div {
-        display: inline-block;
-    }
-    /* small-screen tweaks */
-    @media (max-width: 480px) {
-        .container { padding: 12px; }
-        .sections { flex-direction: column; }
-        body {
-            line-height: 1.7; /* More spacing on mobile */
+        h1 {
+            color: #6d3f3f; 
+            font-size: 65px;
+            margin-bottom: 10px;
         }
-    }
-    p {
-        font-size: 50 px;
-        color: #3b3a3a; /* Medium dark gray for paragraphs */
-        margin-bottom: 1.2em; /* Better paragraph spacing for monospace */
-        font-weight: 500;
-    }
-    a.header-buttons {
-        color: #dcddda; /* Slightly dark green */
-        text-decoration: none;
-        font-size: 20px;
-        margin: 10px;
-        padding: 5px;
-        transition: color 0.3s ease;
-    }
-    a.header-buttons:hover {
-        color: #556B2F; /* Darker green on hover */
-        text-decoration: underline;
-    }
-    .image-section {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: 250px;
-    }
-    .profile-image {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        border-radius: 8px;
-        border: 2px solid #6B8E23; /* Slightly dark green border */
-    }
-    .image-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 20px;
-        margin: 20px 0;
-    }
-    .gallery-item {
-        border: 2px solid #6B8E23; /* Slightly dark green border */
-        border-radius: 8px;
-        overflow: hidden;
-        background: rgba(107, 142, 35, 0.08); /* Slightly dark green transparency */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .gallery-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(107, 142, 35, 0.2);
-    }
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block;
-    }
-    .small {
-        font-size: 16px;
-        color: #666666; 
-    }
-    .custom-cursor {
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        background: transparent;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        transition: transform 0.1s ease;
-        transform: translate(-50%, -50%);
-        border: 2px solid #6B8E23; 
-    }
-    .cursor {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        pointer-events: none;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        font-weight: 600; 
-        margin-top: 1.5em;
-        margin-bottom: 0.8em;
-    }
-    
-    code, pre {
-        font-family: inherit; 
-        background: rgba(107, 142, 35, 0.1); /
-        color: #3D3D3D;
-        padding: 0.2em 0.4em;
-        border-radius: 3px;
-        border-left: 3px solid #6B8E23; 
-    }
-    
-    /* Better focus states for accessibility */
-    button:focus,
-    a:focus {
-        outline: 2px solid #6B8E23;
-        outline-offset: 2px;
-    }
-    
-    /* Smooth scroll for better UX */
-    html {
-        scroll-behavior: smooth;
-    }
-   
-</style>
+        
+        body {
+            background: #FAF0E6; 
+            color: #3D3D3D; 
+            font-family: 'Courier New', monospace, Consolas, 'Liberation Mono', monospace;
+            margin: 0;
+            padding: 0;
+            cursor: none;
+            line-height: 1.6; 
+            letter-spacing: 0.01em; 
+        }
+        
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        button {
+            background: #A57C65; 
+            border: none;
+            color: #FAF0E6; 
+            font-family: inherit; 
+            font-size: 22px;
+            border-radius: 8px;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            background: #6B8E23; 
+            color: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(107, 142, 35, 0.2);
+        }
+        
+        h2 {
+            color: #834e4e;
+            letter-spacing: -0.02em; 
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+        
+        header {
+            border: 2px solid #6B8E23; 
+            margin: 0 0 25px 0;
+            padding: 18px;
+            background: rgba(107, 142, 35, 0.08); 
+            color: #654848;
+            font-size: 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .header-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .back-button {
+            margin: 0 auto 25px;
+            display: block;
+            text-align: center;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        section {
+            border: 2px solid #6B8E23;
+            border-radius: 8px;
+            padding: 30px;
+            background: rgba(107, 142, 35, 0.08); 
+            line-height: 1.6; 
+            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15); 
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(107, 142, 35, 0.2);
+        }
+        
+        .content-section {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        
+        ul {
+            font-size: 19px;
+            color: #3b3a3a;
+            margin-bottom: 20px;
+            padding-left: 25px;
+            line-height: 1.7;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        
+        /* small-screen tweaks */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                max-width: 95%;
+            }
+            
+            h1 {
+                font-size: 48px;
+                margin-bottom: 8px;
+            }
+            
+            h2 {
+                font-size: 28px;
+            }
+            
+            header {
+                padding: 15px;
+                margin-bottom: 20px;
+                font-size: 18px;
+            }
+            
+            .header-nav {
+                gap: 8px;
+            }
+            
+            .header-nav button {
+                padding: 8px 16px;
+                font-size: 18px;
+            }
+            
+            section {
+                padding: 25px 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 12px;
+            }
+            
+            section {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 40px;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            ul {
+                padding-left: 20px;
+            }
+        }
+        
+        p {
+            font-size: 20px;
+            color: #3b3a3a;
+            margin-bottom: 1.5em;
+            font-weight: 500;
+            line-height: 1.7;
+        }
+        
+        .intro-paragraph {
+            margin-bottom: 25px;
+            padding: 0 5px;
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        a.header-buttons {
+            color: #FAF0E6;
+            text-decoration: none;
+            font-size: 22px;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+        
+        a.header-buttons:hover {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        
+        .small {
+            font-size: 16px;
+            color: #666666; 
+        }
+        
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            transform: translate(-50%, -50%);
+            border: 2px solid #6B8E23; 
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600; 
+        }
+        
+        code, pre {
+            font-family: inherit; 
+            background: rgba(107, 142, 35, 0.1);
+            color: #3D3D3D;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            border-left: 3px solid #6B8E23; 
+        }
+        
+        /* Better focus states for accessibility */
+        button:focus,
+        a:focus {
+            outline: 2px solid #6B8E23;
+            outline-offset: 2px;
+        }
+        
+        /* Smooth scroll for better UX */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        strong {
+            color: #834e4e;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <header> 
-       Projects and Experiences:
-        <div><button><a class = "header-buttons" href="Hardware.html">Hardware🔧</a></button></div>
-    <div><button><a class = "header-buttons" href="../Software Pages/Software.html">Software💻</a></button></div>
-    <div><button><a class = "header-buttons" href="../WEC.html">WEC💡</a></button></div>  
-</header>
-    <button><a class = "header-buttons" href="Hardware.html">⬅️Hardware</a></button>
-    <h1>Self Balancing Motorcycle</h1>
-       <section>
-        <h2>Project Overview</h2>
-        <p>
-            The Self Balancing Motorocycle is an upcoming mechatronics project. I will build and program a motorcycle that self balances and maneuvers by itself using a flywheel.
-        </p>
-        <h2>Components Used</h2>
-        <ul>
-            <li>Arduino Nano 33 IoT (microcontroller)</li>
-            <li>Arduino Nano Motor Carrier</li>
-            <li>Servo Motors</li>
-            <li>Motor Drivers</li>
-            <li>Frame and Structure</li>
-            <li>Flywheel</li>
-            <li>Power Supply</li>
-        </ul>
-        <h2>Skills</h2>
-        <ul>
-            <li>MATLAB programming and algorithm development</li>
-            <li>Microcontroller programming (Arduino)</li>
-            <li>Sensor integration</li>
-            <li>Mechanical design and assembly</li>
-            <li>Hardware troubleshooting and circuit analysis</li>
-        </ul> 
-    </section>
-    <div class="custom-cursor">
+    <div class="container">
+        <header> 
+            Projects and Experiences
+            <div class="header-nav">
+                 <button><a class="header-buttons" href="../index.html">⬅️ Home</a></button>
+                 <button><a class='header-buttons' href='../Resume.html'>Resume 📄</a></button>
+                <button><a class='header-buttons' href='../Work Pages/Work.html'>Work 💼</a></button>
+                <button><a class="header-buttons" href="Hardware.html">Hardware 🔧</a></button>
+                <button><a class="header-buttons" href="../Software Pages/Software.html">Software 💻</a></button>
+                <button><a class="header-buttons" href="../WEC.html">WEC 💡</a></button>  
+            </div>
+        </header>
+        
+        <div class="page-header">
+            <h1>Self Balancing Motorcycle</h1>
+        </div>
+        
+        <div class="content-section">
+            <section>
+                <h2>Project Overview</h2>
+                <p>The Self Balancing Motorcycle is an upcoming mechatronics project. I will build and program a motorcycle that self balances and maneuvers by itself using a flywheel.</p>
+                
+                <h2>Components Used</h2>
+                <ul>
+                    <li>Arduino Nano 33 IoT (microcontroller)</li>
+                    <li>Arduino Nano Motor Carrier</li>
+                    <li>Servo Motors</li>
+                    <li>Motor Drivers</li>
+                    <li>Frame and Structure</li>
+                    <li>Flywheel</li>
+                    <li>Power Supply</li>
+                </ul>
+                
+                <h2>Skills</h2>
+                <ul>
+                    <li>MATLAB programming and algorithm development</li>
+                    <li>Microcontroller programming (Arduino)</li>
+                    <li>Sensor integration</li>
+                    <li>Mechanical design and assembly</li>
+                    <li>Hardware troubleshooting and circuit analysis</li>
+                </ul>
+            </section>
+        </div>
     </div>
+    
+    <div class="custom-cursor"></div>
+    
     <script>
         const cursor = document.querySelector('.custom-cursor');
 
@@ -225,15 +314,18 @@
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
-        const interactiveElements = document.querySelectorAll('a, button, .nav-button, .gallery-item');
+        
+        const interactiveElements = document.querySelectorAll('a, button, section');
 
         interactiveElements.forEach(element => {
             element.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursor.style.borderColor = '#A57C65';
             });
             
             element.addEventListener('mouseleave', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.borderColor = '#6B8E23';
             });
         });
     </script>

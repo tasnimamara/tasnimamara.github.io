@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasnim's Portfolio - WPL</title>
+    <style>
+        h1 {
+            color: #6d3f3f; 
+            font-size: 65px;
+            margin-bottom: 10px;
+        }
+        
+        body {
+            background: #FAF0E6; 
+            color: #3D3D3D; 
+            font-family: 'Courier New', monospace, Consolas, 'Liberation Mono', monospace;
+            margin: 0;
+            padding: 0;
+            cursor: none;
+            line-height: 1.6; 
+            letter-spacing: 0.01em; 
+        }
+        
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        button {
+            background: #A57C65; 
+            border: none;
+            color: #FAF0E6; 
+            font-family: inherit; 
+            font-size: 22px;
+            border-radius: 8px;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            background: #6B8E23; 
+            color: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(107, 142, 35, 0.2);
+        }
+        
+        h2 {
+            color: #834e4e;
+            letter-spacing: -0.02em; 
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+        
+        h3 {
+            color: #6d3f3f;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 26px;
+            border-bottom: 2px solid #6B8E23;
+            padding-bottom: 8px;
+        }
+        
+        header {
+            border: 2px solid #6B8E23; 
+            margin: 0 0 25px 0;
+            padding: 18px;
+            background: rgba(107, 142, 35, 0.08); 
+            color: #654848;
+            font-size: 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .header-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .back-button {
+            margin: 0 auto 25px;
+            display: block;
+            text-align: center;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        section {
+            border: 2px solid #6B8E23;
+            border-radius: 8px;
+            padding: 30px;
+            background: rgba(107, 142, 35, 0.08); 
+            line-height: 1.6; 
+            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15); 
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(107, 142, 35, 0.2);
+        }
+        
+        .content-section {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        
+        .pdf-viewer {
+            border: 2px solid #6B8E23;
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(107, 142, 35, 0.08);
+            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15);
+            height: 700px;
+            width: 100%;
+            margin: 25px 0;
+        }
+        
+        .pdf-viewer iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            padding: 12px 30px;
+            margin: 15px 0;
+        }
+        
+        ul {
+            font-size: 19px;
+            color: #3b3a3a;
+            margin-bottom: 20px;
+            padding-left: 25px;
+            line-height: 1.7;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .skill-category {
+            background: rgba(107, 142, 35, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #6B8E23;
+        }
+        
+        .skill-category h4 {
+            color: #834e4e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        /* small-screen tweaks */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                max-width: 95%;
+            }
+            
+            h1 {
+                font-size: 48px;
+                margin-bottom: 8px;
+            }
+            
+            h2 {
+                font-size: 28px;
+            }
+            
+            h3 {
+                font-size: 24px;
+            }
+            
+            header {
+                padding: 15px;
+                margin-bottom: 20px;
+                font-size: 18px;
+            }
+            
+            .header-nav {
+                gap: 8px;
+            }
+            
+            .header-nav button {
+                padding: 8px 16px;
+                font-size: 18px;
+            }
+            
+            section {
+                padding: 25px 20px;
+            }
+            
+            .pdf-viewer {
+                height: 500px;
+            }
+            
+            .download-button {
+                font-size: 18px;
+                padding: 10px 25px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 12px;
+            }
+            
+            section {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 40px;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            h3 {
+                font-size: 22px;
+            }
+            
+            .pdf-viewer {
+                height: 400px;
+            }
+            
+            .download-button {
+                font-size: 16px;
+                padding: 8px 20px;
+            }
+        }
+        
+        p {
+            font-size: 20px;
+            color: #3b3a3a;
+            margin-bottom: 1.5em;
+            font-weight: 500;
+            line-height: 1.7;
+        }
+        
+        .intro-paragraph {
+            margin-bottom: 25px;
+            padding: 0 5px;
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        a.header-buttons {
+            color: #FAF0E6;
+            text-decoration: none;
+            font-size: 22px;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+        
+        a.header-buttons:hover {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        
+        .small {
+            font-size: 16px;
+            color: #666666; 
+        }
+        
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            transform: translate(-50%, -50%);
+            border: 2px solid #6B8E23; 
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600; 
+        }
+        
+        code, pre {
+            font-family: inherit; 
+            background: rgba(107, 142, 35, 0.1);
+            color: #3D3D3D;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            border-left: 3px solid #6B8E23; 
+        }
+        
+        /* Better focus states for accessibility */
+        button:focus,
+        a:focus {
+            outline: 2px solid #6B8E23;
+            outline-offset: 2px;
+        }
+        
+        /* Smooth scroll for better UX */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        strong {
+            color: #834e4e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header> 
+            Projects and Experiences
+            <div class="header-nav">
+                <button><a class="header-buttons" href="../index.html">⬅️ Home</a></button>
+                <button><a class='header-buttons' href='../Resume.html'>Resume 📄</a></button>
+                <button><a class='header-buttons' href='Work.html'>Work 💼</a></button>
+                <button><a class="header-buttons" href="../Hardware Pages/Hardware.html">Hardware 🔧</a></button>
+                <button><a class="header-buttons" href="../Software Pages/Software.html">Software 💻</a></button>
+                <button><a class="header-buttons" href="../WEC.html">WEC 💡</a></button>  
+            </div>
+        </header>
+        
+        <div class="page-header">
+            <h1>MSAM - Materials Science Research</h1>
+            <p class="intro-paragraph">Materials Science Research Assistant | Working on advanced fabrication techniques and biomedical material development</p>
+        </div>
+        
+        <div class="content-section">
+            <section>
+                <h2>Overview</h2>
+                <p>As a Undergraduate Materials Science Research Assistant at MSAM, I so far contribute to cutting-edge research in two distinct areas: advanced sensor fabrication and biomedical material development. My role involves hands-on laboratory work, technical research, and collaborative problem-solving with experienced materials scientists.</p>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Laboratory Techniques</h4>
+                        <ul>
+                            <li>Electroplating (Nickel Plating)</li>
+                            <li>Thin-film Deposition</li>
+                            <li>Precision Etching</li>
+                            <li>Astrojet System Operation</li>
+                            <li>Material Performance Testing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Research Skills</h4>
+                        <ul>
+                            <li>Literature Review</li>
+                            <li>Technical Analysis</li>
+                            <li>Supplier Evaluation</li>
+                            <li>Data Collection</li>
+                            <li>Presentation Development</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Project Areas</h4>
+                        <ul>
+                            <li>Sensor Fabrication</li>
+                            <li>Composite Formulation</li>
+                            <li>Biocompatible Materials</li>
+                            <li>3D Printing Technology</li>
+                            <li>Medical Device Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Technical Skills Developed</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Fabrication Techniques</h4>
+                        <ul>
+                            <li>Electrochemical Deposition</li>
+                            <li>Precision Etching</li>
+                            <li>Surface Treatment</li>
+                            <li>Composite Preparation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Analytical Methods</h4>
+                        <ul>
+                            <li>Material Performance Testing</li>
+                            <li>Stress Simulation Analysis</li>
+                            <li>Technical Literature Review</li>
+                            <li>Supplier Evaluation</li>
+                            <li>Data Interpretation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Research & Communication</h4>
+                        <ul>
+                            <li>Technical Documentation</li>
+                            <li>Stakeholder Presentation</li>
+                            <li>Cross-disciplinary Collaboration</li>
+                            <li>Project Planning</li>
+                            <li>Technical Reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section>
+                <h2>Project 1: Advanced Sensor Component Development</h2>
+                <p><strong>Timeline:</strong> Ongoing | <strong>Role:</strong> Undergraduate Research Assistant</p>
+                
+                <h3>Responsibilities & Contributions</h3>
+                <ul>
+                    <li><strong>Nickel Plating (Electroplating):</strong> Applying it to enhance surface stability and prevent unwanted electrical contact between layers at elevated temperatures, ensuring reliable sensor performance.</li>
+                    <li><strong>Thin-Film Deposition & Etching:</strong> Learning fabrication of specialized sensor components using precision techniques including operation of Astrojet systems for controlled material application.</li>
+                    <li><strong>Material Testing & Analysis:</strong> Performed laboratory analysis and systematic data collection to evaluate material performance under simulated stress environments, contributing to reliability assessments.</li>
+                    <li><strong>Composite Formulation:</strong> Shadowing PhD researchers in developing thermally stable composite formulations capable of withstanding extreme operating conditions required for advanced sensor applications.</li>
+                </ul>
+                
+                <h3>Key Learning Outcomes</h3>
+                <ul>
+                    <li>Hands-on experience with industrial-scale fabrication equipment</li>
+                    <li>Understanding of material behavior under stress conditions</li>
+                    <li>Exposure to quality control and testing protocols</li>
+                    <li>Collaboration with senior materials scientists on R&D projects</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>Project 2: 3D Printable Biocompatible Silicone for Hearing Aids</h2>
+                <p><strong>Timeline:</strong> Initial Phase | <strong>Role:</strong> Research Analyst</p>
+                
+                <h3>Project Background</h3>
+                <p>The lab is researching methods to 3D print biocompatible silicone with customizable color options for hearing aid applications. This project aims to change hearing aid manufacturing by enabling personalized, comfortable, and aesthetically pleasing devices.</p>
+                
+                <h3>Completed Deliverable 1: Literature Review</h3>
+                <p><strong>Task:</strong> Comprehensive analysis of 3D printing silicone technologies, processes, advantages, limitations, and commercial suppliers.</p>
+                
+                <div class="pdf-viewer">
+                    <iframe src="../3D_Printing_Silicone_Literature_Review.pdf" title="3D Printing Silicone Literature Review"></iframe>
+                </div>
+                
+                <div style="text-align: center;">
+                    <button class="download-button">
+                        <a class="header-buttons" href="../3D_Printing_Silicone_Literature_Review.pdf" download>
+                             Download Literature Review PDF
+                        </a>
+                    </button>
+                </div>
+                
+                <h4>Literature Review Key Findings:</h4>
+                <ul>
+                    <li>Analysis of various 3D printing technologies compatible with silicone materials</li>
+                    <li>Review of current market suppliers and material capabilities</li>
+                    <li>Identification of technical challenges and potential solutions</li>
+                </ul>
+                
+                <h3>Current Work: Printer & Supplier Analysis</h3>
+                <p><strong>Task:</strong> Identify top 5 printers and suppliers of biocompatible silicone, analyze pros/cons of each, and prepare presentation for stakeholder company.</p>
+                
+                <h4>Analysis Criteria:</h4>
+                <ul>
+                    <li>Print resolution and accuracy for medical-grade applications</li>
+                    <li>Material biocompatibility certification and safety standards</li>
+                    <li>Color customization capabilities and limitations</li>
+                    <li>Cost-effectiveness for production-scale manufacturing</li>
+                    <li>Technical support and supplier reliability</li>
+                    <li>Post-processing requirements and complexity</li>
+                </ul>
+                
+                <p><em>Note: This analysis is currently in progress. The completed presentation will be added to this page by Febuary.</em></p>
+            </section>
+            
+            <section>
+                <h2>Impact & Future Directions</h2>
+                <p>This position has provided invaluable exposure to industrial materials research while developing both technical laboratory skills and analytical research capabilities. The multi-project structure has allowed for well-rounded experience across different application domains within materials science.</p>
+                
+                <h3>Expected Outcomes:</h3>
+                <ul>
+                    <li>Contribution to sensor fabrication methods</li>
+                    <li>Development of improved biocompatible materials for medical devices</li>
+                    <li>Enhanced understanding of industry-scale material processing</li>
+                    <li>Practical experience bridging academic knowledge with industrial applications</li>
+                </ul>
+                
+                <p><strong>Status:</strong> Actively contributing to both projects with regular progress updates and collaborative problem-solving sessions with the research team.</p>
+            </section>
+        </div>
+    </div>
+    
+    <div class="custom-cursor"></div>
+    
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+        
+        const interactiveElements = document.querySelectorAll('a, button, section');
+
+        interactiveElements.forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursor.style.borderColor = '#A57C65';
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.borderColor = '#6B8E23';
+            });
+        });
+    </script>
+</body>
+</html>

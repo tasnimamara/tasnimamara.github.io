@@ -5,292 +5,450 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasnim's Portfolio!</title>
     <style>
-    h1 {
-        color: #6d3f3f; 
-        font-size: 75px;
-        text-align: center; 
-    }
-    body {
-        background: #FAF0E6; 
-        color: #3D3D3D; 
-        font-family: 'Courier New', monospace, Consolas, 'Liberation Mono', monospace;
-        margin: 0;
-        padding: 0;
-        cursor: none;
-        line-height: 1.6; 
-        letter-spacing: 0.01em; 
-    }
-    .container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 16px;
-    }
-    button {
-        background: #A57C65; 
-        border: none;
-        color: #FAF0E6; 
-        font-family: inherit; 
-        font-size: 18px;
-        border-radius: 8px;
-        padding: 10px 20px;
-        transition: all 0.3s ease;
-    }
-    button:hover {
-        transform: translateY(-2px);
-        background: #6B8E23; 
-        color: #FFFFFF;
-    }
-    h2 {
-        color: #834e4e;
-        letter-spacing: -0.02em; 
-    }
-    header {
-        border: 2px solid #6B8E23; 
-        margin: 5px 10px;
-        padding: 10px;
-        background: rgba(107, 142, 35, 0.08); 
-        color: #654848;
-        font-size: 18px;
-        border-radius: 4px;
-        font-weight: 700;
-    }
-    section {
-        border: 2px solid #6B8E23;
-        border-radius: 8px;
-        margin: 20px 10px;
-        padding: 30px;
-        background: rgba(107, 142, 35, 0.08); 
-        line-height: 1.6; 
-        box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15); 
-        display: block; 
-    }
-    div {
-        display: inline-block;
-    }
-    /* small-screen tweaks */
-    @media (max-width: 480px) {
-        .container { padding: 12px; }
-        .sections { flex-direction: column; }
-        body {
-            line-height: 1.7; /* More spacing on mobile */
+        h1 {
+            color: #6d3f3f; 
+            font-size: 65px;
+            margin-bottom: 10px;
         }
-    }
-    p {
-        font-size: 20px;
-        color: #3b3a3a; /* Medium dark gray for paragraphs */
-        margin-bottom: 1.2em; /* Better paragraph spacing for monospace */
-        font-weight: 500;
-    }
-    a.header-buttons {
-        color: #dcddda; /* Slightly dark green */
-        text-decoration: none;
-        font-size: 20px;
-        margin: 10px;
-        padding: 5px;
-        transition: color 0.3s ease;
-    }
-    a.header-buttons:hover {
-        color: #556B2F; /* Darker green on hover */
-        text-decoration: underline;
-    }
-    .image-section {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: 250px;
-    }
-    .profile-image {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        border-radius: 8px;
-        border: 2px solid #6B8E23; /* Slightly dark green border */
-    }
-    .image-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        gap: 20px;
-        margin: 20px 0;
-    }
-    .gallery-item {
-        border: 2px solid #6B8E23; /* Slightly dark green border */
-        border-radius: 8px;
-        overflow: hidden;
-        background: rgba(107, 142, 35, 0.08); /* Slightly dark green transparency */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .gallery-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(107, 142, 35, 0.2);
-    }
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block;
-    }
-    .small {
-        font-size: 16px;
-        color: #666666; 
-    }
-    .custom-cursor {
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        background: transparent;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        transition: transform 0.1s ease;
-        transform: translate(-50%, -50%);
-        border: 2px solid #6B8E23; 
-    }
-    .cursor {
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        pointer-events: none;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        font-weight: 600; 
-        margin-top: 1.5em;
-        margin-bottom: 0.8em;
-    }
-    
-    code, pre {
-        font-family: inherit; 
-        background: rgba(107, 142, 35, 0.1); /
-        color: #3D3D3D;
-        padding: 0.2em 0.4em;
-        border-radius: 3px;
-        border-left: 3px solid #6B8E23; 
-    }
-    
-    /* Better focus states for accessibility */
-    button:focus,
-    a:focus {
-        outline: 2px solid #6B8E23;
-        outline-offset: 2px;
-    }
-    
-    /* Smooth scroll for better UX */
-    html {
-        scroll-behavior: smooth;
-    }
-
-    section img {
-        max-width: 200px;
-        height: auto;
-        border-radius: 4px;
-    }
-   
-</style>
+        
+        body {
+            background: #FAF0E6; 
+            color: #3D3D3D; 
+            font-family: 'Courier New', monospace, Consolas, 'Liberation Mono', monospace;
+            margin: 0;
+            padding: 0;
+            cursor: none;
+            line-height: 1.6; 
+            letter-spacing: 0.01em; 
+        }
+        
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        button {
+            background: #A57C65; 
+            border: none;
+            color: #FAF0E6; 
+            font-family: inherit; 
+            font-size: 22px;
+            border-radius: 8px;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            background: #6B8E23; 
+            color: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(107, 142, 35, 0.2);
+        }
+        
+        h2 {
+            color: #834e4e;
+            letter-spacing: -0.02em; 
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+        
+        header {
+            border: 2px solid #6B8E23; 
+            margin: 0 0 25px 0;
+            padding: 18px;
+            background: rgba(107, 142, 35, 0.08); 
+            color: #654848;
+            font-size: 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .header-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .back-button {
+            margin: 0 auto 25px;
+            display: block;
+            text-align: center;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        section {
+            border: 2px solid #6B8E23;
+            border-radius: 8px;
+            padding: 30px;
+            background: rgba(107, 142, 35, 0.08); 
+            line-height: 1.6; 
+            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15); 
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(107, 142, 35, 0.2);
+        }
+        
+        .content-section {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .gallery-item {
+            border: 2px solid #6B8E23;
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(107, 142, 35, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(107, 142, 35, 0.25);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.03);
+        }
+        
+        .image-caption {
+            padding: 15px;
+            font-size: 16px;
+            color: #555;
+            text-align: center;
+            line-height: 1.5;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* small-screen tweaks */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                max-width: 95%;
+            }
+            
+            h1 {
+                font-size: 48px;
+                margin-bottom: 8px;
+            }
+            
+            h2 {
+                font-size: 28px;
+            }
+            
+            header {
+                padding: 15px;
+                margin-bottom: 20px;
+                font-size: 18px;
+            }
+            
+            .header-nav {
+                gap: 8px;
+            }
+            
+            .header-nav button {
+                padding: 8px 16px;
+                font-size: 18px;
+            }
+            
+            section {
+                padding: 25px 20px;
+            }
+            
+            .image-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 20px;
+            }
+            
+            .gallery-item {
+                height: 380px;
+            }
+            
+            .gallery-item img {
+                height: 280px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 12px;
+            }
+            
+            section {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 40px;
+            }
+            
+            h2 {
+                font-size: 26px;
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .gallery-item {
+                height: 350px;
+            }
+            
+            .gallery-item img {
+                height: 250px;
+            }
+        }
+        
+        p {
+            font-size: 20px;
+            color: #3b3a3a;
+            margin-bottom: 1.5em;
+            font-weight: 500;
+            line-height: 1.7;
+        }
+        
+        .intro-paragraph {
+            margin-bottom: 25px;
+            padding: 0 5px;
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        a.header-buttons {
+            color: #FAF0E6;
+            text-decoration: none;
+            font-size: 22px;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+        
+        a.header-buttons:hover {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        
+        .small {
+            font-size: 16px;
+            color: #666666; 
+        }
+        
+        .custom-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            transform: translate(-50%, -50%);
+            border: 2px solid #6B8E23; 
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600; 
+        }
+        
+        code, pre {
+            font-family: inherit; 
+            background: rgba(107, 142, 35, 0.1);
+            color: #3D3D3D;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            border-left: 3px solid #6B8E23; 
+        }
+        
+        /* Better focus states for accessibility */
+        button:focus,
+        a:focus {
+            outline: 2px solid #6B8E23;
+            outline-offset: 2px;
+        }
+        
+        /* Smooth scroll for better UX */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        strong {
+            color: #834e4e;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <header> 
-        Projects and Experiences: 
-        <div><button><a class = "header-buttons" href="Hardware.html">Hardware🔧</a></button></div>
-    <div><button><a class = "header-buttons" href="../Software Pages/Software.html">Software💻</a></button></div>
-    <div><button><a class = "header-buttons" href="../WEC.html">WEC💡</a></button></div> 
-</header>
-    <button><a class = "header-buttons"href="Hardware.html">⬅️Hardware</a></button>
-    <h1>Triboelectric Nanogenerator</h1>
-    <section><h2>Day 1</h2><p>During the first day of our lab project, my group focused on designing a Triboelectric Nanogenerator (TENG) device for our chosen customers, campers. We identified their need for a reliable light source on windy nights when a campfire is impractical. After brainstorming concepts like a wind-powered fan with triboelectric blades that generates a current to light the bulb, we finalized a more innovative design: an aluminum ball housed within a 3D-printed vortex whistle, utilising the wind to move around. Inside this chamber, the ball will roll between two walls (one coated in wool and the other in tephlon) to generate a triboelectric charge through contact and separation. With our concept solidified, we concluded the day by beginning the CAD model in SolidWorks, preparing for 3D printing. </p>
-</section>
-<h2>Pictures from day 1!</h2>
-<div class="image-gallery">
-            <div class="gallery-item">
-                <img src="/images/TENG/IMG_1335.jpg" alt="TENG Brainstorming Session">
-                <div class="image-caption">Materials Available</div>
+    <div class="container">
+        <header> 
+            Projects and Experiences
+            <div class="header-nav">
+                 <button><a class="header-buttons" href="../index.html">⬅️ Home</a></button>
+                 <button><a class='header-buttons' href='../Resume.html'>Resume 📄</a></button>
+                <button><a class='header-buttons' href='../Work Pages/Work.html'>Work 💼</a></button>
+                <button><a class="header-buttons" href="Hardware.html">Hardware 🔧</a></button>
+                <button><a class="header-buttons" href="../Software Pages/Software.html">Software 💻</a></button>
+                <button><a class="header-buttons" href="../WEC.html">WEC 💡</a></button>  
             </div>
-             <div class="gallery-item">
-                <img src="/images/TENG/IMG_1342.jpg" alt="TENG Technical Details">
-                <div class="image-caption">Discussing Technical Details</div>
+        </header>
+      
+        
+        <div class="page-header">
+            <h1>Triboelectric Nanogenerator</h1>
+        </div>
+        
+        <div class="content-section">
+            <section>
+                <h2>Day 1</h2>
+                <p>During the first day of our lab project, my group focused on designing a Triboelectric Nanogenerator (TENG) device for our chosen customers, campers. We identified their need for a reliable light source on windy nights when a campfire is impractical. After brainstorming concepts like a wind-powered fan with triboelectric blades that generates a current to light the bulb, we finalized a more innovative design: an aluminum ball housed within a 3D-printed vortex whistle, utilising the wind to move around. Inside this chamber, the ball will roll between two walls (one coated in wool and the other in teflon) to generate a triboelectric charge through contact and separation. With our concept solidified, we concluded the day by beginning the CAD model in SolidWorks, preparing for 3D printing.</p>
+            </section>
+            
+            <h2>Pictures from day 1!</h2>
+            
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="/images/TENG/IMG_1335.jpg" alt="Materials Available">
+                    <div class="image-caption">Materials Available</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/IMG_1342.jpg" alt="Discussing Technical Details">
+                    <div class="image-caption">Discussing Technical Details</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/IMG_1341.jpg" alt="Ideas">
+                    <div class="image-caption">Ideas</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/IMG_1345.jpg" alt="Concept Development">
+                    <div class="image-caption">Concept Development</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/IMG_1343.jpg" alt="Design Process">
+                    <div class="image-caption">Design Process</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/IMG_1350.jpg" alt="Final Design Sketches">
+                    <div class="image-caption">Final Design Sketches</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/IMG_1336.jpg" alt="Material Selection">
+                    <div class="image-caption">Material Selection</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/IMG_1344.jpg" alt="CAD Model (Solidworks)">
+                    <div class="image-caption">CAD Model (Solidworks)</div>
+                </div>
             </div>
-             <div class="gallery-item">
-                <img src="/images/TENG/IMG_1341.jpg" alt="TENG CAD Model">
-                <div class="image-caption">Ideas</div>
+            
+            <section>
+                <h2>Day 2</h2>
+                <p>Met up with my lab partners to finish the solidworks design and import onto Cura to 3D print. The solidworks design was a vortex whistle with a cap on top to make putting the triboelectric materials inside easier. Uploaded the solidworks to Cura to prepare for 3D printing the next day!</p>
+            </section>
+            
+            <h2>Pictures from day 2!</h2>
+            
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="/images/TENG/IMG_1463.jpg" alt="Main part of the vortex whistle">
+                    <div class="image-caption">Main part of the vortex whistle</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/IMG_1462.jpg" alt="Lid of the vortex whistle">
+                    <div class="image-caption">Lid of the vortex whistle</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/Screenshot 2025-11-12 211440.png" alt="Main part in Cura">
+                    <div class="image-caption">Main part in Cura</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/Screenshot 2025-11-12 212005.png" alt="Lid in Cura">
+                    <div class="image-caption">Lid in Cura</div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="/images/TENG/IMG_1345.jpg" alt="TENG Concept Development">
-                <div class="image-caption">Concept Development</div>
-            </div>
-             <div class="gallery-item">
-                <img src="/images/TENG/IMG_1343.jpg" alt="TENG Design Process">
-                <div class="image-caption">Design Process</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/TENG/IMG_1350.jpg" alt="TENG Design Sketches">
-                <div class="image-caption"> Final Design Sketches</div>
-            </div>
-             <div class="gallery-item">
-                <img src="/images/TENG/IMG_1336.jpg" alt="TENG Prototype Planning">
-                <div class="image-caption">Material Selection</div>
-            </div>
-            <div class="gallery-item">
-                <img src="/images/TENG/IMG_1344.jpg" alt="TENG Material Selection">
-                <div class="image-caption">CAD Model (Solidworks)</div>
+            
+            <section>
+                <h2>Day 3 & 4</h2>
+                <p>My day "3" of the project was to take the solidworks files and 3D print them. Gained key experience with how to operate a Raise3D E2 printer. On day 4, with all our materials prepared, all that was left was assembly. This proved to be quick because of the 3D base we had designed. To increase electric output, we first glued aluminum sheets to the inside walls of the vortex whistle, and then added on the respective chosen material on top (wool and teflon). In between the aluminum sheets and the material, we put copper wires. With our remaining aluminum sheets, we hammered them into balls, that through contact and separation, would generate voltage. In the end we tested our TENG device and produced 0.4V of electricity, which was exciting to watch!</p>
+            </section>
+            
+            <h2>Pictures from day 3 & 4!</h2>
+            
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="/images/TENG/final/IMG_1741.jpg" alt="TENG Assembly">
+                    <div class="image-caption">Assembly Process</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/final/IMG_1806.jpg" alt="TENG Components">
+                    <div class="image-caption">TENG Components</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/final/IMG_1825.jpg" alt="Aluminum Sheets">
+                    <div class="image-caption">Aluminum Sheet Application</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/final/IMG_1826.jpg" alt="Material Application">
+                    <div class="image-caption">Material Application</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/final/IMG_1836.jpg" alt="Copper Wire Installation">
+                    <div class="image-caption">Copper Wire Installation</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/final/IMG_1833.jpg" alt="Aluminum Balls">
+                    <div class="image-caption">Aluminum Balls Preparation</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/final/IMG_1834.jpg" alt="Final Assembly">
+                    <div class="image-caption">Final Assembly</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/images/TENG/final/IMG_2019.jpg" alt="Voltage Testing">
+                    <div class="image-caption">Voltage Testing (0.4V Output)</div>
+                </div>
             </div>
         </div>
-<section><h2>Day 2</h2><p>
-    Met up with my lab partners to finish the solidworks design and import onto Cura to 3d print. The solidworks design was a vortex whistle with a cap on top to make putting the triboelectric materials inside easier. Uploaded the solidworks to Cura to prepare for 3d printing the next day! 
-    </p>
-</section>
-<h2>Pictures from day 2!</h2>
-<div class="image-gallery">
-            <div class="gallery-item">
-                <img src="/images/TENG/IMG_1463.jpg" alt="TENG Brainstorming Session">
-                <div class="image-caption">Main part of the vortex whistle.</div>
-            </div>
-             <div class="gallery-item">
-                <img src="/images/TENG/IMG_1462.jpg" alt="TENG Brainstorming Session">
-                <div class="image-caption">Lid of the vortex whistle. </div>
-            </div>
-             <div class="gallery-item">
-                <img src="/images/TENG/Screenshot 2025-11-12 211440.png" alt="TENG Brainstorming Session">
-                <div class="image-caption">Main part in Cura. </div>
-            </div>
-             <div class="gallery-item">
-                <img src="/images/TENG/Screenshot 2025-11-12 212005.png" alt="TENG Brainstorming Session">
-                <div class="image-caption">Lid in Cura. </div>
-            </div>
     </div>
-<section><h2>Day 3 &4 </h2><p>
-    My day "3" of the project was to take the solidworks files and 3D print them. Ganined key experinece with how to operate a Raise3D E2 printer. On day 4, with all our materials prepared, all the was left was assembly. This proved to be quick because of the 3D base we had designed. To increase electric output, we first glued aluminum sheets to the inside walls of the vortex whistle, and then added on the respective chosen material on top (wool and teflon). Inbetween the aluminum sheets and the material, we put copper wires. With our remaining aluminum sheets, we hammered them into balls, that through contact and seperation, would generate voltage. In the end we tested our TENG device and produced 0.4V of electricity, which was exciting to watch!  
-</p>
-</section>
-<h2>Pictures from day 3 & 4!</h2>
-<div class = 'image-gallery'>
-        <div class = "gallery-item">
-            <img src = "/images/TENG/final/IMG_1741.jpg">
-        </div>
-        <div class = "gallery-item">
-            <img src = "/images/TENG/final/IMG_1806.jpg">
-        </div>
-        <div class = "gallery-item">
-            <img src = "/images/TENG/final/IMG_1825.jpg">
-        </div>
-        <div class=" gallery-item">
-            <img src ="/images/TENG/final/IMG_1826.jpg">
-        </div>
-        <div class = "gallery-item">
-            <img src = "/images/TENG/final/IMG_1836.jpg">
-        </div>
-        <div class = "gallery-item">
-            <img src = "/images/TENG/final/IMG_1833.jpg">
-        </div>
-        <div class = "gallery-item">
-            <img src="/images/TENG/final/IMG_1834.jpg">
-        </div>
-        <div class = "gallery-item">
-            <img src = "/images/TENG/final/IMG_2019.jpg">
-        </div>
-</div>
-
-    <div class="custom-cursor">
-    </div>
+    
+    <div class="custom-cursor"></div>
+    
     <script>
         const cursor = document.querySelector('.custom-cursor');
 
@@ -298,17 +456,20 @@
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
-        const interactiveElements = document.querySelectorAll('a, button, .nav-button, .gallery-item');
+        
+        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
 
         interactiveElements.forEach(element => {
             element.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursor.style.borderColor = '#A57C65';
             });
             
             element.addEventListener('mouseleave', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.borderColor = '#6B8E23';
             });
         });
     </script>
-    </body>
+</body>
 </html>

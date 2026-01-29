@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasnim's Portfolio!</title>
+    <title>Tasnim's Portfolio - Resume</title>
     <style>
         h1 {
             color: #6d3f3f; 
@@ -51,8 +51,9 @@
             color: #834e4e;
             letter-spacing: -0.02em; 
             margin-top: 0;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             font-size: 32px;
+            text-align: center;
         }
         
         header {
@@ -107,51 +108,40 @@
             margin: 0 auto;
         }
         
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        .resume-container {
+            display: flex;
+            flex-direction: column;
             gap: 25px;
-            margin: 30px 0;
+            margin-top: 20px;
         }
         
-        .gallery-item {
+        .pdf-viewer {
             border: 2px solid #6B8E23;
             border-radius: 8px;
             overflow: hidden;
             background: rgba(107, 142, 35, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 400px;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(107, 142, 35, 0.25);
-        }
-        
-        .gallery-item img {
+            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15);
+            height: 800px;
             width: 100%;
-            height: 300px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
         }
         
-        .gallery-item:hover img {
-            transform: scale(1.03);
+        .pdf-viewer iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
         
-        .image-caption {
-            padding: 15px;
-            font-size: 16px;
-            color: #555;
+        .download-section {
             text-align: center;
-            line-height: 1.5;
-            flex-grow: 1;
-            display: flex;
+            padding: 20px;
+        }
+        
+        .download-button {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
+            gap: 10px;
+            font-size: 20px;
+            padding: 12px 30px;
         }
         
         /* small-screen tweaks */
@@ -189,17 +179,13 @@
                 padding: 25px 20px;
             }
             
-            .image-gallery {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 20px;
+            .pdf-viewer {
+                height: 600px;
             }
             
-            .gallery-item {
-                height: 380px;
-            }
-            
-            .gallery-item img {
-                height: 280px;
+            .download-button {
+                font-size: 18px;
+                padding: 10px 25px;
             }
         }
         
@@ -220,17 +206,13 @@
                 font-size: 26px;
             }
             
-            .image-gallery {
-                grid-template-columns: 1fr;
-                gap: 15px;
+            .pdf-viewer {
+                height: 500px;
             }
             
-            .gallery-item {
-                height: 350px;
-            }
-            
-            .gallery-item img {
-                height: 250px;
+            .download-button {
+                font-size: 16px;
+                padding: 8px 20px;
             }
         }
         
@@ -240,12 +222,6 @@
             margin-bottom: 1.5em;
             font-weight: 500;
             line-height: 1.7;
-        }
-        
-        .intro-paragraph {
-            margin-bottom: 25px;
-            padding: 0 5px;
-            font-size: 22px;
             text-align: center;
         }
         
@@ -308,11 +284,6 @@
         strong {
             color: #834e4e;
         }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-        }
     </style>
 </head>
 <body>
@@ -321,42 +292,50 @@
             Projects and Experiences
             <div class="header-nav">
                 <button><a class="header-buttons" href="../index.html">⬅️ Home</a></button>
-                <button><a class='header-buttons' href='../Resume.html'>Resume 📄</a></button>
-                <button><a class='header-buttons' href='../Work Pages/Work.html'>Work 💼</a></button>
-                <button><a class="header-buttons" href="Hardware.html">Hardware 🔧</a></button>
-                <button><a class="header-buttons" href="../Software Pages/Software.html">Software 💻</a></button>
-                <button><a class="header-buttons" href="../WEC.html">WEC 💡</a></button>  
+                <button><a class='header-buttons' href='Resume.html'>Resume 📄</a></button>
+                <button><a class='header-buttons' href='Work Pages/Work.html'>Work 💼</a></button>
+                <button><a class="header-buttons" href="Hardware Pages/Hardware.html">Hardware 🔧</a></button>
+                <button><a class="header-buttons" href="Software Pages/Software.html">Software 💻</a></button>
+                <button><a class="header-buttons" href="WEC.html">WEC 💡</a></button>  
             </div>
         </header>
         
         <div class="page-header">
-            <h1>Soldering Lab</h1>
+            <h1>My Resume</h1>
+            <p>A comprehensive overview of my education, skills, and professional experience.</p>
         </div>
         
         <div class="content-section">
             <section>
-                <h2>Soldering Lab Experience</h2>
-                <p>Soldering is the process of joining two or more electronic components together by melting solder around the connection. It is a fundamental skill in electronics and is essential for building and repairing circuits. Thankfully, I built that skill during my FireFighter Bot project and this lab helped reinforce it. Here's some pictures from my lab in which I built a fully functioning circuit with a switch and 2 LEDs.</p>
+                <h2>Quick Overview</h2>
+                <p><strong>University of Waterloo</strong> - Nanotechnology Engineering (Expected Graduation: [2030])</p>
+                <p><strong>Technical Skills:</strong> PCB Design, Microcontroller Programming, MATLAB/SIMULINK, Python, SolidWorks, 3D Printing, Soldering</p>
+                <p><strong>Areas of Expertise:</strong> Mechatronics, Hardware Development, Embedded Systems, Sensor Integration, Additive Manufacturing</p>
+                <p><strong>Currently Seeking:</strong> Co-op opportunities for [<strong>Summer 2026</strong>] in hardware engineering, mechatronics, or embedded systems</p>
             </section>
-            
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="/images/Soldering Lab/breadboard.jpg" alt="Breadboard Setup">
-                    <div class="image-caption">My breadboard setup</div>
+            <section>
+                <h2>Resume</h2>
+                <p>Below is my current resume. You can view it directly in your browser or download a copy for your records.</p>
+                
+                <div class="resume-container">
+                    <div class="pdf-viewer">
+                        <iframe src="Tasnim_Amara_Resume.pdf" title="Tasnim Amara Resume"></iframe>
+                    </div>
+                    
+                    <div class="download-section">
+                        <button class="download-button">
+                            <a class="header-buttons" href="Tasnim_Amara_Resume.pdf" download>
+                                Download PDF Resume
+                            </a>
+                        </button>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="/images/Soldering Lab/soldering.jpg" alt="Soldering Process">
-                    <div class="image-caption">Me soldering!</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/Soldering Lab/final look.jpg" alt="Completed Solder">
-                    <div class="image-caption">Completed solder joints</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/Soldering Lab/circuit working.jpg" alt="Working Circuit">
-                    <div class="image-caption">The final product with LEDs on!</div>
-                </div>
-            </div>
+                
+                <p class="small" style="text-align: center; margin-top: 20px;">
+                   |<strong> Last updated: [January 2026] </strong>| 
+                    
+                </p>
+            </section>
         </div>
     </div>
     
@@ -370,7 +349,7 @@
             cursor.style.top = e.clientY + 'px';
         });
         
-        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
+        const interactiveElements = document.querySelectorAll('a, button, section');
 
         interactiveElements.forEach(element => {
             element.addEventListener('mouseenter', () => {
