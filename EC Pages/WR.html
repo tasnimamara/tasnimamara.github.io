@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasnim's Portfolio - Resume</title>
+    <title>Tasnim's Portfolio!</title>
     <style>
         h1 {
             color: #6d3f3f; 
@@ -50,10 +50,16 @@
         h2 {
             color: #834e4e;
             letter-spacing: -0.02em; 
-            margin-top: 0;
-            margin-bottom: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
             font-size: 32px;
-            text-align: center;
+        }
+        
+        h3 {
+            color: #6d3f3f;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 26px;
         }
         
         header {
@@ -76,7 +82,7 @@
             margin-top: 15px;
         }
         
-        .back-button {
+        .home-button {
             margin: 0 auto 25px;
             display: block;
             text-align: center;
@@ -108,40 +114,32 @@
             margin: 0 auto;
         }
         
-        .resume-container {
+        .inspiration-images {
             display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 25px 0;
         }
         
-        .pdf-viewer {
-            border: 2px solid #6B8E23;
+        .inspiration-image {
+            max-width: 400px;
             border-radius: 8px;
-            overflow: hidden;
-            background: rgba(107, 142, 35, 0.08);
-            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15);
-            height: 800px;
-            width: 100%;
+            border: 2px solid #6B8E23;
+            box-shadow: 0 4px 8px rgba(107, 142, 35, 0.15);
         }
         
-        .pdf-viewer iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        ul {
+            font-size: 19px;
+            color: #3b3a3a;
+            margin-bottom: 20px;
+            padding-left: 25px;
+            line-height: 1.7;
         }
         
-        .download-section {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .download-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 20px;
-            padding: 12px 30px;
+        li {
+            margin-bottom: 10px;
+            padding-left: 10px;
         }
         
         /* small-screen tweaks */
@@ -158,6 +156,11 @@
             
             h2 {
                 font-size: 28px;
+                margin-top: 25px;
+            }
+            
+            h3 {
+                font-size: 24px;
             }
             
             header {
@@ -172,26 +175,29 @@
             
             .header-nav button {
                 padding: 8px 16px;
-                font-size: 18px;
+                font-size: 22px;
             }
             
             section {
                 padding: 25px 20px;
             }
             
-            .pdf-viewer {
-                height: 600px;
+            .inspiration-images {
+                gap: 20px;
             }
             
-            .download-button {
-                font-size: 18px;
-                padding: 10px 25px;
+            .inspiration-image {
+                max-width: 100%;
             }
         }
         
         @media (max-width: 480px) {
             .container {
                 padding: 12px;
+            }
+            
+            body {
+                line-height: 1.6;
             }
             
             section {
@@ -206,13 +212,12 @@
                 font-size: 26px;
             }
             
-            .pdf-viewer {
-                height: 500px;
+            h3 {
+                font-size: 22px;
             }
             
-            .download-button {
-                font-size: 16px;
-                padding: 8px 20px;
+            ul {
+                padding-left: 20px;
             }
         }
         
@@ -222,7 +227,6 @@
             margin-bottom: 1.5em;
             font-weight: 500;
             line-height: 1.7;
-            text-align: center;
         }
         
         a.header-buttons {
@@ -236,6 +240,38 @@
         a.header-buttons:hover {
             color: #FFFFFF;
             text-decoration: none;
+        }
+        
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0 50px 0;
+        }
+        
+        .gallery-item {
+            border: 2px solid #6B8E23;
+            border-radius: 8px;
+            overflow: hidden;
+            background: rgba(107, 142, 35, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(107, 142, 35, 0.25);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
         }
         
         .small {
@@ -284,60 +320,38 @@
         strong {
             color: #834e4e;
         }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+
+     <div class="container">
         <header> 
             Projects and Experiences
             <div class="header-nav">
-                <button><a class="header-buttons" href="index.html">⬅️ Home</a></button>
-                <button><a class='header-buttons' href='Resume.html'>Resume 📄</a></button>
-                <button><a class='header-buttons' href='Work Pages/Work.html'>Work 💼</a></button>
-                <button><a class="header-buttons" href="Hardware Pages/Hardware.html">Hardware 🔧</a></button>
-                <button><a class="header-buttons" href="Software Pages/Software.html">Software 💻</a></button>
-                <button><a class="header-buttons" href="EC Pages/EC.html">Extracurriculars 💡</a></button>  
+                <button><a class="header-buttons" href="../index.html">⬅️ Home</a></button>
+                <button><a class='header-buttons' href='../Resume.html'>Resume 📄</a></button>
+                <button><a class='header-buttons' href='../Work Pages/Work.html'>Work 💼</a></button>
+                <button><a class="header-buttons" href="../Hardware Pages/Hardware.html">Hardware 🔧</a></button>
+                <button><a class="header-buttons" href="../Software Pages/Software.html">Software 💻</a></button>
+                <button><a class="header-buttons" href="EC.html">Extracurriculars 💡</a></button>  
             </div>
         </header>
         
         <div class="page-header">
-            <h1>My Resume</h1>
-            <p>A comprehensive overview of my education, skills, and professional experience.</p>
+            <h1>Waterloo Rocketry!</h1>
         </div>
-        
         <div class="content-section">
             <section>
-                <h2>Quick Overview</h2>
-                <p><strong>University of Waterloo</strong> - Nanotechnology Engineering (Expected Graduation: [2030])</p>
-                <p><strong>Technical Skills:</strong> PCB Design, Microcontroller Programming, MATLAB/SIMULINK, Python, SolidWorks, Isaac Sim, 3D Printing, Soldering</p>
-                <p><strong>Areas of Expertise:</strong> Mechatronics, Hardware Development, Embedded Systems, Sensor Integration, Additive Manufacturing, Robotics Simulation</p>
-                <p><strong>Currently Seeking:</strong> Co-op opportunities for [<strong>Summer 2026</strong>] in hardware engineering, mechatronics, or embedded systems</p>
-            </section>
-            <section>
-                <h2>Resume</h2>
-                <p>Below is my current full resume. You can view it directly in your browser or download a copy for your records.</p>
-                
-                <div class="resume-container">
-                    <div class="pdf-viewer">
-                        <iframe src="Tasnim_Amara_Resume.pdf" title="Tasnim Amara Resume"></iframe>
-                    </div>
-                    
-                    <div class="download-section">
-                        <button class="download-button">
-                            <a class="header-buttons" href="Tasnim_Amara_Resume.pdf" download>
-                                Download PDF Resume
-                            </a>
-                        </button>
-                    </div>
-                </div>
-                
-                <p class="small" style="text-align: center; margin-top: 20px;">
-                   |<strong> Last updated: [Febuary 2026] </strong>| 
-                    
+                <p>
+                I've recently joined the Waterloo Rocketry team, working specifically with controls and payload. Any projects that I complete will be added onto here. 
                 </p>
             </section>
         </div>
-    </div>
     
     <div class="custom-cursor"></div>
     
@@ -349,7 +363,7 @@
             cursor.style.top = e.clientY + 'px';
         });
         
-        const interactiveElements = document.querySelectorAll('a, button, section');
+        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
 
         interactiveElements.forEach(element => {
             element.addEventListener('mouseenter', () => {

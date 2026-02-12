@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tasnim's Portfolio - Resume</title>
+    <title>Tasnim's Portfolio!</title>
     <style>
         h1 {
             color: #6d3f3f; 
@@ -51,9 +51,8 @@
             color: #834e4e;
             letter-spacing: -0.02em; 
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             font-size: 32px;
-            text-align: center;
         }
         
         header {
@@ -108,40 +107,17 @@
             margin: 0 auto;
         }
         
-        .resume-container {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin-top: 20px;
+        ul {
+            font-size: 19px;
+            color: #3b3a3a;
+            margin-bottom: 20px;
+            padding-left: 25px;
+            line-height: 1.7;
         }
         
-        .pdf-viewer {
-            border: 2px solid #6B8E23;
-            border-radius: 8px;
-            overflow: hidden;
-            background: rgba(107, 142, 35, 0.08);
-            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15);
-            height: 800px;
-            width: 100%;
-        }
-        
-        .pdf-viewer iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        .download-section {
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .download-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 20px;
-            padding: 12px 30px;
+        li {
+            margin-bottom: 10px;
+            padding-left: 10px;
         }
         
         /* small-screen tweaks */
@@ -178,15 +154,6 @@
             section {
                 padding: 25px 20px;
             }
-            
-            .pdf-viewer {
-                height: 600px;
-            }
-            
-            .download-button {
-                font-size: 18px;
-                padding: 10px 25px;
-            }
         }
         
         @media (max-width: 480px) {
@@ -206,13 +173,8 @@
                 font-size: 26px;
             }
             
-            .pdf-viewer {
-                height: 500px;
-            }
-            
-            .download-button {
-                font-size: 16px;
-                padding: 8px 20px;
+            ul {
+                padding-left: 20px;
             }
         }
         
@@ -222,6 +184,12 @@
             margin-bottom: 1.5em;
             font-weight: 500;
             line-height: 1.7;
+        }
+        
+        .intro-paragraph {
+            margin-bottom: 25px;
+            padding: 0 5px;
+            font-size: 22px;
             text-align: center;
         }
         
@@ -284,61 +252,26 @@
         strong {
             color: #834e4e;
         }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
         <header> 
             Projects and Experiences
             <div class="header-nav">
-                <button><a class="header-buttons" href="index.html">⬅️ Home</a></button>
-                <button><a class='header-buttons' href='Resume.html'>Resume 📄</a></button>
-                <button><a class='header-buttons' href='Work Pages/Work.html'>Work 💼</a></button>
-                <button><a class="header-buttons" href="Hardware Pages/Hardware.html">Hardware 🔧</a></button>
-                <button><a class="header-buttons" href="Software Pages/Software.html">Software 💻</a></button>
-                <button><a class="header-buttons" href="EC Pages/EC.html">Extracurriculars 💡</a></button>  
+                <button><a class="header-buttons" href="../index.html">⬅️ Home</a></button>
+                <button><a class='header-buttons' href='../Resume.html'>Resume 📄</a></button>
+                <button><a class='header-buttons' href='../Work Pages/Work.html'>Work 💼</a></button>
+                <button><a class="header-buttons" href="../Hardware Pages/Hardware.html">Hardware 🔧</a></button>
+                <button><a class="header-buttons" href="Software.html">Software 💻</a></button>
+                <button><a class="header-buttons" href="../EC Pages/EC.html">Extracurriculars 💡</a></button>  
             </div>
         </header>
-        
-        <div class="page-header">
-            <h1>My Resume</h1>
-            <p>A comprehensive overview of my education, skills, and professional experience.</p>
-        </div>
-        
-        <div class="content-section">
-            <section>
-                <h2>Quick Overview</h2>
-                <p><strong>University of Waterloo</strong> - Nanotechnology Engineering (Expected Graduation: [2030])</p>
-                <p><strong>Technical Skills:</strong> PCB Design, Microcontroller Programming, MATLAB/SIMULINK, Python, SolidWorks, Isaac Sim, 3D Printing, Soldering</p>
-                <p><strong>Areas of Expertise:</strong> Mechatronics, Hardware Development, Embedded Systems, Sensor Integration, Additive Manufacturing, Robotics Simulation</p>
-                <p><strong>Currently Seeking:</strong> Co-op opportunities for [<strong>Summer 2026</strong>] in hardware engineering, mechatronics, or embedded systems</p>
-            </section>
-            <section>
-                <h2>Resume</h2>
-                <p>Below is my current full resume. You can view it directly in your browser or download a copy for your records.</p>
-                
-                <div class="resume-container">
-                    <div class="pdf-viewer">
-                        <iframe src="Tasnim_Amara_Resume.pdf" title="Tasnim Amara Resume"></iframe>
-                    </div>
-                    
-                    <div class="download-section">
-                        <button class="download-button">
-                            <a class="header-buttons" href="Tasnim_Amara_Resume.pdf" download>
-                                Download PDF Resume
-                            </a>
-                        </button>
-                    </div>
-                </div>
-                
-                <p class="small" style="text-align: center; margin-top: 20px;">
-                   |<strong> Last updated: [Febuary 2026] </strong>| 
-                    
-                </p>
-            </section>
-        </div>
-    </div>
-    
+    </body>
     <div class="custom-cursor"></div>
     
     <script>
