@@ -5,68 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasnim's Portfolio!</title>
     <style>
-        h1 {
-            color: #6d3f3f; 
-            font-size: 65px;
-            margin-bottom: 10px;
-        }
-        
-        body {
-            background: #FAF0E6; 
-            color: #3D3D3D; 
-            font-family: 'Courier New', monospace, Consolas, 'Liberation Mono', monospace;
+        * {
             margin: 0;
             padding: 0;
-            cursor: none;
-            line-height: 1.6; 
-            letter-spacing: 0.01em; 
+            box-sizing: border-box;
         }
-        
+
+        body {
+            background: #FFFFFF;
+            color: #1E1E1E;
+            font-family: 'Courier New', Courier, monospace, Consolas, 'Liberation Mono';
+            line-height: 1.5;
+            letter-spacing: 0.01em;
+            cursor: none;
+        }
+
         .container {
             max-width: 1500px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 24px 32px;
         }
-        
-        button {
-            background: #A57C65; 
-            border: none;
-            color: #FAF0E6; 
-            font-family: inherit; 
-            font-size: 22px;
-            border-radius: 8px;
-            padding: 10px 20px;
-            transition: all 0.3s ease;
-            cursor: pointer;
+
+        h1, h2, h3, strong {
+            color: #6A0DAD;                /* deep purple */
         }
-        
-        button:hover {
-            transform: translateY(-2px);
-            background: #6B8E23; 
-            color: #FFFFFF;
-            box-shadow: 0 4px 8px rgba(107, 142, 35, 0.2);
+
+        h1 {
+            font-size: 58px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #6A0DAD;
         }
-        
+
         h2 {
-            color: #834e4e;
-            letter-spacing: -0.02em; 
-            margin-top: 0;
-            margin-bottom: 15px;
             font-size: 32px;
+            margin: 28px 0 16px;
+            border-left: 6px solid #9B4DFF;
+            padding-left: 20px;
+            font-weight: 600;
         }
-        
+
         header {
-            border: 2px solid #6B8E23; 
-            margin: 0 0 25px 0;
-            padding: 18px;
-            background: rgba(107, 142, 35, 0.08); 
-            color: #654848;
+            border: 2px solid #9B4DFF;
+            background: #F8F4FF;            /* very light purple tint */
+            padding: 18px 20px;
+            margin-bottom: 30px;
+            border-radius: 14px;
+            color: #1E1E1E;
             font-size: 20px;
-            border-radius: 8px;
-            font-weight: 700;
+            font-weight: 600;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(155,77,255,0.08);
         }
-        
+
         .header-nav {
             display: flex;
             justify-content: center;
@@ -74,241 +66,195 @@
             gap: 10px;
             margin-top: 15px;
         }
-        
-        .back-button {
-            margin: 0 auto 25px;
-            display: block;
-            text-align: center;
+
+        button {
+            background: #FFFFFF;
+            border: 2px solid #9B4DFF;
+            color: #1E1E1E;
+            font-family: inherit;
+            font-size: 20px;
+            border-radius: 40px;
+            padding: 10px 24px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 2px 0 #E0D0FF;
         }
-        
+
+        button:hover {
+            background: #9B4DFF;
+            color: #FFFFFF;
+            border-color: #6A0DAD;
+            box-shadow: 0 4px 12px rgba(106,13,173,0.25);
+            transform: translateY(-2px);
+        }
+
+        a.header-buttons {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+        }
+
         .page-header {
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         section {
-            border: 2px solid #6B8E23;
-            border-radius: 8px;
-            padding: 30px;
-            background: rgba(107, 142, 35, 0.08); 
-            line-height: 1.6; 
-            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15); 
-            margin-bottom: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #9B4DFF;
+            border-radius: 24px;
+            padding: 28px 30px;
+            background: #FFFFFF;
+            line-height: 1.5;
+            box-shadow: 0 6px 18px rgba(106,13,173,0.06);
+            margin-bottom: 32px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         section:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(107, 142, 35, 0.2);
+            box-shadow: 0 14px 28px rgba(106,13,173,0.12);
         }
-        
-        .content-section {
-            max-width: 1500px;
-            margin: 0 auto;
+
+        p {
+            font-size: 20px;
+            color: #1E1E1E;
+            margin-bottom: 1.2em;
+            font-weight: 450;
+            line-height: 1.5;
+            max-width: 90ch;
         }
-        
+
         .image-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
+            gap: 24px;
             margin: 30px 0;
         }
-        
+
         .gallery-item {
-            border: 2px solid #6B8E23;
-            border-radius: 8px;
+            border: 2px solid #9B4DFF;
+            border-radius: 20px;
             overflow: hidden;
-            background: rgba(107, 142, 35, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 400px;
+            background: #FFFFFF;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: 360px;
             display: flex;
             flex-direction: column;
         }
-        
+
         .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(107, 142, 35, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(106,13,173,0.15);
         }
-        
+
         .gallery-item img {
             width: 100%;
-            height: 300px;
+            height: 240px;
             object-fit: cover;
             display: block;
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
         }
-        
+
         .gallery-item:hover img {
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
-        
+
         .image-caption {
-            padding: 15px;
+            padding: 14px 12px;
             font-size: 16px;
-            color: #555;
+            color: #2A2A2A;
             text-align: center;
-            line-height: 1.5;
+            line-height: 1.4;
             flex-grow: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: #FCFAFF;
+            border-top: 1px solid #E9D9FF;
         }
-        
-        /* small-screen tweaks */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-                max-width: 95%;
-            }
-            
-            h1 {
-                font-size: 48px;
-                margin-bottom: 8px;
-            }
-            
-            h2 {
-                font-size: 28px;
-            }
-            
-            header {
-                padding: 15px;
-                margin-bottom: 20px;
-                font-size: 18px;
-            }
-            
-            .header-nav {
-                gap: 8px;
-            }
-            
-            .header-nav button {
-                padding: 8px 16px;
-                font-size: 18px;
-            }
-            
-            section {
-                padding: 25px 20px;
-            }
-            
-            .image-gallery {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 20px;
-            }
-            
-            .gallery-item {
-                height: 380px;
-            }
-            
-            .gallery-item img {
-                height: 280px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 12px;
-            }
-            
-            section {
-                padding: 20px 15px;
-            }
-            
-            h1 {
-                font-size: 40px;
-            }
-            
-            h2 {
-                font-size: 26px;
-            }
-            
-            .image-gallery {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .gallery-item {
-                height: 350px;
-            }
-            
-            .gallery-item img {
-                height: 250px;
-            }
-        }
-        
-        p {
-            font-size: 20px;
-            color: #3b3a3a;
-            margin-bottom: 1.5em;
-            font-weight: 500;
-            line-height: 1.7;
-        }
-        
-        .intro-paragraph {
-            margin-bottom: 25px;
-            padding: 0 5px;
-            font-size: 22px;
-            text-align: center;
-        }
-        
-        a.header-buttons {
-            color: #FAF0E6;
-            text-decoration: none;
-            font-size: 22px;
-            transition: color 0.3s ease;
-            display: inline-block;
-        }
-        
-        a.header-buttons:hover {
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-        
-        .small {
-            font-size: 16px;
-            color: #666666; 
-        }
-        
+
         .custom-cursor {
             position: fixed;
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             background: transparent;
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
             transition: transform 0.1s ease;
             transform: translate(-50%, -50%);
-            border: 2px solid #6B8E23; 
+            border: 2px solid #9B4DFF;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 600; 
+
+        /* small‑screen polish – keep original breakpoints */
+        @media (max-width: 768px) {
+            .container {
+                padding: 18px 20px;
+            }
+            h1 {
+                font-size: 48px;
+            }
+            h2 {
+                font-size: 28px;
+            }
+            header {
+                padding: 15px;
+                font-size: 18px;
+            }
+            .header-nav button {
+                padding: 8px 16px;
+                font-size: 18px;
+            }
+            section {
+                padding: 22px 20px;
+            }
+            p {
+                font-size: 18px;
+            }
+            .gallery-item {
+                height: 340px;
+            }
+            .gallery-item img {
+                height: 220px;
+            }
         }
-        
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 26px;
+            }
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+            .gallery-item {
+                height: 320px;
+            }
+            .gallery-item img {
+                height: 200px;
+            }
+        }
+
         code, pre {
-            font-family: inherit; 
-            background: rgba(107, 142, 35, 0.1);
-            color: #3D3D3D;
+            background: #F4EEFF;
+            color: #1E1E1E;
             padding: 0.2em 0.4em;
-            border-radius: 3px;
-            border-left: 3px solid #6B8E23; 
+            border-radius: 6px;
+            border-left: 3px solid #9B4DFF;
         }
-        
-        /* Better focus states for accessibility */
-        button:focus,
-        a:focus {
-            outline: 2px solid #6B8E23;
+
+        button:focus, a:focus {
+            outline: 2px solid #9B4DFF;
             outline-offset: 2px;
         }
-        
-        /* Smooth scroll for better UX */
+
         html {
             scroll-behavior: smooth;
         }
-        
-        strong {
-            color: #834e4e;
-        }
-        
+
         img {
             max-width: 100%;
             height: auto;
@@ -336,25 +282,25 @@
         <div class="content-section">
             <section>
                 <h2>Soldering Lab Experience</h2>
-                <p>Soldering is the process of joining two or more electronic components together by melting solder around the connection. It is a fundamental skill in electronics and is essential for building and repairing circuits. Thankfully, I built that skill during my FireFighter Bot project and this lab helped reinforce it. Here's some pictures from my lab in which I built a fully functioning circuit with a switch and 2 LEDs.</p>
+                <p>Soldering is fundamental for circuit assembly. Built this skill during the FireFighter Bot project; this lab reinforced technique. Built a fully functional circuit with switch and 2 LEDs. Gallery below shows process and result.</p>
             </section>
             
             <div class="image-gallery">
                 <div class="gallery-item">
                     <img src="/images/Soldering Lab/breadboard.jpg" alt="Breadboard Setup">
-                    <div class="image-caption">My breadboard setup</div>
+                    <div class="image-caption">Breadboard prototype</div>
                 </div>
                 <div class="gallery-item">
                     <img src="/images/Soldering Lab/soldering.jpg" alt="Soldering Process">
-                    <div class="image-caption">Me soldering!</div>
+                    <div class="image-caption">Active soldering</div>
                 </div>
                 <div class="gallery-item">
                     <img src="/images/Soldering Lab/final look.jpg" alt="Completed Solder">
-                    <div class="image-caption">Completed solder joints</div>
+                    <div class="image-caption">Finished joints</div>
                 </div>
                 <div class="gallery-item">
                     <img src="/images/Soldering Lab/circuit working.jpg" alt="Working Circuit">
-                    <div class="image-caption">The final product with LEDs on!</div>
+                    <div class="image-caption">Final circuit – LEDs lit</div>
                 </div>
             </div>
         </div>
@@ -364,23 +310,20 @@
     
     <script>
         const cursor = document.querySelector('.custom-cursor');
-
         document.addEventListener('mousemove', e => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
-        
-        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
 
-        interactiveElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
+        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                cursor.style.borderColor = '#A57C65';
+                cursor.style.borderColor = '#6A0DAD';
             });
-            
-            element.addEventListener('mouseleave', () => {
+            el.addEventListener('mouseleave', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-                cursor.style.borderColor = '#6B8E23';
+                cursor.style.borderColor = '#9B4DFF';
             });
         });
     </script>

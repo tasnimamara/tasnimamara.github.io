@@ -5,68 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasnim's Portfolio!</title>
     <style>
-        h1 {
-            color: #6d3f3f; 
-            font-size: 65px;
-            margin-bottom: 10px;
-        }
-        
-        body {
-            background: #FAF0E6; 
-            color: #3D3D3D; 
-            font-family: 'Courier New', monospace, Consolas, 'Liberation Mono', monospace;
+        * {
             margin: 0;
             padding: 0;
-            cursor: none;
-            line-height: 1.6; 
-            letter-spacing: 0.01em; 
+            box-sizing: border-box;
         }
-        
+
+        body {
+            background: #FFFFFF;
+            color: #1E1E1E;
+            font-family: 'Courier New', Courier, monospace, Consolas, 'Liberation Mono';
+            line-height: 1.5;
+            letter-spacing: 0.01em;
+            cursor: none;
+        }
+
         .container {
             max-width: 1500px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 24px 32px;
         }
-        
-        button {
-            background: #A57C65; 
-            border: none;
-            color: #FAF0E6; 
-            font-family: inherit; 
-            font-size: 22px;
-            border-radius: 8px;
-            padding: 10px 20px;
-            transition: all 0.3s ease;
-            cursor: pointer;
+
+        h1, h2, h3, strong {
+            color: #6A0DAD;                /* deep purple */
         }
-        
-        button:hover {
-            transform: translateY(-2px);
-            background: #6B8E23; 
-            color: #FFFFFF;
-            box-shadow: 0 4px 8px rgba(107, 142, 35, 0.2);
+
+        h1 {
+            font-size: 58px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #6A0DAD;
         }
-        
+
         h2 {
-            color: #834e4e;
-            letter-spacing: -0.02em; 
-            margin-top: 0;
-            margin-bottom: 15px;
             font-size: 32px;
+            margin: 28px 0 16px;
+            border-left: 6px solid #9B4DFF;
+            padding-left: 20px;
+            font-weight: 600;
         }
-        
+
         header {
-            border: 2px solid #6B8E23; 
-            margin: 0 0 25px 0;
-            padding: 18px;
-            background: rgba(107, 142, 35, 0.08); 
-            color: #654848;
+            border: 2px solid #9B4DFF;
+            background: #F8F4FF;            /* very light purple tint */
+            padding: 18px 20px;
+            margin-bottom: 30px;
+            border-radius: 14px;
+            color: #1E1E1E;
             font-size: 20px;
-            border-radius: 8px;
-            font-weight: 700;
+            font-weight: 600;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(155,77,255,0.08);
         }
-        
+
         .header-nav {
             display: flex;
             justify-content: center;
@@ -74,241 +66,195 @@
             gap: 10px;
             margin-top: 15px;
         }
-        
-        .back-button {
-            margin: 0 auto 25px;
-            display: block;
-            text-align: center;
+
+        button {
+            background: #FFFFFF;
+            border: 2px solid #9B4DFF;
+            color: #1E1E1E;
+            font-family: inherit;
+            font-size: 20px;
+            border-radius: 40px;
+            padding: 10px 24px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 2px 0 #E0D0FF;
         }
-        
+
+        button:hover {
+            background: #9B4DFF;
+            color: #FFFFFF;
+            border-color: #6A0DAD;
+            box-shadow: 0 4px 12px rgba(106,13,173,0.25);
+            transform: translateY(-2px);
+        }
+
+        a.header-buttons {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+        }
+
         .page-header {
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         section {
-            border: 2px solid #6B8E23;
-            border-radius: 8px;
-            padding: 30px;
-            background: rgba(107, 142, 35, 0.08); 
-            line-height: 1.6; 
-            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15); 
-            margin-bottom: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #9B4DFF;
+            border-radius: 24px;
+            padding: 28px 30px;
+            background: #FFFFFF;
+            line-height: 1.5;
+            box-shadow: 0 6px 18px rgba(106,13,173,0.06);
+            margin-bottom: 32px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         section:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(107, 142, 35, 0.2);
+            box-shadow: 0 14px 28px rgba(106,13,173,0.12);
         }
-        
-        .content-section {
-            max-width: 1500px;
-            margin: 0 auto;
+
+        p {
+            font-size: 20px;
+            color: #1E1E1E;
+            margin-bottom: 1.2em;
+            font-weight: 450;
+            line-height: 1.5;
+            max-width: 90ch;
         }
-        
+
         .image-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
+            gap: 24px;
             margin: 30px 0;
         }
-        
+
         .gallery-item {
-            border: 2px solid #6B8E23;
-            border-radius: 8px;
+            border: 2px solid #9B4DFF;
+            border-radius: 20px;
             overflow: hidden;
-            background: rgba(107, 142, 35, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 400px;
+            background: #FFFFFF;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: 360px;
             display: flex;
             flex-direction: column;
         }
-        
+
         .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(107, 142, 35, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(106,13,173,0.15);
         }
-        
+
         .gallery-item img {
             width: 100%;
-            height: 300px;
+            height: 240px;
             object-fit: cover;
             display: block;
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
         }
-        
+
         .gallery-item:hover img {
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
-        
+
         .image-caption {
-            padding: 15px;
+            padding: 14px 12px;
             font-size: 16px;
-            color: #555;
+            color: #2A2A2A;
             text-align: center;
-            line-height: 1.5;
+            line-height: 1.4;
             flex-grow: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: #FCFAFF;
+            border-top: 1px solid #E9D9FF;
         }
-        
-        /* small-screen tweaks */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-                max-width: 95%;
-            }
-            
-            h1 {
-                font-size: 48px;
-                margin-bottom: 8px;
-            }
-            
-            h2 {
-                font-size: 28px;
-            }
-            
-            header {
-                padding: 15px;
-                margin-bottom: 20px;
-                font-size: 18px;
-            }
-            
-            .header-nav {
-                gap: 8px;
-            }
-            
-            .header-nav button {
-                padding: 8px 16px;
-                font-size: 18px;
-            }
-            
-            section {
-                padding: 25px 20px;
-            }
-            
-            .image-gallery {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 20px;
-            }
-            
-            .gallery-item {
-                height: 380px;
-            }
-            
-            .gallery-item img {
-                height: 280px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 12px;
-            }
-            
-            section {
-                padding: 20px 15px;
-            }
-            
-            h1 {
-                font-size: 40px;
-            }
-            
-            h2 {
-                font-size: 26px;
-            }
-            
-            .image-gallery {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .gallery-item {
-                height: 350px;
-            }
-            
-            .gallery-item img {
-                height: 250px;
-            }
-        }
-        
-        p {
-            font-size: 20px;
-            color: #3b3a3a;
-            margin-bottom: 1.5em;
-            font-weight: 500;
-            line-height: 1.7;
-        }
-        
-        .intro-paragraph {
-            margin-bottom: 25px;
-            padding: 0 5px;
-            font-size: 22px;
-            text-align: center;
-        }
-        
-        a.header-buttons {
-            color: #FAF0E6;
-            text-decoration: none;
-            font-size: 22px;
-            transition: color 0.3s ease;
-            display: inline-block;
-        }
-        
-        a.header-buttons:hover {
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-        
-        .small {
-            font-size: 16px;
-            color: #666666; 
-        }
-        
+
         .custom-cursor {
             position: fixed;
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             background: transparent;
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
             transition: transform 0.1s ease;
             transform: translate(-50%, -50%);
-            border: 2px solid #6B8E23; 
+            border: 2px solid #9B4DFF;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 600; 
+
+        /* small‑screen polish – keep original breakpoints */
+        @media (max-width: 768px) {
+            .container {
+                padding: 18px 20px;
+            }
+            h1 {
+                font-size: 48px;
+            }
+            h2 {
+                font-size: 28px;
+            }
+            header {
+                padding: 15px;
+                font-size: 18px;
+            }
+            .header-nav button {
+                padding: 8px 16px;
+                font-size: 18px;
+            }
+            section {
+                padding: 22px 20px;
+            }
+            p {
+                font-size: 18px;
+            }
+            .gallery-item {
+                height: 340px;
+            }
+            .gallery-item img {
+                height: 220px;
+            }
         }
-        
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 26px;
+            }
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+            .gallery-item {
+                height: 320px;
+            }
+            .gallery-item img {
+                height: 200px;
+            }
+        }
+
         code, pre {
-            font-family: inherit; 
-            background: rgba(107, 142, 35, 0.1);
-            color: #3D3D3D;
+            background: #F4EEFF;
+            color: #1E1E1E;
             padding: 0.2em 0.4em;
-            border-radius: 3px;
-            border-left: 3px solid #6B8E23; 
+            border-radius: 6px;
+            border-left: 3px solid #9B4DFF;
         }
-        
-        /* Better focus states for accessibility */
-        button:focus,
-        a:focus {
-            outline: 2px solid #6B8E23;
+
+        button:focus, a:focus {
+            outline: 2px solid #9B4DFF;
             outline-offset: 2px;
         }
-        
-        /* Smooth scroll for better UX */
+
         html {
             scroll-behavior: smooth;
         }
-        
-        strong {
-            color: #834e4e;
-        }
-        
+
         img {
             max-width: 100%;
             height: auto;
@@ -317,7 +263,7 @@
 </head>
 <body>
     <div class="container">
-       <header> 
+        <header> 
             Projects and Experiences
             <div class="header-nav">
                 <button><a class="header-buttons" href="../index.html">⬅️ Home</a></button>
@@ -328,7 +274,6 @@
                 <button><a class="header-buttons" href="../EC Pages/EC.html">Extracurriculars 💡</a></button>  
             </div>
         </header>
-      
         
         <div class="page-header">
             <h1>Triboelectric Nanogenerator</h1>
@@ -336,113 +281,50 @@
         
         <div class="content-section">
             <section>
-                <h2>Day 1</h2>
-                <p>During the first day of our lab project, my group focused on designing a Triboelectric Nanogenerator (TENG) device for our chosen customers, campers. We identified their need for a reliable light source on windy nights when a campfire is impractical. After brainstorming concepts like a wind-powered fan with triboelectric blades that generates a current to light the bulb, we finalized a more innovative design: an aluminum ball housed within a 3D-printed vortex whistle, utilising the wind to move around. Inside this chamber, the ball will roll between two walls (one coated in wool and the other in teflon) to generate a triboelectric charge through contact and separation. With our concept solidified, we concluded the day by beginning the CAD model in SolidWorks, preparing for 3D printing.</p>
+                <h2>Day 1 – concept & CAD</h2>
+                <p>Designed TENG for campers needing light on windy nights. Final concept: aluminium ball inside 3D‑printed vortex whistle rolls between wool and teflon coated walls, generating charge via contact electrification. Started SolidWorks model.</p>
             </section>
             
-            <h2>Pictures from day 1!</h2>
-            
+            <h2>Day 1 gallery</h2>
             <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="/images/TENG/IMG_1335.jpg" alt="Materials Available">
-                    <div class="image-caption">Materials Available</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/IMG_1342.jpg" alt="Discussing Technical Details">
-                    <div class="image-caption">Discussing Technical Details</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/IMG_1341.jpg" alt="Ideas">
-                    <div class="image-caption">Ideas</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/IMG_1345.jpg" alt="Concept Development">
-                    <div class="image-caption">Concept Development</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/IMG_1343.jpg" alt="Design Process">
-                    <div class="image-caption">Design Process</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/IMG_1350.jpg" alt="Final Design Sketches">
-                    <div class="image-caption">Final Design Sketches</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/IMG_1336.jpg" alt="Material Selection">
-                    <div class="image-caption">Material Selection</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/IMG_1344.jpg" alt="CAD Model (Solidworks)">
-                    <div class="image-caption">CAD Model (Solidworks)</div>
-                </div>
+                <div class="gallery-item"><img src="/images/TENG/IMG_1335.jpg" alt=""><div class="image-caption">Materials available</div></div>
+                <div class="gallery-item"><img src="/images/TENG/IMG_1342.jpg" alt=""><div class="image-caption">Discussing technical details</div></div>
+                <div class="gallery-item"><img src="/images/TENG/IMG_1341.jpg" alt=""><div class="image-caption">Ideas</div></div>
+                <div class="gallery-item"><img src="/images/TENG/IMG_1345.jpg" alt=""><div class="image-caption">Concept development</div></div>
+                <div class="gallery-item"><img src="/images/TENG/IMG_1343.jpg" alt=""><div class="image-caption">Design process</div></div>
+                <div class="gallery-item"><img src="/images/TENG/IMG_1350.jpg" alt=""><div class="image-caption">Final sketches</div></div>
+                <div class="gallery-item"><img src="/images/TENG/IMG_1336.jpg" alt=""><div class="image-caption">Material selection</div></div>
+                <div class="gallery-item"><img src="/images/TENG/IMG_1344.jpg" alt=""><div class="image-caption">CAD model (SolidWorks)</div></div>
             </div>
             
             <section>
-                <h2>Day 2</h2>
-                <p>Met up with my lab partners to finish the solidworks design and import onto Cura to 3D print. The solidworks design was a vortex whistle with a cap on top to make putting the triboelectric materials inside easier. Uploaded the solidworks to Cura to prepare for 3D printing the next day!</p>
+                <h2>Day 2 – from CAD to Cura</h2>
+                <p>Finalised vortex whistle CAD (main body + removable lid). Exported to Cura, ready for 3D printing.</p>
             </section>
             
-            <h2>Pictures from day 2!</h2>
-            
+            <h2>Day 2 gallery</h2>
             <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="/images/TENG/IMG_1463.jpg" alt="Main part of the vortex whistle">
-                    <div class="image-caption">Main part of the vortex whistle</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/IMG_1462.jpg" alt="Lid of the vortex whistle">
-                    <div class="image-caption">Lid of the vortex whistle</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/Screenshot 2025-11-12 211440.png" alt="Main part in Cura">
-                    <div class="image-caption">Main part in Cura</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/Screenshot 2025-11-12 212005.png" alt="Lid in Cura">
-                    <div class="image-caption">Lid in Cura</div>
-                </div>
+                <div class="gallery-item"><img src="/images/TENG/IMG_1463.jpg" alt=""><div class="image-caption">Main part – vortex whistle</div></div>
+                <div class="gallery-item"><img src="/images/TENG/IMG_1462.jpg" alt=""><div class="image-caption">Lid design</div></div>
+                <div class="gallery-item"><img src="/images/TENG/Screenshot 2025-11-12 211440.png" alt=""><div class="image-caption">Main part in Cura</div></div>
+                <div class="gallery-item"><img src="/images/TENG/Screenshot 2025-11-12 212005.png" alt=""><div class="image-caption">Lid in Cura</div></div>
             </div>
             
             <section>
-                <h2>Day 3 & 4</h2>
-                <p>My day "3" of the project was to take the solidworks files and 3D print them. Gained key experience with how to operate a Raise3D E2 printer. On day 4, with all our materials prepared, all that was left was assembly. This proved to be quick because of the 3D base we had designed. To increase electric output, we first glued aluminum sheets to the inside walls of the vortex whistle, and then added on the respective chosen material on top (wool and teflon). In between the aluminum sheets and the material, we put copper wires. With our remaining aluminum sheets, we hammered them into balls, that through contact and separation, would generate voltage. In the end we tested our TENG device and produced 0.4V of electricity, which was exciting to watch!</p>
+                <h2>Day 3 & 4 – print & assembly</h2>
+                <p>Operated Raise3D E2 printer. Assembled: glued aluminium sheets to inner walls, added wool (pos) and teflon (neg) with copper wire contacts. Hammered aluminium foil into balls. Final test yielded <strong>0.4 V</strong> – proof of concept.</p>
             </section>
             
-            <h2>Pictures from day 3 & 4!</h2>
-            
+            <h2>Day 3 & 4 gallery</h2>
             <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="/images/TENG/final/IMG_1741.jpg" alt="TENG Assembly">
-                    <div class="image-caption">Assembly Process</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/final/IMG_1806.jpg" alt="TENG Components">
-                    <div class="image-caption">TENG Components</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/final/IMG_1825.jpg" alt="Aluminum Sheets">
-                    <div class="image-caption">Aluminum Sheet Application</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/final/IMG_1826.jpg" alt="Material Application">
-                    <div class="image-caption">Material Application</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/final/IMG_1836.jpg" alt="Copper Wire Installation">
-                    <div class="image-caption">Copper Wire Installation</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/final/IMG_1833.jpg" alt="Aluminum Balls">
-                    <div class="image-caption">Aluminum Balls Preparation</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/final/IMG_1834.jpg" alt="Final Assembly">
-                    <div class="image-caption">Final Assembly</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/TENG/final/IMG_2019.jpg" alt="Voltage Testing">
-                    <div class="image-caption">Voltage Testing (0.4V Output)</div>
-                </div>
+                <div class="gallery-item"><img src="/images/TENG/final/IMG_1741.jpg" alt=""><div class="image-caption">Assembly process</div></div>
+                <div class="gallery-item"><img src="/images/TENG/final/IMG_1806.jpg" alt=""><div class="image-caption">TENG components</div></div>
+                <div class="gallery-item"><img src="/images/TENG/final/IMG_1825.jpg" alt=""><div class="image-caption">Aluminium sheet lining</div></div>
+                <div class="gallery-item"><img src="/images/TENG/final/IMG_1826.jpg" alt=""><div class="image-caption">Wool / teflon application</div></div>
+                <div class="gallery-item"><img src="/images/TENG/final/IMG_1836.jpg" alt=""><div class="image-caption">Copper wire installation</div></div>
+                <div class="gallery-item"><img src="/images/TENG/final/IMG_1833.jpg" alt=""><div class="image-caption">Aluminium balls</div></div>
+                <div class="gallery-item"><img src="/images/TENG/final/IMG_1834.jpg" alt=""><div class="image-caption">Final assembly</div></div>
+                <div class="gallery-item"><img src="/images/TENG/final/IMG_2019.jpg" alt=""><div class="image-caption">Voltage test – 0.4 V</div></div>
             </div>
         </div>
     </div>
@@ -451,23 +333,20 @@
     
     <script>
         const cursor = document.querySelector('.custom-cursor');
-
         document.addEventListener('mousemove', e => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
-        
-        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
 
-        interactiveElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
+        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                cursor.style.borderColor = '#A57C65';
+                cursor.style.borderColor = '#6A0DAD';
             });
-            
-            element.addEventListener('mouseleave', () => {
+            el.addEventListener('mouseleave', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-                cursor.style.borderColor = '#6B8E23';
+                cursor.style.borderColor = '#9B4DFF';
             });
         });
     </script>

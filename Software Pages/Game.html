@@ -5,68 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasnim's Portfolio!</title>
     <style>
-        h1 {
-            color: #6d3f3f; 
-            font-size: 65px;
-            margin-bottom: 10px;
-        }
-        
-        body {
-            background: #FAF0E6; 
-            color: #3D3D3D; 
-            font-family: 'Courier New', monospace, Consolas, 'Liberation Mono', monospace;
+        * {
             margin: 0;
             padding: 0;
-            cursor: none;
-            line-height: 1.6; 
-            letter-spacing: 0.01em; 
+            box-sizing: border-box;
         }
-        
+
+        body {
+            background: #FFFFFF;
+            color: #1E1E1E;
+            font-family: 'Courier New', Courier, monospace, Consolas, 'Liberation Mono';
+            line-height: 1.5;
+            letter-spacing: 0.01em;
+            cursor: none;
+        }
+
         .container {
             max-width: 1500px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 24px 32px;
         }
-        
-        button {
-            background: #A57C65; 
-            border: none;
-            color: #FAF0E6; 
-            font-family: inherit; 
-            font-size: 22px;
-            border-radius: 8px;
-            padding: 10px 20px;
-            transition: all 0.3s ease;
-            cursor: pointer;
+
+        h1, h2, h3, strong {
+            color: #6A0DAD;                /* deep purple */
         }
-        
-        button:hover {
-            transform: translateY(-2px);
-            background: #6B8E23; 
-            color: #FFFFFF;
-            box-shadow: 0 4px 8px rgba(107, 142, 35, 0.2);
+
+        h1 {
+            font-size: 58px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #6A0DAD;
         }
-        
+
         h2 {
-            color: #834e4e;
-            letter-spacing: -0.02em; 
-            margin-top: 0;
-            margin-bottom: 15px;
+            color: #6A0DAD;
+            letter-spacing: -0.02em;
+            margin: 0 0 15px 0;
             font-size: 32px;
         }
-        
+
         header {
-            border: 2px solid #6B8E23; 
-            margin: 0 0 25px 0;
-            padding: 18px;
-            background: rgba(107, 142, 35, 0.08); 
-            color: #654848;
+            border: 2px solid #9B4DFF;
+            background: #F8F4FF;
+            padding: 18px 20px;
+            margin-bottom: 30px;
+            border-radius: 14px;
+            color: #1E1E1E;
             font-size: 20px;
-            border-radius: 8px;
-            font-weight: 700;
+            font-weight: 600;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(155,77,255,0.08);
         }
-        
+
         .header-nav {
             display: flex;
             justify-content: center;
@@ -74,254 +65,203 @@
             gap: 10px;
             margin-top: 15px;
         }
-        
-        .back-button {
-            margin: 0 auto 25px;
-            display: block;
-            text-align: center;
+
+        button {
+            background: #FFFFFF;
+            border: 2px solid #9B4DFF;
+            color: #1E1E1E;
+            font-family: inherit;
+            font-size: 20px;
+            border-radius: 40px;
+            padding: 10px 24px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 2px 0 #E0D0FF;
         }
-        
+
+        button:hover {
+            background: #9B4DFF;
+            color: #FFFFFF;
+            border-color: #6A0DAD;
+            box-shadow: 0 4px 12px rgba(106,13,173,0.25);
+            transform: translateY(-2px);
+        }
+
+        a.header-buttons {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+        }
+
         .page-header {
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         section {
-            border: 2px solid #6B8E23;
-            border-radius: 8px;
-            padding: 30px;
-            background: rgba(107, 142, 35, 0.08); 
-            line-height: 1.6; 
-            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15); 
-            margin-bottom: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #9B4DFF;
+            border-radius: 24px;
+            padding: 28px 30px;
+            background: #FFFFFF;
+            line-height: 1.5;
+            box-shadow: 0 6px 18px rgba(106,13,173,0.06);
+            margin-bottom: 32px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         section:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(107, 142, 35, 0.2);
+            box-shadow: 0 14px 28px rgba(106,13,173,0.12);
         }
-        
+
         .content-section {
             max-width: 1500px;
             margin: 0 auto;
         }
-        
+
+        p {
+            font-size: 20px;
+            color: #1E1E1E;
+            margin-bottom: 1.2em;
+            font-weight: 450;
+            line-height: 1.6;
+        }
+
         ul {
             font-size: 19px;
-            color: #3b3a3a;
+            color: #1E1E1E;
             margin-bottom: 20px;
             padding-left: 25px;
-            line-height: 1.7;
+            line-height: 1.6;
         }
-        
+
         li {
-            margin-bottom: 10px;
-            padding-left: 10px;
+            margin-bottom: 6px;
+            padding-left: 6px;
         }
-        
+
         .image-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
+            gap: 24px;
             margin: 30px 0;
         }
-        
+
         .gallery-item {
-            border: 2px solid #6B8E23;
-            border-radius: 8px;
+            border: 2px solid #9B4DFF;
+            border-radius: 20px;
             overflow: hidden;
-            background: rgba(107, 142, 35, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 400px;
+            background: #FFFFFF;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: 360px;
             display: flex;
             flex-direction: column;
         }
-        
+
         .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(107, 142, 35, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(106,13,173,0.15);
         }
-        
+
         .gallery-item img {
             width: 100%;
-            height: 300px;
+            height: 240px;
             object-fit: cover;
             display: block;
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
         }
-        
+
         .gallery-item:hover img {
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
-        
+
         .image-caption {
-            padding: 15px;
+            padding: 12px;
             font-size: 16px;
-            color: #555;
+            color: #2A2A2A;
             text-align: center;
-            line-height: 1.5;
+            line-height: 1.4;
             flex-grow: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: #FCFAFF;
+            border-top: 1px solid #E9D9FF;
         }
-        
-        /* small-screen tweaks */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-                max-width: 95%;
-            }
-            
-            h1 {
-                font-size: 48px;
-                margin-bottom: 8px;
-            }
-            
-            h2 {
-                font-size: 28px;
-            }
-            
-            header {
-                padding: 15px;
-                margin-bottom: 20px;
-                font-size: 18px;
-            }
-            
-            .header-nav {
-                gap: 8px;
-            }
-            
-            .header-nav button {
-                padding: 8px 16px;
-                font-size: 18px;
-            }
-            
-            section {
-                padding: 25px 20px;
-            }
-            
-            .image-gallery {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 20px;
-            }
-            
-            .gallery-item {
-                height: 380px;
-            }
-            
-            .gallery-item img {
-                height: 280px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 12px;
-            }
-            
-            section {
-                padding: 20px 15px;
-            }
-            
-            h1 {
-                font-size: 40px;
-            }
-            
-            h2 {
-                font-size: 26px;
-            }
-            
-            .image-gallery {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .gallery-item {
-                height: 350px;
-            }
-            
-            .gallery-item img {
-                height: 250px;
-            }
-        }
-        
-        p {
-            font-size: 20px;
-            color: #3b3a3a;
-            margin-bottom: 1.5em;
-            font-weight: 500;
-            line-height: 1.7;
-        }
-        
-        .intro-paragraph {
-            margin-bottom: 25px;
-            padding: 0 5px;
-            font-size: 22px;
-            text-align: center;
-        }
-        
-        a.header-buttons {
-            color: #FAF0E6;
-            text-decoration: none;
-            font-size: 22px;
-            transition: color 0.3s ease;
-            display: inline-block;
-        }
-        
-        a.header-buttons:hover {
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-        
-        .small {
-            font-size: 16px;
-            color: #666666; 
-        }
-        
+
         .custom-cursor {
             position: fixed;
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             background: transparent;
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
             transition: transform 0.1s ease;
             transform: translate(-50%, -50%);
-            border: 2px solid #6B8E23; 
+            border: 2px solid #9B4DFF;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 600; 
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 18px 20px;
+            }
+            h1 {
+                font-size: 48px;
+            }
+            h2 {
+                font-size: 28px;
+            }
+            header {
+                padding: 15px;
+                font-size: 18px;
+            }
+            .header-nav button {
+                padding: 8px 16px;
+                font-size: 18px;
+            }
+            section {
+                padding: 22px 20px;
+            }
+            p {
+                font-size: 18px;
+            }
+            .gallery-item {
+                height: 340px;
+            }
+            .gallery-item img {
+                height: 220px;
+            }
         }
-        
-        code, pre {
-            font-family: inherit; 
-            background: rgba(107, 142, 35, 0.1);
-            color: #3D3D3D;
-            padding: 0.2em 0.4em;
-            border-radius: 3px;
-            border-left: 3px solid #6B8E23; 
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 26px;
+            }
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+            .gallery-item {
+                height: 320px;
+            }
+            .gallery-item img {
+                height: 200px;
+            }
         }
-        
-        /* Better focus states for accessibility */
-        button:focus,
-        a:focus {
-            outline: 2px solid #6B8E23;
+
+        button:focus, a:focus {
+            outline: 2px solid #9B4DFF;
             outline-offset: 2px;
         }
-        
-        /* Smooth scroll for better UX */
+
         html {
             scroll-behavior: smooth;
         }
-        
-        strong {
-            color: #834e4e;
-        }
-        
+
         img {
             max-width: 100%;
             height: auto;
@@ -349,102 +289,52 @@
         <div class="content-section">
             <section>
                 <h2>Project Overview</h2>
-                <p>
-                    I am building a first-person shooter game using the Ursina game engine in Python. The game will feature basic shooting mechanic and a simple level design. Disclaimer: This is all self taught and I am following various tutorials, aiming to learn the skills as I go.
-                </p>
+                <p>Building a first‑person shooter with Ursina (Python). Self‑taught, focused on learning core game dev: mechanics, level design, asset integration.</p>
                 
-                <h2>Components Used</h2>
+                <h2>Tools & Skills</h2>
                 <ul>
-                    <li>Ursina Game Engine</li>
-                    <li>Python Programming Language</li>
-                    <li>3D Models and Textures (Sketchfab)</li>
-                </ul>
-                
-                <h2>Skills</h2>
-                <ul>
-                    <li>Game development with Ursina</li>
-                    <li>3D modeling and asset integration</li>
-                    <li>Basic game mechanics programming</li>
-                    <li>Level design</li>
+                    <li>Ursina Engine · Python · 3D models (Sketchfab)</li>
+                    <li>Game mechanics · level design · asset debugging</li>
                 </ul>
             </section>
             
             <h2>Documentation</h2>
             
             <section>
-                <p><strong>Day 1:</strong> Successfully set up the basic foundation for a first-person shooter game using the Ursina game engine. Created the initial level structure with player controls and environment.</p>
-                
+                <p><strong>Day 1 – Foundation:</strong> Set up player controller, basic environment, and level structure.</p>
                 <div class="image-gallery">
                     <div class="gallery-item">
-                        <img src="../images/FPS Game/Screenshot 2025-11-09 143004.png" alt="Game Screenshot 1">
-                        <div class="image-caption">Game Code (can be found in my Github)</div>
+                        <img src="../images/FPS Game/Screenshot 2025-11-09 143004.png" alt="Code screenshot">
+                        <div class="image-caption">Initial code (GitHub)</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="../images/FPS Game/Screenshot 2025-11-09 143438.png" alt="Game Screenshot 2">
-                        <div class="image-caption">Game World in Ursina</div>
+                        <img src="../images/FPS Game/Screenshot 2025-11-09 143438.png" alt="Game world">
+                        <div class="image-caption">Game world in Ursina</div>
                     </div>
                 </div>
             </section>
             
             <section>
-                <p><strong>Day 2:</strong> Imported 3D castle model from Sketchfab. Debugged and fixed texture loading errors by correcting the project's file structure. Started adjusting the model's position and scale within the world to align it properly. Finished a lot of the world initial building phase, but still have more to do. Ended the day still trying to adjust the model.</p>
-                
+                <p><strong>Day 2 – 3D model & debugging:</strong> Imported castle model, fixed file‑path errors, adjusted position/scale. Model loaded upside down — rotation fix in progress.</p>
                 <div class="image-gallery">
-                    <div class="gallery-item">
-                        <img src="../images/FPS Game/Error Code.png" alt="Error Code">
-                        <div class="image-caption">Loaded in my 3D model and got this error code</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/FPS Game/debugging.png" alt="Debugging Code">
-                        <div class="image-caption">Ran this code section to debug. It returns whether or not the path exists.</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/FPS Game/not-found.png" alt="Path Not Found">
-                        <div class="image-caption">Path was not found. Time to find out why.</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/FPS Game/debugging2.png" alt="Debugging Code 2">
-                        <div class="image-caption">Ran this code section to debug. It returns whether the files (game and 3D model) are in the same folder.</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/FPS Game/upside-down.png" alt="Upside Down Model">
-                        <div class="image-caption">Turned out the files were not in the same folder. Once that got sorted out, my model came out upside down. Started working on fixing rotation.</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/FPS Game/new-model.png" alt="New Model">
-                        <div class="image-caption">Thought that the 3D model I used was bad, so ran a newer one, still the same issues. Ended the day still trying to fix my rotation.</div>
-                    </div>
+                    <div class="gallery-item"><img src="../images/FPS Game/Error Code.png" alt="Error"><div class="image-caption">Texture load error</div></div>
+                    <div class="gallery-item"><img src="../images/FPS Game/debugging.png" alt="Debug"><div class="image-caption">Path existence check</div></div>
+                    <div class="gallery-item"><img src="../images/FPS Game/not-found.png" alt="Not found"><div class="image-caption">Path missing</div></div>
+                    <div class="gallery-item"><img src="../images/FPS Game/debugging2.png" alt="Folder check"><div class="image-caption">Folder mismatch</div></div>
+                    <div class="gallery-item"><img src="../images/FPS Game/upside-down.png" alt="Upside down"><div class="image-caption">Model upside down</div></div>
+                    <div class="gallery-item"><img src="../images/FPS Game/new-model.png" alt="New model"><div class="image-caption">Second model, same issue</div></div>
                 </div>
             </section>
             
             <section>
-                <p><strong>Day 3:</strong> Continued working on fixing the rotation of the 3D model by adjusting the rotation parameters in code. Finally managed to get the model upright and properly aligned within the game world. The textures were not showing up properly so I decided to troubleshoot by creating the same entity twice with different textures, but that didn't help. Decided that in order to learn, I needed to start small so I replaced the 3D castle with a wall. Then, I built walls surrounding the character.</p>
-                
+                <p><strong>Day 3 – Rotation & textures:</strong> Fixed rotation, but textures still buggy. Scoped down: replaced castle with simple wall, built enclosing walls — success.</p>
                 <div class="image-gallery">
-                    <div class="gallery-item">
-                        <img src="../images/FPS Game/gotRotation.png" alt="Fixed Rotation">
-                        <div class="image-caption">Rotation of model finally fixed!</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/FPS Game/codeToGetTex.png" alt="Texture Code">
-                        <div class="image-caption">Ran this code to attempt to fix texture issues.</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/FPS Game/texStillBad.png" alt="Texture Still Bad">
-                        <div class="image-caption">Didn't work well.</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/FPS Game/wallCode.png" alt="Wall Code">
-                        <div class="image-caption">Decided to start small and replace the castle with a wall.</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/FPS Game/wall.png" alt="Wall Successful">
-                        <div class="image-caption">Wall successful!!</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="../images/FPS Game/surroundingWalls.png" alt="Surrounding Walls">
-                        <div class="image-caption">Surrounded the character with walls.</div>
-                    </div>
+                    <div class="gallery-item"><img src="../images/FPS Game/gotRotation.png" alt="Rotation fixed"><div class="image-caption">Rotation corrected</div></div>
+                    <div class="gallery-item"><img src="../images/FPS Game/codeToGetTex.png" alt="Texture debug"><div class="image-caption">Texture troubleshooting</div></div>
+                    <div class="gallery-item"><img src="../images/FPS Game/texStillBad.png" alt="Textures broken"><div class="image-caption">Textures still off</div></div>
+                    <div class="gallery-item"><img src="../images/FPS Game/wallCode.png" alt="Wall code"><div class="image-caption">Started small: wall</div></div>
+                    <div class="gallery-item"><img src="../images/FPS Game/wall.png" alt="Wall working"><div class="image-caption">Wall works!</div></div>
+                    <div class="gallery-item"><img src="../images/FPS Game/surroundingWalls.png" alt="Enclosure"><div class="image-caption">Character enclosed</div></div>
                 </div>
             </section>
         </div>
@@ -454,23 +344,20 @@
     
     <script>
         const cursor = document.querySelector('.custom-cursor');
-
         document.addEventListener('mousemove', e => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
-        
-        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
 
-        interactiveElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
+        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                cursor.style.borderColor = '#A57C65';
+                cursor.style.borderColor = '#6A0DAD';
             });
-            
-            element.addEventListener('mouseleave', () => {
+            el.addEventListener('mouseleave', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-                cursor.style.borderColor = '#6B8E23';
+                cursor.style.borderColor = '#9B4DFF';
             });
         });
     </script>

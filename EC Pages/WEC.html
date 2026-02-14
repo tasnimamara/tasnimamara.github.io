@@ -5,75 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasnim's Portfolio!</title>
     <style>
-        h1 {
-            color: #6d3f3f; 
-            font-size: 65px;
-            margin-bottom: 10px;
-        }
-        
-        body {
-            background: #FAF0E6; 
-            color: #3D3D3D; 
-            font-family: 'Courier New', monospace, Consolas, 'Liberation Mono', monospace;
+        * {
             margin: 0;
             padding: 0;
-            cursor: none;
-            line-height: 1.6; 
-            letter-spacing: 0.01em; 
+            box-sizing: border-box;
         }
-        
+
+        body {
+            background: #FFFFFF;
+            color: #1E1E1E;
+            font-family: 'Courier New', Courier, monospace, Consolas, 'Liberation Mono';
+            line-height: 1.5;
+            letter-spacing: 0.01em;
+            cursor: none;
+        }
+
         .container {
             max-width: 1500px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 24px 32px;
         }
-        
-        button {
-            background: #A57C65; 
-            border: none;
-            color: #FAF0E6; 
-            font-family: inherit; 
-            font-size: 22px;
-            border-radius: 8px;
-            padding: 10px 20px;
-            transition: all 0.3s ease;
-            cursor: pointer;
+
+        h1, h2, h3, strong {
+            color: #6A0DAD;                /* deep purple */
         }
-        
-        button:hover {
-            transform: translateY(-2px);
-            background: #6B8E23; 
-            color: #FFFFFF;
-            box-shadow: 0 4px 8px rgba(107, 142, 35, 0.2);
+
+        h1 {
+            font-size: 58px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #6A0DAD;
         }
-        
+
         h2 {
-            color: #834e4e;
-            letter-spacing: -0.02em; 
+            color: #6A0DAD;
+            letter-spacing: -0.02em;
             margin-top: 30px;
             margin-bottom: 15px;
             font-size: 32px;
         }
-        
+
         h3 {
-            color: #6d3f3f;
+            color: #6A0DAD;
             margin-top: 25px;
             margin-bottom: 15px;
             font-size: 26px;
         }
-        
+
         header {
-            border: 2px solid #6B8E23; 
-            margin: 0 0 25px 0;
-            padding: 18px;
-            background: rgba(107, 142, 35, 0.08); 
-            color: #654848;
+            border: 2px solid #9B4DFF;
+            background: #F8F4FF;            /* very light purple tint */
+            padding: 18px 20px;
+            margin-bottom: 30px;
+            border-radius: 14px;
+            color: #1E1E1E;
             font-size: 20px;
-            border-radius: 8px;
-            font-weight: 700;
+            font-weight: 600;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(155,77,255,0.08);
         }
-        
+
         .header-nav {
             display: flex;
             justify-content: center;
@@ -81,39 +73,69 @@
             gap: 10px;
             margin-top: 15px;
         }
-        
-        .home-button {
-            margin: 0 auto 25px;
-            display: block;
-            text-align: center;
+
+        button {
+            background: #FFFFFF;
+            border: 2px solid #9B4DFF;
+            color: #1E1E1E;
+            font-family: inherit;
+            font-size: 20px;
+            border-radius: 40px;
+            padding: 10px 24px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 2px 0 #E0D0FF;
         }
-        
+
+        button:hover {
+            background: #9B4DFF;
+            color: #FFFFFF;
+            border-color: #6A0DAD;
+            box-shadow: 0 4px 12px rgba(106,13,173,0.25);
+            transform: translateY(-2px);
+        }
+
+        a.header-buttons {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+        }
+
         .page-header {
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         section {
-            border: 2px solid #6B8E23;
-            border-radius: 8px;
-            padding: 30px;
-            background: rgba(107, 142, 35, 0.08); 
-            line-height: 1.6; 
-            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15); 
-            margin-bottom: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #9B4DFF;
+            border-radius: 24px;
+            padding: 28px 30px;
+            background: #FFFFFF;
+            line-height: 1.5;
+            box-shadow: 0 6px 18px rgba(106,13,173,0.06);
+            margin-bottom: 32px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         section:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(107, 142, 35, 0.2);
+            box-shadow: 0 14px 28px rgba(106,13,173,0.12);
         }
-        
+
         .content-section {
             max-width: 1500px;
             margin: 0 auto;
         }
-        
+
+        p {
+            font-size: 20px;
+            color: #1E1E1E;
+            margin-bottom: 1.2em;
+            font-weight: 450;
+            line-height: 1.5;
+        }
+
         .inspiration-images {
             display: flex;
             flex-wrap: wrap;
@@ -121,206 +143,145 @@
             gap: 30px;
             margin: 25px 0;
         }
-        
+
         .inspiration-image {
             max-width: 400px;
-            border-radius: 8px;
-            border: 2px solid #6B8E23;
-            box-shadow: 0 4px 8px rgba(107, 142, 35, 0.15);
+            border-radius: 16px;
+            border: 2px solid #9B4DFF;
+            box-shadow: 0 4px 12px rgba(106,13,173,0.1);
         }
-        
+
         ul {
             font-size: 19px;
-            color: #3b3a3a;
+            color: #1E1E1E;
             margin-bottom: 20px;
             padding-left: 25px;
-            line-height: 1.7;
+            line-height: 1.6;
         }
-        
+
         li {
-            margin-bottom: 10px;
-            padding-left: 10px;
+            margin-bottom: 6px;
+            padding-left: 6px;
         }
-        
-        /* small-screen tweaks */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-                max-width: 95%;
-            }
-            
-            h1 {
-                font-size: 48px;
-                margin-bottom: 8px;
-            }
-            
-            h2 {
-                font-size: 28px;
-                margin-top: 25px;
-            }
-            
-            h3 {
-                font-size: 24px;
-            }
-            
-            header {
-                padding: 15px;
-                margin-bottom: 20px;
-                font-size: 18px;
-            }
-            
-            .header-nav {
-                gap: 8px;
-            }
-            
-            .header-nav button {
-                padding: 8px 16px;
-                font-size: 22px;
-            }
-            
-            section {
-                padding: 25px 20px;
-            }
-            
-            .inspiration-images {
-                gap: 20px;
-            }
-            
-            .inspiration-image {
-                max-width: 100%;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 12px;
-            }
-            
-            body {
-                line-height: 1.6;
-            }
-            
-            section {
-                padding: 20px 15px;
-            }
-            
-            h1 {
-                font-size: 40px;
-            }
-            
-            h2 {
-                font-size: 26px;
-            }
-            
-            h3 {
-                font-size: 22px;
-            }
-            
-            ul {
-                padding-left: 20px;
-            }
-        }
-        
-        p {
-            font-size: 20px;
-            color: #3b3a3a;
-            margin-bottom: 1.5em;
-            font-weight: 500;
-            line-height: 1.7;
-        }
-        
-        a.header-buttons {
-            color: #FAF0E6;
-            text-decoration: none;
-            font-size: 22px;
-            transition: color 0.3s ease;
-            display: inline-block;
-        }
-        
-        a.header-buttons:hover {
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-        
+
         .image-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 25px;
-            margin: 30px 0 50px 0;
+            margin: 30px 0 50px;
         }
-        
+
         .gallery-item {
-            border: 2px solid #6B8E23;
-            border-radius: 8px;
+            border: 2px solid #9B4DFF;
+            border-radius: 20px;
             overflow: hidden;
-            background: rgba(107, 142, 35, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #FFFFFF;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         .gallery-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(107, 142, 35, 0.25);
+            box-shadow: 0 12px 24px rgba(106,13,173,0.15);
         }
-        
+
         .gallery-item img {
             width: 100%;
             height: 500px;
             object-fit: cover;
             display: block;
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
         }
-        
+
         .gallery-item:hover img {
-            transform: scale(1.05);
+            transform: scale(1.02);
         }
-        
-        .small {
-            font-size: 16px;
-            color: #666666; 
-        }
-        
+
         .custom-cursor {
             position: fixed;
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             background: transparent;
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
             transition: transform 0.1s ease;
             transform: translate(-50%, -50%);
-            border: 2px solid #6B8E23; 
+            border: 2px solid #9B4DFF;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 600; 
+
+        /* small‑screen tweaks */
+        @media (max-width: 768px) {
+            .container {
+                padding: 18px 20px;
+            }
+            h1 {
+                font-size: 48px;
+            }
+            h2 {
+                font-size: 28px;
+                margin-top: 25px;
+            }
+            h3 {
+                font-size: 24px;
+            }
+            header {
+                padding: 15px;
+                font-size: 18px;
+            }
+            .header-nav button {
+                padding: 8px 16px;
+                font-size: 18px;
+            }
+            section {
+                padding: 25px 20px;
+            }
+            p {
+                font-size: 18px;
+            }
+            .gallery-item img {
+                height: 400px;
+            }
         }
-        
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 26px;
+            }
+            h3 {
+                font-size: 22px;
+            }
+            .gallery-item img {
+                height: 300px;
+            }
+            ul {
+                padding-left: 20px;
+            }
+        }
+
         code, pre {
-            font-family: inherit; 
-            background: rgba(107, 142, 35, 0.1);
-            color: #3D3D3D;
+            background: #F4EEFF;
+            color: #1E1E1E;
             padding: 0.2em 0.4em;
-            border-radius: 3px;
-            border-left: 3px solid #6B8E23; 
+            border-radius: 6px;
+            border-left: 3px solid #9B4DFF;
         }
-        
-        /* Better focus states for accessibility */
-        button:focus,
-        a:focus {
-            outline: 2px solid #6B8E23;
+
+        button:focus, a:focus {
+            outline: 2px solid #9B4DFF;
             outline-offset: 2px;
         }
-        
-        /* Smooth scroll for better UX */
+
         html {
             scroll-behavior: smooth;
         }
-        
+
         strong {
-            color: #834e4e;
+            color: #6A0DAD;
         }
-        
+
         img {
             max-width: 100%;
             height: auto;
@@ -342,87 +303,53 @@
         </header>
         
         <div class="page-header">
-            <h1>Waterloo Engineering Competition!</h1>
+            <h1>Waterloo Engineering Competition</h1>
         </div>
         
         <div class="content-section">
             <section>
                 <h2>Overview</h2>
-                <p>The Waterloo Engineering Competition (WEC) is an annual event that brings together engineering students from various faculties to showcase their skills, creativity, and problem-solving abilities. The competition typically involves a series of challenges that test participants technical knowledge, teamwork, and innovation. My teammates and I signed up for the junior design competition, in which we are given a complex engineering problem and are required to design and build a working prototype. We then present our solution and test our prototype in front of a panel of judges.</p>
+                <p>Annual design competition where engineering students tackle real‑world problems under time constraints. For Junior Design, my team of four had 8 h to design, build, and present a functional prototype.</p>
                 
-                <h2>The Problem</h2>
-                <p>This year's challenge was to design a floating mechanical rescue vehicle aimed at transporting aid to various communities affected by heavy flooding, within the constraint of $2000. Additional challenges were that the two communities were of different elevations, and there were some obstacles in the way to clearly dictate the path we needed to take. By the end of the 8 hours, we needed to have a working prototype and presentation for the judges showing our process such as idea sketches, materials list, FBD of final sketch, etc.</p>
+                <h2>The Challenge</h2>
+                <p>Build a floating rescue vehicle to deliver aid between two communities at different elevations, navigating obstacles and currents. Budget: $2000 (simulated).</p>
                 
-                <h2>The Guidelines</h2>
-                <p><strong>Design Requirements:</strong></p>
+                <h3>Key Requirements</h3>
                 <ul>
-                    <li>A maximum size of 13 cm x 13 cm</li>
-                    <li>The vehicle must be able to float and navigate through water.</li>
-                    <li>Mechanical power system.</li>
-                    <li>Controlled delivery at each station.</li>
-                    <li>The vehicle must be constructed using materials within the given budget.</li>
-                </ul>
-                
-                <p><strong>Environmental Constraints:</strong></p>
-                <ul>
-                    <li>Variable water currents and floating debris.</li>
-                    <li>Different elevations between the two communities.</li>
-                    <li>Restricted width channels.</li>
-                </ul>
-                
-                <p><strong>Human Intervention:</strong></p>
-                <ul>
-                    <li>Initial launch of the vehicle.</li>
-                    <li>Adjust vehicle at mid-point. You may re-orient/turn vehicle for a max of 5 seconds.</li>
-                    <li>Point penalty for any other additional contact.</li>
-                    <li><strong>Completion of entire run with no post-launch contact will result in 30 bonus points.</strong></li>
+                    <li>Max size 13 × 13 cm · must float & navigate mechanically</li>
+                    <li>Deliver payload at two stations with different heights</li>
+                    <li>Materials within budget · 30‑point bonus for zero post‑launch contact</li>
                 </ul>
                 
                 <h2>Our Solution</h2>
-                <p>To address the challenge, our team developed a boat that would be propelled by two different mechanisms. The first will be a balloon that will be attached to a straw, utilising the wind as an initial force to get the boat moving. The second mechanism is an elastic band/wheel/popsicle stick that will replicate boat motors. On the top, there is an elevated base with ramps on the sides for which the aid can fall off of.</p>
+                <p>Dual‑propulsion boat: (1) balloon‑powered air thrust for initial speed, (2) elastic‑band‑driven paddle wheel for sustained movement. Elevated deck with side ramps released aid via tilt. Design inspired by balloon cars and rubber‑band boats (see below).</p>
                 
-                <h3>Our main inspiration for the power system</h3>
+                <h3>Inspiration</h3>
                 <div class="inspiration-images">
                     <img src="https://static.wixstatic.com/media/9282ac_c41a5124504c4dbfbff77db2b19622ab~mv2.jpg/v1/fill/w_1000,h_897,al_c,q_85,usm_0.66_1.00_0.01/9282ac_c41a5124504c4dbfbff77db2b19622ab~mv2.jpg" 
-                         alt="Balloon Powered car" 
+                         alt="Balloon powered car" 
                          class="inspiration-image">
                     <img src="https://i.ytimg.com/vi/YVInLcZUcFA/maxresdefault.jpg" 
-                         alt="Elastic Powered Boat" 
+                         alt="Elastic powered boat" 
                          class="inspiration-image">
                 </div>
             </section>
             
-            <h2>The Process</h2>
+            <h2>Process & Outcome</h2>
             <section>
-                <p>After getting our challenge, my 3 teammates and I kicked off the event by taking a look at the "environment" our boat was to go through and taking measurements of that. Measurements included the path length and elevation of the two communities. We then took a look at our available materials and started sketching out ideas. We spent the next 8 hours implementing our designs, revising and iterating through our ideas. Tested on water to ensure that it floated and moved, but ultimately were unable to implement the second part of the mechanical propulsion system that we had in mind. Didn't end up winning the competition, but the experience gained was indispensable.</p>
+                <p><strong>8‑hour sprint:</strong> Measured water tank, brainstormed concepts, iterated on prototypes. Achieved floatation and basic movement, but second propulsion stage remained unrealised due to time. Didn’t place, but gained intense experience in rapid prototyping, teamwork, and design under pressure.</p>
             </section>
         </div>
         
         <div class="image-gallery">
-            <div class="gallery-item">
-                <img src="/images/WEC/IMG_1664.jpg" alt="WEC Process Photo 1">
-            </div>
-            <div class="gallery-item">
-                <img src="/images/WEC/IMG_1683.jpg" alt="WEC Process Photo 2">
-            </div>
-            <div class="gallery-item">
-                <img src="/images/WEC/IMG_1684.jpg" alt="WEC Process Photo 3">
-            </div>
-            <div class="gallery-item">
-                <img src="/images/WEC/IMG_1691.jpg" alt="WEC Process Photo 4">
-            </div>
-            <div class="gallery-item">
-                <img src="/images/WEC/IMG_1690.jpg" alt="WEC Process Photo 5">
-            </div>
-            <div class="gallery-item">
-                <img src="/images/WEC/IMG_1700.jpg" alt="WEC Process Photo 6">
-            </div>
-            <div class="gallery-item">
-                <img src="/images/WEC/IMG_1699.jpg" alt="WEC Process Photo 7">
-            </div>
-            <div class="gallery-item">
-                <img src="/images/WEC/IMG_1702.jpg" alt="WEC Process Photo 8">
-            </div>
+            <div class="gallery-item"><img src="/images/WEC/IMG_1664.jpg" alt="WEC build 1"></div>
+            <div class="gallery-item"><img src="/images/WEC/IMG_1683.jpg" alt="WEC build 2"></div>
+            <div class="gallery-item"><img src="/images/WEC/IMG_1684.jpg" alt="WEC build 3"></div>
+            <div class="gallery-item"><img src="/images/WEC/IMG_1691.jpg" alt="WEC build 4"></div>
+            <div class="gallery-item"><img src="/images/WEC/IMG_1690.jpg" alt="WEC build 5"></div>
+            <div class="gallery-item"><img src="/images/WEC/IMG_1700.jpg" alt="WEC build 6"></div>
+            <div class="gallery-item"><img src="/images/WEC/IMG_1699.jpg" alt="WEC build 7"></div>
+            <div class="gallery-item"><img src="/images/WEC/IMG_1702.jpg" alt="WEC build 8"></div>
         </div>
     </div>
     
@@ -430,23 +357,20 @@
     
     <script>
         const cursor = document.querySelector('.custom-cursor');
-
         document.addEventListener('mousemove', e => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
-        
-        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
 
-        interactiveElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
+        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                cursor.style.borderColor = '#A57C65';
+                cursor.style.borderColor = '#6A0DAD';
             });
-            
-            element.addEventListener('mouseleave', () => {
+            el.addEventListener('mouseleave', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-                cursor.style.borderColor = '#6B8E23';
+                cursor.style.borderColor = '#9B4DFF';
             });
         });
     </script>

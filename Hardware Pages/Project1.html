@@ -5,68 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tasnim's Portfolio!</title>
     <style>
-        h1 {
-            color: #6d3f3f; 
-            font-size: 65px;
-            margin-bottom: 10px;
-        }
-        
-        body {
-            background: #FAF0E6; 
-            color: #3D3D3D; 
-            font-family: 'Courier New', monospace, Consolas, 'Liberation Mono', monospace;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #FFFFFF;
+            color: #1E1E1E;
+            font-family: 'Courier New', Courier, monospace, Consolas, 'Liberation Mono';
+            line-height: 1.5;
+            letter-spacing: 0.01em;
             cursor: none;
-            line-height: 1.6; 
-            letter-spacing: 0.01em; 
+            margin: 0;
+            padding: 0;
         }
-        
+
         .container {
-            max-width: 1500px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 24px 32px;
         }
-        
-        button {
-            background: #A57C65; 
-            border: none;
-            color: #FAF0E6; 
-            font-family: inherit; 
-            font-size: 22px;
-            border-radius: 8px;
-            padding: 10px 20px;
-            transition: all 0.3s ease;
-            cursor: pointer;
+
+        h1, h2, h3, strong {
+            color: #6A0DAD;
         }
-        
-        button:hover {
-            transform: translateY(-2px);
-            background: #6B8E23; 
-            color: #FFFFFF;
-            box-shadow: 0 4px 8px rgba(107, 142, 35, 0.2);
+
+        h1 {
+            font-size: 58px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #6A0DAD;
         }
-        
+
         h2 {
-            color: #834e4e;
-            letter-spacing: -0.02em; 
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 32px;
+            font-size: 30px;
+            margin: 28px 0 16px 0;
+            border-left: 6px solid #9B4DFF;
+            padding-left: 18px;
+            font-weight: 600;
         }
-        
+
         header {
-            border: 2px solid #6B8E23; 
-            margin: 0 0 25px 0;
-            padding: 18px;
-            background: rgba(107, 142, 35, 0.08); 
-            color: #654848;
+            border: 2px solid #9B4DFF;
+            background: #F8F4FF;
+            padding: 18px 20px;
+            margin-bottom: 30px;
+            border-radius: 14px;
+            color: #1E1E1E;
             font-size: 20px;
-            border-radius: 8px;
-            font-weight: 700;
+            font-weight: 600;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(155, 77, 255, 0.08);
         }
-        
+
         .header-nav {
             display: flex;
             justify-content: center;
@@ -74,280 +68,213 @@
             gap: 10px;
             margin-top: 15px;
         }
-        
-        .back-button {
-            margin: 0 auto 25px;
-            display: block;
-            text-align: center;
+
+        button {
+            background: #FFFFFF;
+            border: 2px solid #9B4DFF;
+            color: #1E1E1E;
+            font-family: inherit;
+            font-size: 20px;
+            border-radius: 40px;
+            padding: 10px 24px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 2px 0 #E0D0FF;
         }
-        
+
+        button:hover {
+            background: #9B4DFF;
+            color: #FFFFFF;
+            border-color: #6A0DAD;
+            box-shadow: 0 4px 12px rgba(106, 13, 173, 0.25);
+            transform: translateY(-2px);
+        }
+
+        a.header-buttons {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+        }
+
         .page-header {
             text-align: center;
             margin-bottom: 30px;
         }
-        
+
         section {
-            border: 2px solid #6B8E23;
-            border-radius: 8px;
-            padding: 30px;
-            background: rgba(107, 142, 35, 0.08); 
-            line-height: 1.6; 
-            box-shadow: 0 4px 12px rgba(107, 142, 35, 0.15); 
-            margin-bottom: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #9B4DFF;
+            border-radius: 24px;
+            padding: 28px 30px;
+            background: #FFFFFF;
+            line-height: 1.5;
+            box-shadow: 0 6px 18px rgba(106, 13, 173, 0.06);
+            margin-bottom: 32px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         section:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 16px rgba(107, 142, 35, 0.2);
+            box-shadow: 0 14px 28px rgba(106, 13, 173, 0.12);
         }
-        
-        .content-section {
-            max-width: 1500px;
-            margin: 0 auto;
+
+        p {
+            font-size: 20px;
+            color: #1E1E1E;
+            margin-bottom: 1.2em;
+            font-weight: 450;
+            line-height: 1.5;
+            max-width: 85ch;
         }
-        
+
+        /* recruiter-friendly concise text blocks */
+        .concise-block p {
+            margin-bottom: 0.75em;
+        }
+
+        ul {
+            font-size: 19px;
+            color: #1E1E1E;
+            margin-bottom: 20px;
+            padding-left: 25px;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 6px;
+            padding-left: 6px;
+        }
+
         .image-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 30px 0 10px;
         }
-        
+
         .gallery-item {
-            border: 2px solid #6B8E23;
-            border-radius: 8px;
+            border: 2px solid #9B4DFF;
+            border-radius: 20px;
             overflow: hidden;
-            background: rgba(107, 142, 35, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 400px;
+            background: #FFFFFF;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: 360px;
             display: flex;
             flex-direction: column;
         }
-        
+
         .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(107, 142, 35, 0.25);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(106, 13, 173, 0.15);
         }
-        
+
         .gallery-item img {
             width: 100%;
-            height: 300px;
+            height: 240px;
             object-fit: cover;
             display: block;
-            transition: transform 0.3s ease;
+            transition: transform 0.2s ease;
         }
-        
+
         .gallery-item:hover img {
-            transform: scale(1.03);
+            transform: scale(1.02);
         }
-        
+
         .video-wrapper {
             width: 100%;
-            height: 300px;
-            background: rgba(107, 142, 35, 0.05);
+            height: 240px;
+            background: #FAF7FF;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
+
         .video-wrapper video {
             width: 100%;
             height: 100%;
             object-fit: contain;
         }
-        
+
         .image-caption {
-            padding: 15px;
+            padding: 14px 12px;
             font-size: 16px;
-            color: #555;
+            color: #2A2A2A;
             text-align: center;
-            line-height: 1.5;
+            line-height: 1.4;
             flex-grow: 1;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: #FCFAFF;
+            border-top: 1px solid #E9D9FF;
         }
-        
-        ul {
-            font-size: 19px;
-            color: #3b3a3a;
-            margin-bottom: 20px;
-            padding-left: 25px;
-            line-height: 1.7;
-        }
-        
-        li {
-            margin-bottom: 10px;
-            padding-left: 10px;
-        }
-        
-        /* small-screen tweaks */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-                max-width: 95%;
-            }
-            
-            h1 {
-                font-size: 48px;
-                margin-bottom: 8px;
-            }
-            
-            h2 {
-                font-size: 28px;
-            }
-            
-            header {
-                padding: 15px;
-                margin-bottom: 20px;
-                font-size: 18px;
-            }
-            
-            .header-nav {
-                gap: 8px;
-            }
-            
-            .header-nav button {
-                padding: 8px 16px;
-                font-size: 18px;
-            }
-            
-            section {
-                padding: 25px 20px;
-            }
-            
-            .image-gallery {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 20px;
-            }
-            
-            .gallery-item {
-                height: 380px;
-            }
-            
-            .gallery-item img {
-                height: 280px;
-            }
-            
-            .video-wrapper {
-                height: 280px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 12px;
-            }
-            
-            section {
-                padding: 20px 15px;
-            }
-            
-            h1 {
-                font-size: 40px;
-            }
-            
-            h2 {
-                font-size: 26px;
-            }
-            
-            .image-gallery {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .gallery-item {
-                height: 350px;
-            }
-            
-            .gallery-item img {
-                   width: 100%;
-                   height: auto;
-                   object-fit: cover;
-                   display: block;
-            }
-            
-            .video-wrapper {
-                height: 250px;
-            }
-        }
-        
-        p {
-            font-size: 20px;
-            color: #3b3a3a;
-            margin-bottom: 1.5em;
-            font-weight: 500;
-            line-height: 1.7;
-        }
-        
-        .intro-paragraph {
-            margin-bottom: 25px;
-            padding: 0 5px;
-            font-size: 22px;
-            text-align: center;
-        }
-        
-        a.header-buttons {
-            color: #FAF0E6;
-            text-decoration: none;
-            font-size: 22px;
-            transition: color 0.3s ease;
-            display: inline-block;
-        }
-        
-        a.header-buttons:hover {
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-        
-        .small {
-            font-size: 16px;
-            color: #666666; 
-        }
-        
+
         .custom-cursor {
             position: fixed;
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             background: transparent;
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
             transition: transform 0.1s ease;
             transform: translate(-50%, -50%);
-            border: 2px solid #6B8E23; 
+            border: 2px solid #9B4DFF;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 600; 
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 18px 20px;
+            }
+            h1 {
+                font-size: 46px;
+            }
+            h2 {
+                font-size: 26px;
+            }
+            section {
+                padding: 22px 20px;
+            }
+            p {
+                font-size: 18px;
+            }
+            .gallery-item {
+                height: 340px;
+            }
+            .gallery-item img {
+                height: 220px;
+            }
+            .video-wrapper {
+                height: 220px;
+            }
         }
-        
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 38px;
+            }
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
         code, pre {
-            font-family: inherit; 
-            background: rgba(107, 142, 35, 0.1);
-            color: #3D3D3D;
+            background: #F4EEFF;
+            color: #1E1E1E;
             padding: 0.2em 0.4em;
-            border-radius: 3px;
-            border-left: 3px solid #6B8E23; 
+            border-radius: 6px;
+            border-left: 3px solid #9B4DFF;
         }
-        
-        /* Better focus states for accessibility */
-        button:focus,
-        a:focus {
-            outline: 2px solid #6B8E23;
+
+        button:focus, a:focus {
+            outline: 2px solid #9B4DFF;
             outline-offset: 2px;
         }
-        
-        /* Smooth scroll for better UX */
+
         html {
             scroll-behavior: smooth;
         }
-        
-        strong {
-            color: #834e4e;
-        }
-        
+
         img {
             max-width: 100%;
             height: auto;
@@ -375,128 +302,107 @@
         <div class="content-section">
             <section>
                 <h2>Project Overview</h2>
-                <p>I built this in high school for my grade 12 engineering class. The FireFighter bot is an autonomous robot designed to navigate a maze and locate the fire source, which in our case was a candle. Once the fire source is detected by the IR sensors, the robot activates the fan to blow out the flame. The project involves integrating various sensors, such as flame sensors and ultrasonic sensors, to enable the robot to detect walls and the fire source effectively.</p>
+                <p>Autonomous robot that navigates a maze to detect and extinguishe a candle flame. Built in grade 12 engineering class using PIC16f18875, IR flame sensors, ultrasonic sensors, and a 12V fan. Integrates three custom PCBs, real time sensor fusion, and autonomous navigation algorithms.</p>
                 
-                <h2>Components Used</h2>
+                <h2>Core Components</h2>
                 <ul>
-                    <li>PIC16f18875 microcontroller</li>
-                    <li>3 PCB designed using Traxmaker Pro</li>
-                    <li>2 ultrasonic sensors</li>
-                    <li>IR flame sensors</li>
-                    <li>LCD</li>
-                    <li>Motors</li>
-                    <li>12v Fan</li>
-                    <li>Wood, threaded lamp rods, wires</li>
-                    <li>Power Supply</li>
+                    <li>PIC16f18875 microcontroller · 3x PCBs (Traxmaker Pro) · 2x ultrasonic · IR flame sensors · LCD · 12V fan · threaded lamp rod chassis</li>
                 </ul>
                 
-                <h2>Skills</h2>
+                <h2>Key Skills</h2>
                 <ul>
-                    <li>PCB Design and fabrication</li>
-                    <li>Soldering</li>
-                    <li>Microcontroller programming (PIC16f18875)</li>
-                    <li>Sensor integration (ultrasonic and flame (IR) sensors)</li>
-                    <li>Autonomous navigation algorithms</li>
-                    <li>Mechanical design and assembly</li>
-                    <li>Hardware troubleshooting and circuit analysis</li>
-                    <li>Team collaboration and project management</li>
+                    <li>PCB design & fabrication · soldering · C (GCBasic) · sensor integration · autonomous navigation · circuit troubleshooting · mechanical assembly · team leadership</li>
                 </ul>
             </section>
             
-            <h2>Documentation</h2>
+            <h2>Documentation </h2>
             
             <section>
-                <p><strong>Part 1:</strong> Before starting on our project, we had to complete 10 different breadboarding assignments, all designed to help us understand logic gates, binary clocks, etc. In this, I was exposed to building circuits from looking at schematic diagrams, which built my foundation for the more complex work ahead. I became skilled with a multimeter, troubleshooting issues like bad connections and short circuits to ensure each circuit functioned as intended. Then, my partner and I wrote up a document explaining our project, including a detailed sketch, materials list and project calendar to be evaluated by our teacher and prepare us for future workplaces.</p>
-                
+                <p><strong>Part 1 – foundation:</strong> Completed 10 breadboard assignments (logic gates, binary clocks). Learned schematic reading, multimeter debugging, short/bad connection diagnosis. Drafted project proposal with sketch, BOM, and timeline (approved, 99/100).</p>
                 <div class="image-gallery">
                     <div class="gallery-item">
-                        <img src="../images/Firefighter Bot/IMG_1435.jpg" alt="Working on Breadboard Assignments" style="max-height: 300px; object-fit: contain;">
-                        <div class="image-caption">Me, working on one of my assignments at home.</div>
+                        <img src="../images/Firefighter Bot/IMG_1435.jpg" alt="Breadboard work" >
+                        <div class="image-caption">Breadboarding at home (logic gate practice)</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="../images/Firefighter Bot/IMG_1437.jpg" alt="Completed Breadboard Circuit"style="max-height: 300px; object-fit: contain;">
-                        <div class="image-caption">One of my completed circuits, always trying to be more efficient in my circuitry.</div>
+                        <img src="../images/Firefighter Bot/IMG_1437.jpg" alt="Completed circuit">
+                        <div class="image-caption">Compact circuit after debugging</div>
                     </div>
                 </div>
             </section>
-            
+           
             <section>
-                <p><strong>Part 2:</strong> Now that the basics were done, we were given another schematic diagram that we had to translate onto a printed circuit board, designed using Traxmaker Pro. Taught me greatly about how to make circuits more efficient now that I couldn't have wires jumping over each other to get it running.</p>
-                
+                <p><strong>Part 2 – PCB translation:</strong> Converted schematic to PCB layout using Traxmaker Pro. Optimised component placement for single layer boards and no jumper wires.</p>
                 <div class="image-gallery">
                     <div class="gallery-item">
-                        <img src="../images/Firefighter Bot/FireFighter Schematic.png" alt="FireFighter Bot Schematic Diagram"  style = "max-width: 700px;">
-                        <div class= image-caption >FireFighter Bot Schematic Diagram</div>
+                        <img src="../images/Firefighter Bot/FireFighter Schematic.png" alt="Schematic">
+                        <div class="image-caption">FireFighter Bot schematic</div>
                     </div>
                 </div>
             </section>
-            
             <section>
-                <p><strong>Part 3:</strong> Once the PCB designs were approved, it was printed onto a photosensitive copper-clad laminate using UV light exposure, then put into an etching tank to remove excess copper and reveal the final circuit pathways. We then drilled small openings to solder our components in. During this time, we also built the frame of the bot, and lucked out by finding threaded lamp rods that had a shell in which we could run wire through. This decluttered the bot making the PCB boards clearer to see/easier to troubleshoot and the bot more visually appealing.</p>
-                
+                <p><strong>Part 3 – fabrication & chassis:</strong> PCBs exposed under UV, etched, drilled, soldered. Frame built with threaded lamp rods – internal wiring reduced clutter, improved troubleshooting.</p>
                 <div class="image-gallery">
                     <div class="gallery-item">
-                        <img src="../images/Firefighter Bot/PCB Design 1.jpg" alt="PCB for Motor Board">
-                        <div class="image-caption">PCB for motor board</div>
+                        <img src="../images/Firefighter Bot/PCB Design 1.jpg" alt="Motor board PCB">
+                        <div class="image-caption">Motor driver PCB</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="../images/Firefighter Bot/PCB Design 2.JPG" alt="PCB for Main Board">
-                        <div class="image-caption">PCB for main board</div>
+                        <img src="../images/Firefighter Bot/PCB Design 2.JPG" alt="Main board PCB">
+                        <div class="image-caption">Main board (uC, sensors)</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="../images/Firefighter Bot/PCB Design 3.JPG" alt="PCB for IR Detection and Fan Board">
-                        <div class="image-caption">PCB for IR detection and fan board</div>
+                        <img src="../images/Firefighter Bot/PCB Design 3.JPG" alt="IR & fan PCB">
+                        <div class="image-caption">IR detection & fan driver</div>
                     </div>
                 </div>
             </section>
-            
+  
             <section>
-                <p><strong>Part 4:</strong> Now that we had everything set up, we connected the PCB's to power and started troubleshooting, because as is the way with engineering, nothing ever goes right the first time. Started from basics such as getting the motors running, getting the wall sensors to detect objects and output the values in the LCD, to finally getting the IR sensors to detect the flame and turn the fan on. Through this, we had to constantly troubleshoot the circuitry using a multimeter, resolder some parts and lines, and replace components that weren't working.</p>
+                <p><strong>Part 4 – system integration:</strong> Powered PCBs, tested subsystems: motor control, ultrasonic ranging displayed on LCD, IR flame detection -> fan trigger. Multimeter troubleshooting.</p>
             </section>
-            
+         
             <section>
-                <p><strong>Part 5:</strong> Once everything was working individually, we were finally ready to start testing the bot in the maze. The aim was to successfully navigate the maze, detect the flame and blow it out with the fan. The algorithm was coded using GCBasic. Lots of trial and error, as well as troubleshooting circuitry and resoldering. We got it to detect the flame in the end!! Overall, this project taught me a lot about PCB design, microcontroller programming, sensor integration and autonomous navigation algorithms. It was a challenging but rewarding experience that helped me develop my skills in mechatronics engineering.</p>
-                
+                <p><strong>Part 5 – maze navigation & flameout:</strong> Coded GCBasic algorithm: wall following + flame search. Iterative testing – adjusted IR thresholds. Final run: robot navigates maze, detects candle, activates fan -> flame extinguished.</p>
                 <div class="image-gallery">
                     <div class="gallery-item">
-                        <img src="../images/Firefighter Bot/top.JPG" alt="Top View of Bot" style="max-width: 500px;object-fit: contain;">
-                        <div class="image-caption">Top View</div>
+                        <img src="../images/Firefighter Bot/top.JPG" alt="Top view" style="width: 300px; height: 400px;">
+                        <div class="image-caption">Top</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="../images/Firefighter Bot/front.JPG" alt="Front View of Bot" style="max-width: 500px;object-fit: contain;">
-                        <div class="image-caption">Front View</div>
+                        <img src="../images/Firefighter Bot/front.JPG" alt="Front view" style="width: 300px; height: 400px;">
+                        <div class="image-caption">Front</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="../images/Firefighter Bot/side 1.JPG" alt="Side View 1 of Bot" style="max-width: 500px;object-fit: contain;">
-                        <div class="image-caption">Side View 1</div>
+                        <img src="../images/Firefighter Bot/side 1.JPG" alt="Side view 1" style="width: 300px; height: 400px;">
+                        <div class="image-caption">Left side</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="../images/Firefighter Bot/side 2.JPG" alt="Side View 2 of Bot" style="max-width: 500px;object-fit: contain;">
-                        <div class="image-caption">Side View 2</div>
+                        <img src="../images/Firefighter Bot/side 2.JPG" alt="Side view 2" style="width: 300px; height: 400px;">
+                        <div class="image-caption">Right side</div>
                     </div>
                     <div class="gallery-item">
-                        <img src="../images/Firefighter Bot/bakc.JPG" alt="Back View of Bot" style="max-width: 500px;object-fit: contain;">
-                        <div class="image-caption">Back View</div>
+                        <img src="../images/Firefighter Bot/bakc.JPG" alt="Back view" style="width: 300px; height: 400px;">
+                        <div class="image-caption">Rear</div>
                     </div>
                     <div class="gallery-item">
-                       
-                        <div class="image-caption">The Maze - Coming Soon!</div>
+                        <div class="video-wrapper" style="background:#F0E8FF;">coming soon!</div>
+                        <div class="image-caption">Maze layout </div>
                     </div>
                 </div>
             </section>
-            
+       
             <section>
-                <p><strong>Final Thoughts:</strong> This project was a great learning experience that taught me valuable skills in PCB design, microcontroller programming, sensor integration, and autonomous navigation algorithms. It also highlighted the importance of teamwork and effective communication in successfully completing a complex engineering project. Overall, I am proud of what my partner and I accomplished with the FireFighter Bot and look forward to applying these skills in future mechatronics projects.</p>
-                
+                <p><strong>Final impact:</strong> End‑to‑end mechatronics design – PCBs, sensor fusion, mechanical assembly. Team of 2, delivered working prototype under deadline. Demonstrated troubleshooting, clear documentation, and autonomous decision‑making.</p>
                 <div class="image-gallery">
                     <div class="gallery-item">
                         <div class="video-wrapper">
                             <video controls>
-                                <source src="../images/Firefighter Bot/IMG_2231.mov" type="video/mp4">
+                                <source src="../images/Firefighter Bot/IMG_2231.mov" type="video/mp4" style="width: 300px; height: 400px;">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
-                        <div class="image-caption">The bot finding the flame in the maze and putting it out</div>
+                        <div class="image-caption">Bot detecting flame + extinguishing (final demo)</div>
                     </div>
                 </div>
             </section>
@@ -504,26 +410,23 @@
     </div>
     
     <div class="custom-cursor"></div>
-    
+
     <script>
         const cursor = document.querySelector('.custom-cursor');
-
         document.addEventListener('mousemove', e => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         });
-        
-        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
 
-        interactiveElements.forEach(element => {
-            element.addEventListener('mouseenter', () => {
+        const interactiveElements = document.querySelectorAll('a, button, .gallery-item, section');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-                cursor.style.borderColor = '#A57C65';
+                cursor.style.borderColor = '#6A0DAD';
             });
-            
-            element.addEventListener('mouseleave', () => {
+            el.addEventListener('mouseleave', () => {
                 cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-                cursor.style.borderColor = '#6B8E23';
+                cursor.style.borderColor = '#9B4DFF';
             });
         });
     </script>
