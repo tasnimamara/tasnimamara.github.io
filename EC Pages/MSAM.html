@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasnim's Portfolio!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #FFFFFF;
+            color: #1E1E1E;
+            font-family: 'Courier New', Courier, monospace, Consolas, 'Liberation Mono';
+            line-height: 1.5;
+            letter-spacing: 0.01em;
+            cursor: none;
+        }
+
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 24px 32px;
+        }
+
+        h1, h2, h3, strong {
+            color: #6A0DAD;                /* deep purple */
+        }
+
+        h1 {
+            font-size: 58px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #6A0DAD;
+        }
+
+        h2 {
+            color: #6A0DAD;
+            letter-spacing: -0.02em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 32px;
+        }
+
+        h3 {
+            color: #6A0DAD;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 26px;
+        }
+
+        header {
+            border: 2px solid #9B4DFF;
+            background: #F8F4FF;            /* very light purple tint */
+            padding: 18px 20px;
+            margin-bottom: 30px;
+            border-radius: 14px;
+            color: #1E1E1E;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(155,77,255,0.08);
+        }
+
+        .header-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            background: #FFFFFF;
+            border: 2px solid #9B4DFF;
+            color: #1E1E1E;
+            font-family: inherit;
+            font-size: 20px;
+            border-radius: 40px;
+            padding: 10px 24px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 2px 0 #E0D0FF;
+        }
+
+        button:hover {
+            background: #9B4DFF;
+            color: #FFFFFF;
+            border-color: #6A0DAD;
+            box-shadow: 0 4px 12px rgba(106,13,173,0.25);
+            transform: translateY(-2px);
+        }
+
+        a.header-buttons {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        section {
+            border: 2px solid #9B4DFF;
+            border-radius: 24px;
+            padding: 28px 30px;
+            background: #FFFFFF;
+            line-height: 1.5;
+            box-shadow: 0 6px 18px rgba(106,13,173,0.06);
+            margin-bottom: 30px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 28px rgba(106,13,173,0.12);
+        }
+
+        .content-section {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 20px;
+            color: #1E1E1E;
+            margin-bottom: 1.2em;
+            font-weight: 450;
+            line-height: 1.5;
+        }
+
+        .custom-cursor {
+            position: fixed;
+            width: 22px;
+            height: 22px;
+            background: transparent;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            transform: translate(-50%, -50%);
+            border: 2px solid #9B4DFF;
+        }
+
+        ul {
+            font-size: 19px;
+            color: #1E1E1E;
+            margin-bottom: 20px;
+            padding-left: 25px;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 6px;
+            padding-left: 6px;
+        }
+
+                .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 30px 0 10px;
+        }
+
+        .gallery-item {
+            border: 2px solid #9B4DFF;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #FFFFFF;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: 360px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(106, 13, 173, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.02);
+        }
+
+        .video-wrapper {
+            width: 100%;
+            height: 240px;
+            background: #FAF7FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .image-caption {
+            padding: 14px 12px;
+            font-size: 16px;
+            color: #2A2A2A;
+            text-align: center;
+            line-height: 1.4;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #FCFAFF;
+            border-top: 1px solid #E9D9FF;
+        }
+
+
+        /* small-screen tweaks */
+        @media (max-width: 768px) {
+            .container {
+                padding: 18px 20px;
+            }
+            h1 {
+                font-size: 48px;
+            }
+            h2 {
+                font-size: 28px;
+                margin-top: 25px;
+            }
+            h3 {
+                font-size: 24px;
+            }
+            header {
+                padding: 15px;
+                font-size: 18px;
+            }
+            .header-nav button {
+                padding: 8px 16px;
+                font-size: 18px;
+            }
+            section {
+                padding: 25px 20px;
+            }
+            p {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+
+        button:focus, a:focus {
+            outline: 2px solid #9B4DFF;
+            outline-offset: 2px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header> 
+            <div class="header-nav">
+                <button><a class="header-buttons" href="../index.html">⬅️ home</a></button>
+                <button><a class='header-buttons' href='../Resume.html'>resume 📄</a></button>
+                <!--<button><a class='header-buttons' href='../Work Pages/Work.html'>Work 💼</a></button>-->
+                <button><a class="header-buttons" href="../Hardware Pages/Hardware.html">hardware 🔧</a></button>
+                <button><a class="header-buttons" href="../Software Pages/Software.html">software 💻</a></button>
+                <button><a class="header-buttons" href="../Laboratory Pages/Laboratory.html">laboratory 🥼</a></button>
+                <button><a class="header-buttons" href="EC.html">extracurriculars 💡</a></button>  
+            </div>
+        </header>
+        <button><a class="header-buttons" href="EC.html">back</a></button>  
+        <div class="page-header">
+            <h1>materials lab assistant</h1>
+        </div>
+        
+        <div class="content-section">
+            <section>
+            <h2>overview</h2>
+            <p>joined MSAM in january of 2026 to learn more about materials science. planning on continuing with this lab every study term until I am statisfied with the experience gained.</p>
+            <p><strong>f26 work</strong>: materials lab assistant working alongside the current operations coop student.</p>
+            <p><strong>w26 work</strong>: researching 3D printing technologies for medical-grade hearing aid manufacturing. </p>
+            </section>
+            <section>
+                <h2>f26</h2>
+            <p>started a hands-on position within the lab working in operations alongside the coop student. while in the lab (8h-12h per week) I work on the following:</p>
+            <ul>
+                <li><strong>chemcial inventory auditing</strong> - making sure chemicals are compliant with lifecycle documentation standards</li>
+                <li><strong>standard operating procedure (SOP)</strong> - revising the current SOP for the nano and etching lab</li>
+                <li><strong>coolant changeovers</strong> - perform this on the precision saw, cut-off saw, and bandsaw equipment</li>
+            </ul>
+            
+
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="/images/MSAM/IMG_1989.jpeg" alt="inside the lab" class="project-image" style="width: 300px; height: 400px;" >
+                    <div class="image-caption">the machines are so cool</div>
+                </div>
+            </div>
+
+            <h2>w26</h2>
+                <p>did not want to take on a big workload this term, so I focused on:</p> 
+                
+                <ul>
+                    <li><strong>literature reviews</strong> - finding 3D printing technologies with biocompatible silicone for customizable medical-grade hearing aid manufacturing</li>
+                    <li><strong>evaluation</strong> - comapred printer specs and material certifications to recommend cost-effective and production ready solutions</li>
+                    <li><strong>suppplier analysis</strong> - anaylzed 10+ suppliers and created slideshows to present findings to stakeholder companies</li>
+                </ul>
+            </section>
+
+        </div>
+            
+
+       
+        </div>
+    </div>
+    
+    <div class="custom-cursor"></div>
+    
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        const interactiveElements = document.querySelectorAll('a, button, section');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursor.style.borderColor = '#6A0DAD';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.borderColor = '#9B4DFF';
+            });
+        });
+    </script>
+</body>
+</html>

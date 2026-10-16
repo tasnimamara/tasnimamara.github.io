@@ -153,6 +153,69 @@
             transform: translate(-50%, -50%);
             border: 2px solid #9B4DFF;
         }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 30px 0 10px;
+        }
+
+        .gallery-item {
+            border: 2px solid #9B4DFF;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #FFFFFF;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: 360px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(106, 13, 173, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.02);
+        }
+
+        .video-wrapper {
+            width: 100%;
+            height: 240px;
+            background: #FAF7FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .image-caption {
+            padding: 14px 12px;
+            font-size: 16px;
+            color: #2A2A2A;
+            text-align: center;
+            line-height: 1.4;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #FCFAFF;
+            border-top: 1px solid #E9D9FF;
+        }
 
         @media (max-width: 768px) {
             .container {
@@ -211,6 +274,7 @@
                 <!--<button><a class='header-buttons' href='../Work Pages/Work.html'>Work 💼</a></button>-->
                 <button><a class="header-buttons" href="../Hardware Pages/Hardware.html">hardware 🔧</a></button>
                 <button><a class="header-buttons" href="Software.html">software 💻</a></button>
+                <button><a class="header-buttons" href="../Laboratory Pages/Laboratory.html">laboratory 🥼</a></button>
                 <button><a class="header-buttons" href="../EC Pages/EC.html">extracurriculars 💡</a></button>  
             </div>
         </header>
@@ -221,7 +285,7 @@
         
         <div class="content-section">
             <section>
-                <h2>overview</h2>
+                <h2>project overview</h2>
                 <p>gained exposure using NVIDIA isaac sim to design, simulate, and validate robotic systems in photorealistic environments. focused on sensor integration and control logic so far.</p>
                 
                 <h2>tools</h2>
@@ -238,14 +302,14 @@
                     <li>environment building</li>
                     
                 </ul>
-                
-            </section>
-            <section>
-
             <div class="image-gallery">
-                <div class="gallery-item"><img src="/images/isaac sim/IMG_2311.jpeg" alt=""><div class="image-caption">playing around with the simulation</div></div>
+                <div class="gallery-item">
+                    <img src="/images/isaac sim/IMG_2311.jpeg" alt="Isaac Sim Program" class="project-image" style="width: 300px; height: 400px;" >
+                    <div class="image-caption">playing around with the simulation</div>
                 </div>
+            </div>
             </section>
+            
         </div>
     </div>
     

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasnim's Portfolio!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #FFFF;
+            color: #1E1E1E;
+            font-family: 'Courier New', Courier, monospace, Consolas, 'Liberation Mono';
+            line-height: 1.5;
+            letter-spacing: 0.01em;
+            cursor: none;
+        }
+
+        .container {
+            max-width: 1500px;
+            margin: 0 auto;
+            padding: 24px 32px;
+        }
+
+        h1, h2, h3, strong {
+            color: #6A0DAD;                /* deep purple */
+        }
+
+        h1 {
+            font-size: 58px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #6A0DAD;
+        }
+
+        h2 {
+            color: #6A0DAD;
+            letter-spacing: -0.02em;
+            margin: 0 0 15px 0;
+            font-size: 32px;
+        }
+
+        header {
+            border: 2px solid #9B4DFF;
+            background: #F8F4FF;
+            padding: 18px 20px;
+            margin-bottom: 30px;
+            border-radius: 14px;
+            color: #1E1E1E;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(155,77,255,0.08);
+        }
+
+        .header-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        button {
+            background: #FFFFFF;
+            border: 2px solid #9B4DFF;
+            color: #1E1E1E;
+            font-family: inherit;
+            font-size: 20px;
+            border-radius: 40px;
+            padding: 10px 24px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 0 2px 0 #E0D0FF;
+        }
+
+        button:hover {
+            background: #9B4DFF;
+            color: #FFFFFF;
+            border-color: #6A0DAD;
+            box-shadow: 0 4px 12px rgba(106,13,173,0.25);
+            transform: translateY(-2px);
+        }
+
+        a.header-buttons {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        section {
+            border: 2px solid #9B4DFF;
+            border-radius: 24px;
+            padding: 28px 30px;
+            background: #FFFFFF;
+            line-height: 1.5;
+            box-shadow: 0 6px 18px rgba(106,13,173,0.06);
+            margin-bottom: 32px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 28px rgba(106,13,173,0.12);
+        }
+
+        .content-section {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        p {
+            font-size: 20px;
+            color: #1E1E1E;
+            margin-bottom: 1.2em;
+            font-weight: 450;
+            line-height: 1.6;
+        }
+
+        ul {
+            font-size: 19px;
+            color: #1E1E1E;
+            margin-bottom: 20px;
+            padding-left: 25px;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 6px;
+            padding-left: 6px;
+        }
+
+        .custom-cursor {
+            position: fixed;
+            width: 22px;
+            height: 22px;
+            background: transparent;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            transform: translate(-50%, -50%);
+            border: 2px solid #9B4DFF;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 18px 20px;
+            }
+            h1 {
+                font-size: 48px;
+            }
+            h2 {
+                font-size: 28px;
+            }
+            header {
+                padding: 15px;
+                font-size: 18px;
+            }
+            .header-nav button {
+                padding: 8px 16px;
+                font-size: 18px;
+            }
+            section {
+                padding: 22px 20px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 40px;
+            }
+            h2 {
+                font-size: 26px;
+            }
+            ul {
+                padding-left: 20px;
+            }
+        }
+
+        button:focus, a:focus {
+            outline: 2px solid #9B4DFF;
+            outline-offset: 2px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header> 
+            <div class="header-nav">
+                <button><a class="header-buttons" href="../index.html">⬅️ home</a></button>
+                <button><a class='header-buttons' href='../Resume.html'>resume 📄</a></button>
+                <!--<button><a class='header-buttons' href='../Work Pages/Work.html'>Work 💼</a></button>-->
+                <button><a class="header-buttons" href="../Hardware Pages/Hardware.html">hardware 🔧</a></button>
+                <button><a class="header-buttons" href="Software.html">software 💻</a></button>
+                <button><a class="header-buttons" href="../Laboratory Pages/Laboratory.html">laboratory 🥼</a></button>
+                <button><a class="header-buttons" href="../EC Pages/EC.html">extracurriculars 💡</a></button>  
+            </div>
+        </header>
+         <button><a class="header-buttons" href="Software.html">back</a></button>  
+        <div class="page-header">
+            <h1>this website!</h1>
+        </div>
+        
+        <div class="content-section">
+            <section>
+                <h2>project overview</h2>
+                <p>decided to teach myself html/css to have a creative outlet that let me relax without the paranoia that I'm falling behind my peers. planning on expanding on this by building a 3D interactive portfolio using Blender and Three.js. </p>
+                <p>I used to think I hated coding until I started this project. now I make an exception for web design. </p>
+
+
+                <h2>tools</h2>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>youtube tutorials</li>
+                    <li>claude (troubleshooting & CSS)</li>
+                </ul>
+                
+                <h2>skills</h2>
+                <ul>
+                    <li>debugging</li>
+                    <li>initiative</li>
+                    <li>project/time management</li>
+                    <li>creativitiy</li>
+                    <li>self directed learning</li>
+                    <li>visual design</li>
+                    
+                </ul>
+                
+            </section>
+            
+        </div>
+    </div>
+    
+    <div class="custom-cursor"></div>
+    
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        const interactiveElements = document.querySelectorAll('a, button, section');
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursor.style.borderColor = '#6A0DAD';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.borderColor = '#9B4DFF';
+            });
+        });
+    </script>
+</body>
+</html>

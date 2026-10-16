@@ -129,13 +129,74 @@
         }
 
         p {
-            font-size: 24px;
+            font-size: 20px;
             color: #1E1E1E;
             margin-bottom: 1.2em;
             font-weight: 450;
             line-height: 1.5;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 30px 0 10px;
+        }
+
+        .gallery-item {
+            border: 2px solid #9B4DFF;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #FFFFFF;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            height: 360px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(106, 13, 173, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.02);
+        }
+
+        .video-wrapper {
+            width: 100%;
+            height: 240px;
+            background: #FAF7FF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .image-caption {
+            padding: 14px 12px;
+            font-size: 16px;
+            color: #2A2A2A;
             text-align: center;
-            padding: 10px 0;
+            line-height: 1.4;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #FCFAFF;
+            border-top: 1px solid #E9D9FF;
         }
 
         .custom-cursor {
@@ -151,6 +212,18 @@
             border: 2px solid #9B4DFF;
         }
 
+        ul {
+            font-size: 19px;
+            color: #1E1E1E;
+            margin-bottom: 20px;
+            padding-left: 25px;
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 6px;
+            padding-left: 6px;
+        }
         /* small-screen tweaks */
         @media (max-width: 768px) {
             .container {
@@ -210,6 +283,7 @@
                 <!--<button><a class='header-buttons' href='../Work Pages/Work.html'>Work 💼</a></button>-->
                 <button><a class="header-buttons" href="../Hardware Pages/Hardware.html">hardware 🔧</a></button>
                 <button><a class="header-buttons" href="../Software Pages/Software.html">software 💻</a></button>
+                <button><a class="header-buttons" href="../Laboratory Pages/Laboratory.html">laboratory 🥼</a></button>
                 <button><a class="header-buttons" href="EC.html">extracurriculars 💡</a></button>  
             </div>
         </header>
@@ -220,7 +294,28 @@
         
         <div class="content-section">
             <section>
-                <p>recently joined the waterloo rocketry team (payload subteam). project updates will appear here as they develop.</p>
+            <h2>overview</h2>
+            <p>member of the payload subteam, designing scientific experiments for the rocket.</p>
+            <p><strong>f26 payload project</strong>: build a tunable diode laser spectrometer (TDLAS) that will allow us to measure the airflow of the rocket.</p>
+            </section>
+            <section>
+                <h2>f26 - (main power pcb)</h2>
+            <p>my task is to develop the main power board schematic and pcb for the TDLAS using KiCad. must meet the following:</p>
+            <ul>
+                <li>use an STM32H503CBT6 MCU</li>
+                <li>convert power from 5v to 3.3vD and 3.3vA</li>
+                <li>provide power to 3 other boards via connectors</li>
+                <li>SPI and CAN interfaces</li>
+                <li>include an SD card to log information</li>
+                <li>send information between boards</li>
+            </ul>
+            <p>as someone with no schematic development experience, I took on this load because the only way to learn to swim is to jump. this will prove to be a pivotal learning experience for me, but such is the waterloo experience. </p>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="/images/Rocketry/Schematic (no connectors).png" alt="WEC build 1">
+                    <div class="image-caption">still need to learn more about SPI and CAN to finish this</div>
+            </div>
+            
             </section>
         </div>
     </div>
